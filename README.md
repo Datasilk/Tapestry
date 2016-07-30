@@ -1,2 +1,2 @@
 # Tapestry
-A CSS / LESS Dashboard UI framework created for Websilk, a drag &amp; drop web development platform written in C# &amp; ASP.NET Core
+Tapestry is a CSS / LESS Dashboard UI framework created for [Websilk][http://www.github.com/websilk/home], a highly advanced drag & drop web development platform.
