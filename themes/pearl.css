@@ -1,0 +1,1613 @@
+.box {
+  background-color: #efefef;
+  color: #666666;
+}
+.box .grip {
+  background-color: #e2e2e2;
+}
+.box .title {
+  color: #595959;
+}
+.box .close a:hover use {
+  color: #cc0000 !important;
+}
+.box.arrow-top:after {
+  border-bottom-color: #efefef;
+}
+.box .section-info {
+  background-color: #e2e2e2;
+}
+.box .row.header {
+  background-color: #e2e2e2;
+}
+.box .top-menu,
+.box .side-menu {
+  background-color: #dddddd;
+}
+.box .tabs .item {
+  color: #ababab;
+  background-color: #dddddd;
+}
+.box .tabs .item:hover {
+  color: #666666;
+  background-color: #abdfdc;
+}
+.box .tabs .item.selected {
+  color: #666666;
+  border-bottom: 2px solid #76c6c1;
+}
+.box .top-menu .tabs .item {
+  color: #ababab;
+  background-color: #dddddd;
+}
+.box .top-menu .tabs .item:hover {
+  color: #666666;
+  background-color: #abdfdc;
+}
+.box .top-menu .tabs .item.selected {
+  color: #666666;
+  border-bottom: 2px solid #76c6c1;
+}
+.box .help-info {
+  color: #666666;
+  background-color: #e2e2e2;
+}
+.box .column-help > div {
+  color: #009c75;
+  background-color: #e2e2e2;
+}
+.box .column-help > div:after {
+  border-right-color: #e2e2e2;
+}
+.box .column-help .row.color:hover {
+  color: #00926d;
+  background-color: #dbdbdb;
+}
+.box .message.alert {
+  background-color: #aed1e8;
+  color: #003580;
+}
+.box .message.alert a:link {
+  color: #0034ff;
+}
+.box .message.alert a:visited {
+  color: #0034ff;
+}
+.box .message.alert a:hover {
+  color: #0005ff;
+}
+.box .message.alert a:active {
+  color: #0005ff;
+}
+.box .message.error {
+  background-color: #c28686;
+  color: #5c0000;
+}
+.box .message.error a:link {
+  color: #ff6500;
+}
+.box .message.error a:visited {
+  color: #ff6500;
+}
+.box .message.error a:hover {
+  color: #ff5600;
+}
+.box .message.error a:active {
+  color: #ff5600;
+}
+.box a:link {
+  color: #666666;
+}
+.box a:visited {
+  color: #666666;
+}
+.box a:hover {
+  color: #33ffcc;
+}
+.box a:active {
+  color: #00ffcc;
+}
+.box .row.link a:link,
+.box .col.link a:link,
+.box .row.link a:visited,
+.box .col.link a:visited,
+.box .row.link a:hover,
+.box .col.link a:hover,
+.box .row.link a:active,
+.box .col.link a:active {
+  color: #666666;
+}
+.box a:link use {
+  color: #009c75;
+}
+.box a:visited use {
+  color: #009c75;
+}
+.box a:hover use {
+  color: #00c561;
+}
+.box a:active use {
+  color: #00945b;
+}
+.box .icon use {
+  color: #009c75;
+}
+.box .bg {
+  background-color: #efefef;
+}
+.box .bg.dark {
+  background-color: #c5e9e7;
+}
+.box .list-item {
+  background-color: #f7f7f7;
+}
+.box .list-item:hover {
+  background-color: #d0edec;
+}
+.box .bg {
+  background-color: #efefef;
+}
+.box .bg.dark {
+  background-color: #c5e9e7;
+}
+.box div.row,
+.box div.row.hover,
+.box div.item.hover {
+  background-color: #efefef;
+}
+.box div.row > .column-label,
+.box div.row.hover > .column-label,
+.box div.item.hover > .column-label,
+.box div.row .column-icon,
+.box div.row.hover .column-icon,
+.box div.item.hover .column-icon {
+  color: rgba(102, 102, 102, 0.7);
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #f2f2f2;
+}
+.box div.row > .column,
+.box div.row.hover > .column,
+.box div.item.hover > .column,
+.box div.row > .column-input,
+.box div.row.hover > .column-input,
+.box div.item.hover > .column-input,
+.box div.row > .empty,
+.box div.row.hover > .empty,
+.box div.item.hover > .empty,
+.box div.row .column-button,
+.box div.row.hover .column-button,
+.box div.item.hover .column-button {
+  background-color: #efefef;
+  border-bottom: 1px solid #eaeaea;
+}
+.box tr.hover td {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #f2f2f2;
+}
+.box .row.hover:hover,
+.box .row:hover > .col.hover,
+.box .item.hover:hover {
+  background-color: #c5e9e7;
+}
+.box .row.hover:hover > .column-label,
+.box .row:hover > .col.hover > .column-label,
+.box .item.hover:hover > .column-label,
+.box .row.hover:hover .column-icon,
+.box .row:hover > .col.hover .column-icon,
+.box .item.hover:hover .column-icon {
+  color: #666666;
+  background-color: #d0edec;
+  border-bottom: 1px solid #c5e9e7;
+}
+.box .row.hover:hover > .column,
+.box .row:hover > .col.hover > .column,
+.box .item.hover:hover > .column,
+.box .row.hover:hover > .column-input,
+.box .row:hover > .col.hover > .column-input,
+.box .item.hover:hover > .column-input,
+.box .row.hover:hover > .empty,
+.box .row:hover > .col.hover > .empty,
+.box .item.hover:hover > .empty,
+.box .row.hover:hover .column-button,
+.box .row:hover > .col.hover .column-button,
+.box .item.hover:hover .column-button {
+  background-color: #c5e9e7;
+  border-bottom: 1px solid #bae5e2;
+}
+.box tr.hover:hover td {
+  background-color: #c5e9e7;
+  border-bottom: 1px solid #bee6e4;
+}
+.box tr.hover:hover td:hover {
+  background-color: #d0edec;
+  border-bottom: 1px solid #c9eae9;
+}
+.box .spreadsheet .row.hover.head {
+  background: #b3e2df;
+}
+.box .hover input,
+.box .hover textarea,
+.box .hover select {
+  color: rgba(102, 102, 102, 0.9);
+  background-color: #ffffff;
+}
+.box .hover:hover input,
+.box .hover:hover textarea,
+.box .hover:hover select {
+  color: #666666;
+  background-color: #ffffff;
+}
+.box .hover input:focus,
+.box .hover textarea:focus,
+.box .hover select:focus {
+  background-color: #ffffff;
+}
+.box .hover .field-label {
+  color: #00b98d;
+}
+.box .button {
+  color: #ffffff;
+  background-color: #00ac83;
+}
+.box .button:hover {
+  color: #ffffff;
+  background-color: #00795c;
+}
+.box .button.apply {
+  color: #ffffff;
+  background-color: #00ac83;
+}
+.box .button.apply:hover {
+  color: #ffffff;
+  background-color: #00795c;
+}
+.box .button.cancel {
+  color: #ffffff;
+  background-color: #aaaaaa;
+}
+.box .button.cancel:hover {
+  color: #ffffff;
+  background-color: #919191;
+}
+.box .button.outline {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.box .button.outline:hover {
+  color: #ffffff;
+  border-color: rgba(230, 230, 230, 0.7);
+}
+.box .hover-alt {
+  color: #666666;
+}
+.box .hover-alt a:link {
+  color: #666666;
+}
+.box .hover-alt a:visited {
+  color: #666666;
+}
+.box .hover-alt a:hover {
+  color: #33ffcc;
+}
+.box .hover-alt a:active {
+  color: #00ffcc;
+}
+.box .row.hover-alt.link a:link,
+.box .row.hover-alt .col.link a:link,
+.box .row.hover-alt.link a:visited,
+.box .row.hover-alt .col.link a:visited,
+.box .row.hover-alt.link a:hover,
+.box .row.hover-alt .col.link a:hover,
+.box .row.hover-alt.link a:active,
+.box .row.hover-alt .col.link a:active {
+  color: #666666;
+}
+.box .hover-alt a:link use {
+  color: #009c75;
+}
+.box .hover-alt a:visited use {
+  color: #009c75;
+}
+.box .hover-alt a:hover use {
+  color: #00c561;
+}
+.box .hover-alt a:active use {
+  color: #00945b;
+}
+.box .hover-alt .icon use {
+  color: #009c75;
+}
+.box .hover-alt .list-item {
+  background-color: #f4f4f4;
+}
+.box .hover-alt .list-item:hover {
+  background-color: #d0edec;
+}
+.box .bg {
+  background-color: #ececec;
+}
+.box .bg.dark {
+  background-color: #c5e9e7;
+}
+.box div.row,
+.box div.row.hover-alt,
+.box div.item.hover-alt {
+  background-color: #ececec;
+}
+.box div.row > .column-label,
+.box div.row.hover-alt > .column-label,
+.box div.item.hover-alt > .column-label,
+.box div.row .column-icon,
+.box div.row.hover-alt .column-icon,
+.box div.item.hover-alt .column-icon {
+  color: rgba(102, 102, 102, 0.7);
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #efefef;
+}
+.box div.row > .column,
+.box div.row.hover-alt > .column,
+.box div.item.hover-alt > .column,
+.box div.row > .column-input,
+.box div.row.hover-alt > .column-input,
+.box div.item.hover-alt > .column-input,
+.box div.row > .empty,
+.box div.row.hover-alt > .empty,
+.box div.item.hover-alt > .empty,
+.box div.row .column-button,
+.box div.row.hover-alt .column-button,
+.box div.item.hover-alt .column-button {
+  background-color: #ececec;
+  border-bottom: 1px solid #e7e7e7;
+}
+.box tr.hover-alt td {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #efefef;
+}
+.box .row.hover-alt:hover,
+.box .row:hover > .col.hover-alt,
+.box .item.hover-alt:hover {
+  background-color: #c5e9e7;
+}
+.box .row.hover-alt:hover > .column-label,
+.box .row:hover > .col.hover-alt > .column-label,
+.box .item.hover-alt:hover > .column-label,
+.box .row.hover-alt:hover .column-icon,
+.box .row:hover > .col.hover-alt .column-icon,
+.box .item.hover-alt:hover .column-icon {
+  color: #666666;
+  background-color: #d0edec;
+  border-bottom: 1px solid #c5e9e7;
+}
+.box .row.hover-alt:hover > .column,
+.box .row:hover > .col.hover-alt > .column,
+.box .item.hover-alt:hover > .column,
+.box .row.hover-alt:hover > .column-input,
+.box .row:hover > .col.hover-alt > .column-input,
+.box .item.hover-alt:hover > .column-input,
+.box .row.hover-alt:hover > .empty,
+.box .row:hover > .col.hover-alt > .empty,
+.box .item.hover-alt:hover > .empty,
+.box .row.hover-alt:hover .column-button,
+.box .row:hover > .col.hover-alt .column-button,
+.box .item.hover-alt:hover .column-button {
+  background-color: #c5e9e7;
+  border-bottom: 1px solid #bae5e2;
+}
+.box tr.hover-alt:hover td {
+  background-color: #c5e9e7;
+  border-bottom: 1px solid #bee6e4;
+}
+.box tr.hover-alt:hover td:hover {
+  background-color: #d0edec;
+  border-bottom: 1px solid #c9eae9;
+}
+.box .spreadsheet .row.hover-alt.head {
+  background: #b3e2df;
+}
+.box .hover-alt input,
+.box .hover-alt textarea,
+.box .hover-alt select {
+  color: rgba(102, 102, 102, 0.9);
+  background-color: #ffffff;
+}
+.box .hover-alt:hover input,
+.box .hover-alt:hover textarea,
+.box .hover-alt:hover select {
+  color: #666666;
+  background-color: #ffffff;
+}
+.box .hover-alt input:focus,
+.box .hover-alt textarea:focus,
+.box .hover-alt select:focus {
+  background-color: #ffffff;
+}
+.box .hover-alt .field-label {
+  color: #00b98d;
+}
+.box .button {
+  color: #ffffff;
+  background-color: #00ac83;
+}
+.box .button:hover {
+  color: #ffffff;
+  background-color: #00795c;
+}
+.box .button.apply {
+  color: #ffffff;
+  background-color: #00ac83;
+}
+.box .button.apply:hover {
+  color: #ffffff;
+  background-color: #00795c;
+}
+.box .button.cancel {
+  color: #ffffff;
+  background-color: #aaaaaa;
+}
+.box .button.cancel:hover {
+  color: #ffffff;
+  background-color: #919191;
+}
+.box .button.outline {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.box .button.outline:hover {
+  color: #ffffff;
+  border-color: rgba(230, 230, 230, 0.7);
+}
+.box .purple {
+  color: #NaNNaNNaN;
+}
+.box .purple a:link {
+  color: #666666;
+}
+.box .purple a:visited {
+  color: #666666;
+}
+.box .purple a:hover {
+  color: #33ffcc;
+}
+.box .purple a:active {
+  color: #00ffcc;
+}
+.box .purple .row.link a:link,
+.box .purple .col.link a:link,
+.box .purple .row.link a:visited,
+.box .purple .col.link a:visited,
+.box .purple .row.link a:hover,
+.box .purple .col.link a:hover,
+.box .purple .row.link a:active,
+.box .purple .col.link a:active {
+  color: #NaNNaNNaN;
+}
+.box .purple a:link use {
+  color: #930ab8;
+}
+.box .purple a:visited use {
+  color: #930ab8;
+}
+.box .purple a:hover use {
+  color: #NaNNaNNaN;
+}
+.box .purple a:active use {
+  color: #NaNNaNNaN;
+}
+.box .purple .icon use {
+  color: #930ab8;
+}
+.box .purple .bg {
+  background-color: #e9d1f0;
+}
+.box .purple .bg.dark {
+  background-color: #e0bee9;
+}
+.box .purple .list-item {
+  background-color: #efddf4;
+}
+.box .purple .list-item:hover {
+  background-color: #e4c6ec;
+}
+.box .purple .bg {
+  background-color: #e9d1f0;
+}
+.box .purple .bg.dark {
+  background-color: #e0bee9;
+}
+.box .purple div.row,
+.box .purple div.row.hover,
+.box .purple div.item.hover {
+  background-color: #e9d1f0;
+}
+.box .purple div.row > .column-label,
+.box .purple div.row.hover > .column-label,
+.box .purple div.item.hover > .column-label,
+.box .purple div.row .column-icon,
+.box .purple div.row.hover .column-icon,
+.box .purple div.item.hover .column-icon {
+  color: rgba(NaN, NaN, NaN, 0.8);
+  background-color: #efddf4;
+  border-bottom: 1px solid #ebd5f1;
+}
+.box .purple div.row > .column,
+.box .purple div.row.hover > .column,
+.box .purple div.item.hover > .column,
+.box .purple div.row > .column-input,
+.box .purple div.row.hover > .column-input,
+.box .purple div.item.hover > .column-input,
+.box .purple div.row > .empty,
+.box .purple div.row.hover > .empty,
+.box .purple div.item.hover > .empty,
+.box .purple div.row .column-button,
+.box .purple div.row.hover .column-button,
+.box .purple div.item.hover .column-button {
+  background-color: #e9d1f0;
+  border-bottom: 1px solid #e6caed;
+}
+.box .purple tr.hover td {
+  background-color: #efddf4;
+  border-bottom: 1px solid #ebd5f1;
+}
+.box .purple .row.hover:hover,
+.box .purple .row:hover > .col.hover,
+.box .purple .item.hover:hover {
+  background-color: #e0bee9;
+}
+.box .purple .row.hover:hover > .column-label,
+.box .purple .row:hover > .col.hover > .column-label,
+.box .purple .item.hover:hover > .column-label,
+.box .purple .row.hover:hover .column-icon,
+.box .purple .row:hover > .col.hover .column-icon,
+.box .purple .item.hover:hover .column-icon {
+  color: #NaNNaNNaN;
+  background-color: #e4c6ec;
+  border-bottom: 1px solid #debae8;
+}
+.box .purple .row.hover:hover > .column,
+.box .purple .row:hover > .col.hover > .column,
+.box .purple .item.hover:hover > .column,
+.box .purple .row.hover:hover > .column-input,
+.box .purple .row:hover > .col.hover > .column-input,
+.box .purple .item.hover:hover > .column-input,
+.box .purple .row.hover:hover > .empty,
+.box .purple .row:hover > .col.hover > .empty,
+.box .purple .item.hover:hover > .empty,
+.box .purple .row.hover:hover .column-button,
+.box .purple .row:hover > .col.hover .column-button,
+.box .purple .item.hover:hover .column-button {
+  background-color: #e0bee9;
+  border-bottom: 1px solid #dbb3e6;
+}
+.box .purple tr.hover:hover td {
+  background-color: #e0bee9;
+  border-bottom: 1px solid #ddb6e7;
+}
+.box .purple tr.hover:hover td:hover {
+  background-color: #e4c6ec;
+  border-bottom: 1px solid #e0bee9;
+}
+.box .purple .spreadsheet .row.hover.head {
+  background: #d7abe3;
+}
+.box .purple .button {
+  color: #NaNNaNNaN;
+  background-color: #e9d1f0;
+}
+.box .purple .button:hover {
+  color: #e9d1f0;
+  background-color: #d7abe3;
+}
+.box .purple .button.outline {
+  color: #e9d1f0;
+  border-color: #e9d1f0;
+}
+.box .purple .button.outline:hover {
+  color: #d7abe3;
+  border-color: #d7abe3;
+}
+.box .purple .button.circle {
+  color: #NaNNaNNaN;
+  background-color: #e9d1f0;
+}
+.box .purple .button.circle:hover {
+  color: #NaNNaNNaN;
+  background-color: #d7abe3;
+}
+.box .purple .button.circle a:link use,
+.box .purple .button.circle a:visited use {
+  color: #NaNNaNNaN;
+}
+.box .purple .button.circle a:hover use,
+.box .purple .button.circle a:active use {
+  color: #NaNNaNNaN;
+}
+.box .blue {
+  color: #NaNNaNNaN;
+}
+.box .blue a:link {
+  color: #666666;
+}
+.box .blue a:visited {
+  color: #666666;
+}
+.box .blue a:hover {
+  color: #33ffcc;
+}
+.box .blue a:active {
+  color: #00ffcc;
+}
+.box .blue .row.link a:link,
+.box .blue .col.link a:link,
+.box .blue .row.link a:visited,
+.box .blue .col.link a:visited,
+.box .blue .row.link a:hover,
+.box .blue .col.link a:hover,
+.box .blue .row.link a:active,
+.box .blue .col.link a:active {
+  color: #NaNNaNNaN;
+}
+.box .blue a:link use {
+  color: #093aa9;
+}
+.box .blue a:visited use {
+  color: #093aa9;
+}
+.box .blue a:hover use {
+  color: #NaNNaNNaN;
+}
+.box .blue a:active use {
+  color: #NaNNaNNaN;
+}
+.box .blue .icon use {
+  color: #093aa9;
+}
+.box .blue .bg {
+  background-color: #c5d1ec;
+}
+.box .blue .bg.dark {
+  background-color: #adc0ea;
+}
+.box .blue .list-item {
+  background-color: #d1daf0;
+}
+.box .blue .list-item:hover {
+  background-color: #b5c6ed;
+}
+.box .blue .bg {
+  background-color: #c5d1ec;
+}
+.box .blue .bg.dark {
+  background-color: #adc0ea;
+}
+.box .blue div.row,
+.box .blue div.row.hover,
+.box .blue div.item.hover {
+  background-color: #c5d1ec;
+}
+.box .blue div.row > .column-label,
+.box .blue div.row.hover > .column-label,
+.box .blue div.item.hover > .column-label,
+.box .blue div.row .column-icon,
+.box .blue div.row.hover .column-icon,
+.box .blue div.item.hover .column-icon {
+  color: rgba(NaN, NaN, NaN, 0.8);
+  background-color: #d1daf0;
+  border-bottom: 1px solid #c9d4ed;
+}
+.box .blue div.row > .column,
+.box .blue div.row.hover > .column,
+.box .blue div.item.hover > .column,
+.box .blue div.row > .column-input,
+.box .blue div.row.hover > .column-input,
+.box .blue div.item.hover > .column-input,
+.box .blue div.row > .empty,
+.box .blue div.row.hover > .empty,
+.box .blue div.item.hover > .empty,
+.box .blue div.row .column-button,
+.box .blue div.row.hover .column-button,
+.box .blue div.item.hover .column-button {
+  background-color: #c5d1ec;
+  border-bottom: 1px solid #becbe9;
+}
+.box .blue tr.hover td {
+  background-color: #d1daf0;
+  border-bottom: 1px solid #c9d4ed;
+}
+.box .blue .row.hover:hover,
+.box .blue .row:hover > .col.hover,
+.box .blue .item.hover:hover {
+  background-color: #adc0ea;
+}
+.box .blue .row.hover:hover > .column-label,
+.box .blue .row:hover > .col.hover > .column-label,
+.box .blue .item.hover:hover > .column-label,
+.box .blue .row.hover:hover .column-icon,
+.box .blue .row:hover > .col.hover .column-icon,
+.box .blue .item.hover:hover .column-icon {
+  color: #NaNNaNNaN;
+  background-color: #b5c6ed;
+  border-bottom: 1px solid #a9bde9;
+}
+.box .blue .row.hover:hover > .column,
+.box .blue .row:hover > .col.hover > .column,
+.box .blue .item.hover:hover > .column,
+.box .blue .row.hover:hover > .column-input,
+.box .blue .row:hover > .col.hover > .column-input,
+.box .blue .item.hover:hover > .column-input,
+.box .blue .row.hover:hover > .empty,
+.box .blue .row:hover > .col.hover > .empty,
+.box .blue .item.hover:hover > .empty,
+.box .blue .row.hover:hover .column-button,
+.box .blue .row:hover > .col.hover .column-button,
+.box .blue .item.hover:hover .column-button {
+  background-color: #adc0ea;
+  border-bottom: 1px solid #a1b6e7;
+}
+.box .blue tr.hover:hover td {
+  background-color: #adc0ea;
+  border-bottom: 1px solid #a5bae8;
+}
+.box .blue tr.hover:hover td:hover {
+  background-color: #b5c6ed;
+  border-bottom: 1px solid #adc0ea;
+}
+.box .blue .spreadsheet .row.hover.head {
+  background: #99b0e5;
+}
+.box .blue .button {
+  color: #NaNNaNNaN;
+  background-color: #c5d1ec;
+}
+.box .blue .button:hover {
+  color: #c5d1ec;
+  background-color: #9fb3df;
+}
+.box .blue .button.outline {
+  color: #c5d1ec;
+  border-color: #c5d1ec;
+}
+.box .blue .button.outline:hover {
+  color: #9fb3df;
+  border-color: #9fb3df;
+}
+.box .blue .button.circle {
+  color: #NaNNaNNaN;
+  background-color: #c5d1ec;
+}
+.box .blue .button.circle:hover {
+  color: #NaNNaNNaN;
+  background-color: #9fb3df;
+}
+.box .blue .button.circle a:link use,
+.box .blue .button.circle a:visited use {
+  color: #NaNNaNNaN;
+}
+.box .blue .button.circle a:hover use,
+.box .blue .button.circle a:active use {
+  color: #NaNNaNNaN;
+}
+.box .turqoise {
+  color: #NaNNaNNaN;
+}
+.box .turqoise a:link {
+  color: #666666;
+}
+.box .turqoise a:visited {
+  color: #666666;
+}
+.box .turqoise a:hover {
+  color: #33ffcc;
+}
+.box .turqoise a:active {
+  color: #00ffcc;
+}
+.box .turqoise .row.link a:link,
+.box .turqoise .col.link a:link,
+.box .turqoise .row.link a:visited,
+.box .turqoise .col.link a:visited,
+.box .turqoise .row.link a:hover,
+.box .turqoise .col.link a:hover,
+.box .turqoise .row.link a:active,
+.box .turqoise .col.link a:active {
+  color: #NaNNaNNaN;
+}
+.box .turqoise a:link use {
+  color: #09ada8;
+}
+.box .turqoise a:visited use {
+  color: #09ada8;
+}
+.box .turqoise a:hover use {
+  color: #NaNNaNNaN;
+}
+.box .turqoise a:active use {
+  color: #NaNNaNNaN;
+}
+.box .turqoise .icon use {
+  color: #09ada8;
+}
+.box .turqoise .bg {
+  background-color: #c8edec;
+}
+.box .turqoise .bg.dark {
+  background-color: #b0ebea;
+}
+.box .turqoise .list-item {
+  background-color: #d4f1f0;
+}
+.box .turqoise .list-item:hover {
+  background-color: #b8edec;
+}
+.box .turqoise .bg {
+  background-color: #c8edec;
+}
+.box .turqoise .bg.dark {
+  background-color: #b0ebea;
+}
+.box .turqoise div.row,
+.box .turqoise div.row.hover,
+.box .turqoise div.item.hover {
+  background-color: #c8edec;
+}
+.box .turqoise div.row > .column-label,
+.box .turqoise div.row.hover > .column-label,
+.box .turqoise div.item.hover > .column-label,
+.box .turqoise div.row .column-icon,
+.box .turqoise div.row.hover .column-icon,
+.box .turqoise div.item.hover .column-icon {
+  color: rgba(NaN, NaN, NaN, 0.8);
+  background-color: #d4f1f0;
+  border-bottom: 1px solid #cceeed;
+}
+.box .turqoise div.row > .column,
+.box .turqoise div.row.hover > .column,
+.box .turqoise div.item.hover > .column,
+.box .turqoise div.row > .column-input,
+.box .turqoise div.row.hover > .column-input,
+.box .turqoise div.item.hover > .column-input,
+.box .turqoise div.row > .empty,
+.box .turqoise div.row.hover > .empty,
+.box .turqoise div.item.hover > .empty,
+.box .turqoise div.row .column-button,
+.box .turqoise div.row.hover .column-button,
+.box .turqoise div.item.hover .column-button {
+  background-color: #c8edec;
+  border-bottom: 1px solid #c1eae9;
+}
+.box .turqoise tr.hover td {
+  background-color: #d4f1f0;
+  border-bottom: 1px solid #cceeed;
+}
+.box .turqoise .row.hover:hover,
+.box .turqoise .row:hover > .col.hover,
+.box .turqoise .item.hover:hover {
+  background-color: #b0ebea;
+}
+.box .turqoise .row.hover:hover > .column-label,
+.box .turqoise .row:hover > .col.hover > .column-label,
+.box .turqoise .item.hover:hover > .column-label,
+.box .turqoise .row.hover:hover .column-icon,
+.box .turqoise .row:hover > .col.hover .column-icon,
+.box .turqoise .item.hover:hover .column-icon {
+  color: #NaNNaNNaN;
+  background-color: #b8edec;
+  border-bottom: 1px solid #aceae8;
+}
+.box .turqoise .row.hover:hover > .column,
+.box .turqoise .row:hover > .col.hover > .column,
+.box .turqoise .item.hover:hover > .column,
+.box .turqoise .row.hover:hover > .column-input,
+.box .turqoise .row:hover > .col.hover > .column-input,
+.box .turqoise .item.hover:hover > .column-input,
+.box .turqoise .row.hover:hover > .empty,
+.box .turqoise .row:hover > .col.hover > .empty,
+.box .turqoise .item.hover:hover > .empty,
+.box .turqoise .row.hover:hover .column-button,
+.box .turqoise .row:hover > .col.hover .column-button,
+.box .turqoise .item.hover:hover .column-button {
+  background-color: #b0ebea;
+  border-bottom: 1px solid #a4e8e6;
+}
+.box .turqoise tr.hover:hover td {
+  background-color: #b0ebea;
+  border-bottom: 1px solid #a8e9e7;
+}
+.box .turqoise tr.hover:hover td:hover {
+  background-color: #b8edec;
+  border-bottom: 1px solid #b0ebea;
+}
+.box .turqoise .spreadsheet .row.hover.head {
+  background: #9ce6e4;
+}
+.box .turqoise .button {
+  color: #NaNNaNNaN;
+  background-color: #c8edec;
+}
+.box .turqoise .button:hover {
+  color: #c8edec;
+  background-color: #a2e0de;
+}
+.box .turqoise .button.outline {
+  color: #c8edec;
+  border-color: #c8edec;
+}
+.box .turqoise .button.outline:hover {
+  color: #a2e0de;
+  border-color: #a2e0de;
+}
+.box .turqoise .button.circle {
+  color: #NaNNaNNaN;
+  background-color: #c8edec;
+}
+.box .turqoise .button.circle:hover {
+  color: #NaNNaNNaN;
+  background-color: #a2e0de;
+}
+.box .turqoise .button.circle a:link use,
+.box .turqoise .button.circle a:visited use {
+  color: #NaNNaNNaN;
+}
+.box .turqoise .button.circle a:hover use,
+.box .turqoise .button.circle a:active use {
+  color: #NaNNaNNaN;
+}
+.box .green {
+  color: #NaNNaNNaN;
+}
+.box .green a:link {
+  color: #666666;
+}
+.box .green a:visited {
+  color: #666666;
+}
+.box .green a:hover {
+  color: #33ffcc;
+}
+.box .green a:active {
+  color: #00ffcc;
+}
+.box .green .row.link a:link,
+.box .green .col.link a:link,
+.box .green .row.link a:visited,
+.box .green .col.link a:visited,
+.box .green .row.link a:hover,
+.box .green .col.link a:hover,
+.box .green .row.link a:active,
+.box .green .col.link a:active {
+  color: #NaNNaNNaN;
+}
+.box .green a:link use {
+  color: #09a438;
+}
+.box .green a:visited use {
+  color: #09a438;
+}
+.box .green a:hover use {
+  color: #NaNNaNNaN;
+}
+.box .green a:active use {
+  color: #NaNNaNNaN;
+}
+.box .green .icon use {
+  color: #09a438;
+}
+.box .green .bg {
+  background-color: #c1ebce;
+}
+.box .green .bg.dark {
+  background-color: #aee4bf;
+}
+.box .green .list-item {
+  background-color: #cdeed7;
+}
+.box .green .list-item:hover {
+  background-color: #b6e7c5;
+}
+.box .green .bg {
+  background-color: #c1ebce;
+}
+.box .green .bg.dark {
+  background-color: #aee4bf;
+}
+.box .green div.row,
+.box .green div.row.hover,
+.box .green div.item.hover {
+  background-color: #c1ebce;
+}
+.box .green div.row > .column-label,
+.box .green div.row.hover > .column-label,
+.box .green div.item.hover > .column-label,
+.box .green div.row .column-icon,
+.box .green div.row.hover .column-icon,
+.box .green div.item.hover .column-icon {
+  color: rgba(NaN, NaN, NaN, 0.8);
+  background-color: #cdeed7;
+  border-bottom: 1px solid #c5ecd1;
+}
+.box .green div.row > .column,
+.box .green div.row.hover > .column,
+.box .green div.item.hover > .column,
+.box .green div.row > .column-input,
+.box .green div.row.hover > .column-input,
+.box .green div.item.hover > .column-input,
+.box .green div.row > .empty,
+.box .green div.row.hover > .empty,
+.box .green div.item.hover > .empty,
+.box .green div.row .column-button,
+.box .green div.row.hover .column-button,
+.box .green div.item.hover .column-button {
+  background-color: #c1ebce;
+  border-bottom: 1px solid #bae8c8;
+}
+.box .green tr.hover td {
+  background-color: #cdeed7;
+  border-bottom: 1px solid #c5ecd1;
+}
+.box .green .row.hover:hover,
+.box .green .row:hover > .col.hover,
+.box .green .item.hover:hover {
+  background-color: #aee4bf;
+}
+.box .green .row.hover:hover > .column-label,
+.box .green .row:hover > .col.hover > .column-label,
+.box .green .item.hover:hover > .column-label,
+.box .green .row.hover:hover .column-icon,
+.box .green .row:hover > .col.hover .column-icon,
+.box .green .item.hover:hover .column-icon {
+  color: #NaNNaNNaN;
+  background-color: #b6e7c5;
+  border-bottom: 1px solid #abe3bc;
+}
+.box .green .row.hover:hover > .column,
+.box .green .row:hover > .col.hover > .column,
+.box .green .item.hover:hover > .column,
+.box .green .row.hover:hover > .column-input,
+.box .green .row:hover > .col.hover > .column-input,
+.box .green .item.hover:hover > .column-input,
+.box .green .row.hover:hover > .empty,
+.box .green .row:hover > .col.hover > .empty,
+.box .green .item.hover:hover > .empty,
+.box .green .row.hover:hover .column-button,
+.box .green .row:hover > .col.hover .column-button,
+.box .green .item.hover:hover .column-button {
+  background-color: #aee4bf;
+  border-bottom: 1px solid #a3e0b6;
+}
+.box .green tr.hover:hover td {
+  background-color: #aee4bf;
+  border-bottom: 1px solid #a7e2b9;
+}
+.box .green tr.hover:hover td:hover {
+  background-color: #b6e7c5;
+  border-bottom: 1px solid #aee4bf;
+}
+.box .green .spreadsheet .row.hover.head {
+  background: #9bdeaf;
+}
+.box .green .button {
+  color: #NaNNaNNaN;
+  background-color: #c1ebce;
+}
+.box .green .button:hover {
+  color: #c1ebce;
+  background-color: #9bdeaf;
+}
+.box .green .button.outline {
+  color: #c1ebce;
+  border-color: #c1ebce;
+}
+.box .green .button.outline:hover {
+  color: #9bdeaf;
+  border-color: #9bdeaf;
+}
+.box .green .button.circle {
+  color: #NaNNaNNaN;
+  background-color: #c1ebce;
+}
+.box .green .button.circle:hover {
+  color: #NaNNaNNaN;
+  background-color: #9bdeaf;
+}
+.box .green .button.circle a:link use,
+.box .green .button.circle a:visited use {
+  color: #NaNNaNNaN;
+}
+.box .green .button.circle a:hover use,
+.box .green .button.circle a:active use {
+  color: #NaNNaNNaN;
+}
+.box .yellow {
+  color: #NaNNaNNaN;
+}
+.box .yellow a:link {
+  color: #666666;
+}
+.box .yellow a:visited {
+  color: #666666;
+}
+.box .yellow a:hover {
+  color: #33ffcc;
+}
+.box .yellow a:active {
+  color: #00ffcc;
+}
+.box .yellow .row.link a:link,
+.box .yellow .col.link a:link,
+.box .yellow .row.link a:visited,
+.box .yellow .col.link a:visited,
+.box .yellow .row.link a:hover,
+.box .yellow .col.link a:hover,
+.box .yellow .row.link a:active,
+.box .yellow .col.link a:active {
+  color: #NaNNaNNaN;
+}
+.box .yellow a:link use {
+  color: #c2ab0a;
+}
+.box .yellow a:visited use {
+  color: #c2ab0a;
+}
+.box .yellow a:hover use {
+  color: #NaNNaNNaN;
+}
+.box .yellow a:active use {
+  color: #NaNNaNNaN;
+}
+.box .yellow .icon use {
+  color: #c2ab0a;
+}
+.box .yellow .bg {
+  background-color: #f2efd9;
+}
+.box .yellow .bg.dark {
+  background-color: #f4edbe;
+}
+.box .yellow .list-item {
+  background-color: #f6f4e4;
+}
+.box .yellow .list-item:hover {
+  background-color: #f5efc7;
+}
+.box .yellow .bg {
+  background-color: #f2efd9;
+}
+.box .yellow .bg.dark {
+  background-color: #f4edbe;
+}
+.box .yellow div.row,
+.box .yellow div.row.hover,
+.box .yellow div.item.hover {
+  background-color: #f2efd9;
+}
+.box .yellow div.row > .column-label,
+.box .yellow div.row.hover > .column-label,
+.box .yellow div.item.hover > .column-label,
+.box .yellow div.row .column-icon,
+.box .yellow div.row.hover .column-icon,
+.box .yellow div.item.hover .column-icon {
+  color: rgba(NaN, NaN, NaN, 0.8);
+  background-color: #f6f4e4;
+  border-bottom: 1px solid #f4f1dd;
+}
+.box .yellow div.row > .column,
+.box .yellow div.row.hover > .column,
+.box .yellow div.item.hover > .column,
+.box .yellow div.row > .column-input,
+.box .yellow div.row.hover > .column-input,
+.box .yellow div.item.hover > .column-input,
+.box .yellow div.row > .empty,
+.box .yellow div.row.hover > .empty,
+.box .yellow div.item.hover > .empty,
+.box .yellow div.row .column-button,
+.box .yellow div.row.hover .column-button,
+.box .yellow div.item.hover .column-button {
+  background-color: #f2efd9;
+  border-bottom: 1px solid #f0ecd1;
+}
+.box .yellow tr.hover td {
+  background-color: #f6f4e4;
+  border-bottom: 1px solid #f4f1dd;
+}
+.box .yellow .row.hover:hover,
+.box .yellow .row:hover > .col.hover,
+.box .yellow .item.hover:hover {
+  background-color: #f4edbe;
+}
+.box .yellow .row.hover:hover > .column-label,
+.box .yellow .row:hover > .col.hover > .column-label,
+.box .yellow .item.hover:hover > .column-label,
+.box .yellow .row.hover:hover .column-icon,
+.box .yellow .row:hover > .col.hover .column-icon,
+.box .yellow .item.hover:hover .column-icon {
+  color: #NaNNaNNaN;
+  background-color: #f5efc7;
+  border-bottom: 1px solid #f3ecba;
+}
+.box .yellow .row.hover:hover > .column,
+.box .yellow .row:hover > .col.hover > .column,
+.box .yellow .item.hover:hover > .column,
+.box .yellow .row.hover:hover > .column-input,
+.box .yellow .row:hover > .col.hover > .column-input,
+.box .yellow .item.hover:hover > .column-input,
+.box .yellow .row.hover:hover > .empty,
+.box .yellow .row:hover > .col.hover > .empty,
+.box .yellow .item.hover:hover > .empty,
+.box .yellow .row.hover:hover .column-button,
+.box .yellow .row:hover > .col.hover .column-button,
+.box .yellow .item.hover:hover .column-button {
+  background-color: #f4edbe;
+  border-bottom: 1px solid #f1e9b1;
+}
+.box .yellow tr.hover:hover td {
+  background-color: #f4edbe;
+  border-bottom: 1px solid #f2ebb5;
+}
+.box .yellow tr.hover:hover td:hover {
+  background-color: #f5efc7;
+  border-bottom: 1px solid #f4edbe;
+}
+.box .yellow .spreadsheet .row.hover.head {
+  background: #f0e7a8;
+}
+.box .yellow .button {
+  color: #NaNNaNNaN;
+  background-color: #f2efd9;
+}
+.box .yellow .button:hover {
+  color: #f2efd9;
+  background-color: #e5dfb3;
+}
+.box .yellow .button.outline {
+  color: #f2efd9;
+  border-color: #f2efd9;
+}
+.box .yellow .button.outline:hover {
+  color: #e5dfb3;
+  border-color: #e5dfb3;
+}
+.box .yellow .button.circle {
+  color: #NaNNaNNaN;
+  background-color: #f2efd9;
+}
+.box .yellow .button.circle:hover {
+  color: #NaNNaNNaN;
+  background-color: #e5dfb3;
+}
+.box .yellow .button.circle a:link use,
+.box .yellow .button.circle a:visited use {
+  color: #NaNNaNNaN;
+}
+.box .yellow .button.circle a:hover use,
+.box .yellow .button.circle a:active use {
+  color: #NaNNaNNaN;
+}
+.box .orange {
+  color: #NaNNaNNaN;
+}
+.box .orange a:link {
+  color: #666666;
+}
+.box .orange a:visited {
+  color: #666666;
+}
+.box .orange a:hover {
+  color: #33ffcc;
+}
+.box .orange a:active {
+  color: #00ffcc;
+}
+.box .orange .row.link a:link,
+.box .orange .col.link a:link,
+.box .orange .row.link a:visited,
+.box .orange .col.link a:visited,
+.box .orange .row.link a:hover,
+.box .orange .col.link a:hover,
+.box .orange .row.link a:active,
+.box .orange .col.link a:active {
+  color: #NaNNaNNaN;
+}
+.box .orange a:link use {
+  color: #c2650a;
+}
+.box .orange a:visited use {
+  color: #c2650a;
+}
+.box .orange a:hover use {
+  color: #NaNNaNNaN;
+}
+.box .orange a:active use {
+  color: #NaNNaNNaN;
+}
+.box .orange .icon use {
+  color: #c2650a;
+}
+.box .orange .bg {
+  background-color: #f2e5d9;
+}
+.box .orange .bg.dark {
+  background-color: #f0d8c2;
+}
+.box .orange .list-item {
+  background-color: #f6ede4;
+}
+.box .orange .list-item:hover {
+  background-color: #f2deca;
+}
+.box .orange .bg {
+  background-color: #f2e5d9;
+}
+.box .orange .bg.dark {
+  background-color: #f0d8c2;
+}
+.box .orange div.row,
+.box .orange div.row.hover,
+.box .orange div.item.hover {
+  background-color: #f2e5d9;
+}
+.box .orange div.row > .column-label,
+.box .orange div.row.hover > .column-label,
+.box .orange div.item.hover > .column-label,
+.box .orange div.row .column-icon,
+.box .orange div.row.hover .column-icon,
+.box .orange div.item.hover .column-icon {
+  color: rgba(NaN, NaN, NaN, 0.8);
+  background-color: #f6ede4;
+  border-bottom: 1px solid #f4e8dd;
+}
+.box .orange div.row > .column,
+.box .orange div.row.hover > .column,
+.box .orange div.item.hover > .column,
+.box .orange div.row > .column-input,
+.box .orange div.row.hover > .column-input,
+.box .orange div.item.hover > .column-input,
+.box .orange div.row > .empty,
+.box .orange div.row.hover > .empty,
+.box .orange div.item.hover > .empty,
+.box .orange div.row .column-button,
+.box .orange div.row.hover .column-button,
+.box .orange div.item.hover .column-button {
+  background-color: #f2e5d9;
+  border-bottom: 1px solid #f0e0d1;
+}
+.box .orange tr.hover td {
+  background-color: #f6ede4;
+  border-bottom: 1px solid #f4e8dd;
+}
+.box .orange .row.hover:hover,
+.box .orange .row:hover > .col.hover,
+.box .orange .item.hover:hover {
+  background-color: #f0d8c2;
+}
+.box .orange .row.hover:hover > .column-label,
+.box .orange .row:hover > .col.hover > .column-label,
+.box .orange .item.hover:hover > .column-label,
+.box .orange .row.hover:hover .column-icon,
+.box .orange .row:hover > .col.hover .column-icon,
+.box .orange .item.hover:hover .column-icon {
+  color: #NaNNaNNaN;
+  background-color: #f2deca;
+  border-bottom: 1px solid #efd6be;
+}
+.box .orange .row.hover:hover > .column,
+.box .orange .row:hover > .col.hover > .column,
+.box .orange .item.hover:hover > .column,
+.box .orange .row.hover:hover > .column-input,
+.box .orange .row:hover > .col.hover > .column-input,
+.box .orange .item.hover:hover > .column-input,
+.box .orange .row.hover:hover > .empty,
+.box .orange .row:hover > .col.hover > .empty,
+.box .orange .item.hover:hover > .empty,
+.box .orange .row.hover:hover .column-button,
+.box .orange .row:hover > .col.hover .column-button,
+.box .orange .item.hover:hover .column-button {
+  background-color: #f0d8c2;
+  border-bottom: 1px solid #edd1b6;
+}
+.box .orange tr.hover:hover td {
+  background-color: #f0d8c2;
+  border-bottom: 1px solid #eed3ba;
+}
+.box .orange tr.hover:hover td:hover {
+  background-color: #f2deca;
+  border-bottom: 1px solid #f0d8c2;
+}
+.box .orange .spreadsheet .row.hover.head {
+  background: #ebccad;
+}
+.box .orange .button {
+  color: #NaNNaNNaN;
+  background-color: #f2e5d9;
+}
+.box .orange .button:hover {
+  color: #f2e5d9;
+  background-color: #e5ccb3;
+}
+.box .orange .button.outline {
+  color: #f2e5d9;
+  border-color: #f2e5d9;
+}
+.box .orange .button.outline:hover {
+  color: #e5ccb3;
+  border-color: #e5ccb3;
+}
+.box .orange .button.circle {
+  color: #NaNNaNNaN;
+  background-color: #f2e5d9;
+}
+.box .orange .button.circle:hover {
+  color: #NaNNaNNaN;
+  background-color: #e5ccb3;
+}
+.box .orange .button.circle a:link use,
+.box .orange .button.circle a:visited use {
+  color: #NaNNaNNaN;
+}
+.box .orange .button.circle a:hover use,
+.box .orange .button.circle a:active use {
+  color: #NaNNaNNaN;
+}
+.box .red {
+  color: #NaNNaNNaN;
+}
+.box .red a:link {
+  color: #666666;
+}
+.box .red a:visited {
+  color: #666666;
+}
+.box .red a:hover {
+  color: #33ffcc;
+}
+.box .red a:active {
+  color: #00ffcc;
+}
+.box .red .row.link a:link,
+.box .red .col.link a:link,
+.box .red .row.link a:visited,
+.box .red .col.link a:visited,
+.box .red .row.link a:hover,
+.box .red .col.link a:hover,
+.box .red .row.link a:active,
+.box .red .col.link a:active {
+  color: #NaNNaNNaN;
+}
+.box .red a:link use {
+  color: #c20a0a;
+}
+.box .red a:visited use {
+  color: #c20a0a;
+}
+.box .red a:hover use {
+  color: #NaNNaNNaN;
+}
+.box .red a:active use {
+  color: #NaNNaNNaN;
+}
+.box .red .icon use {
+  color: #c20a0a;
+}
+.box .red .bg {
+  background-color: #f2d9d9;
+}
+.box .red .bg.dark {
+  background-color: #eec4c4;
+}
+.box .red .list-item {
+  background-color: #f6e4e4;
+}
+.box .red .list-item:hover {
+  background-color: #f0cccc;
+}
+.box .red .bg {
+  background-color: #f2d9d9;
+}
+.box .red .bg.dark {
+  background-color: #eec4c4;
+}
+.box .red div.row,
+.box .red div.row.hover,
+.box .red div.item.hover {
+  background-color: #f2d9d9;
+}
+.box .red div.row > .column-label,
+.box .red div.row.hover > .column-label,
+.box .red div.item.hover > .column-label,
+.box .red div.row .column-icon,
+.box .red div.row.hover .column-icon,
+.box .red div.item.hover .column-icon {
+  color: rgba(NaN, NaN, NaN, 0.8);
+  background-color: #f6e4e4;
+  border-bottom: 1px solid #f4dddd;
+}
+.box .red div.row > .column,
+.box .red div.row.hover > .column,
+.box .red div.item.hover > .column,
+.box .red div.row > .column-input,
+.box .red div.row.hover > .column-input,
+.box .red div.item.hover > .column-input,
+.box .red div.row > .empty,
+.box .red div.row.hover > .empty,
+.box .red div.item.hover > .empty,
+.box .red div.row .column-button,
+.box .red div.row.hover .column-button,
+.box .red div.item.hover .column-button {
+  background-color: #f2d9d9;
+  border-bottom: 1px solid #f0d1d1;
+}
+.box .red tr.hover td {
+  background-color: #f6e4e4;
+  border-bottom: 1px solid #f4dddd;
+}
+.box .red .row.hover:hover,
+.box .red .row:hover > .col.hover,
+.box .red .item.hover:hover {
+  background-color: #eec4c4;
+}
+.box .red .row.hover:hover > .column-label,
+.box .red .row:hover > .col.hover > .column-label,
+.box .red .item.hover:hover > .column-label,
+.box .red .row.hover:hover .column-icon,
+.box .red .row:hover > .col.hover .column-icon,
+.box .red .item.hover:hover .column-icon {
+  color: #NaNNaNNaN;
+  background-color: #f0cccc;
+  border-bottom: 1px solid #edc0c0;
+}
+.box .red .row.hover:hover > .column,
+.box .red .row:hover > .col.hover > .column,
+.box .red .item.hover:hover > .column,
+.box .red .row.hover:hover > .column-input,
+.box .red .row:hover > .col.hover > .column-input,
+.box .red .item.hover:hover > .column-input,
+.box .red .row.hover:hover > .empty,
+.box .red .row:hover > .col.hover > .empty,
+.box .red .item.hover:hover > .empty,
+.box .red .row.hover:hover .column-button,
+.box .red .row:hover > .col.hover .column-button,
+.box .red .item.hover:hover .column-button {
+  background-color: #eec4c4;
+  border-bottom: 1px solid #eab8b8;
+}
+.box .red tr.hover:hover td {
+  background-color: #eec4c4;
+  border-bottom: 1px solid #ebbcbc;
+}
+.box .red tr.hover:hover td:hover {
+  background-color: #f0cccc;
+  border-bottom: 1px solid #eec4c4;
+}
+.box .red .spreadsheet .row.hover.head {
+  background: #e8b0b0;
+}
+.box .red .button {
+  color: #NaNNaNNaN;
+  background-color: #f2d9d9;
+}
+.box .red .button:hover {
+  color: #f2d9d9;
+  background-color: #e5b3b3;
+}
+.box .red .button.outline {
+  color: #f2d9d9;
+  border-color: #f2d9d9;
+}
+.box .red .button.outline:hover {
+  color: #e5b3b3;
+  border-color: #e5b3b3;
+}
+.box .red .button.circle {
+  color: #NaNNaNNaN;
+  background-color: #f2d9d9;
+}
+.box .red .button.circle:hover {
+  color: #NaNNaNNaN;
+  background-color: #e5b3b3;
+}
+.box .red .button.circle a:link use,
+.box .red .button.circle a:visited use {
+  color: #NaNNaNNaN;
+}
+.box .red .button.circle a:hover use,
+.box .red .button.circle a:active use {
+  color: #NaNNaNNaN;
+}

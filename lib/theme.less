@@ -1,0 +1,371 @@
+﻿////////////////////////////////////////////
+// Editor Defaults
+////////////////////////////////////////////
+@purple:#C100F5;
+@blue:#0046E5;
+@turqoise:#00E9E2;
+@green:#00E044;
+@yellow:#FFE000;
+@orange:#FF7E00;
+@red:#FF0000;
+
+
+////////////////////////////////////////////
+// Interfaces
+////////////////////////////////////////////
+
+//setup color calculations for a dark & light interface
+.setupInterface(dark){
+    //setup an interface that uses a dark background color
+
+    @perc-light:0%; //lighten
+    @perc-dark:30%; //darken
+    @perc-desat:30%; //desaturate
+
+    @perc-hov-light:0%;  //hover lighten
+    @perc-hov-dark:27%;  //hover darken
+    @perc-hov-desat:30%;  //hover desaturate
+
+    @perc-field-light:10%; //input field lighten
+    @perc-field-dark:0%; //input field darken
+
+    @perc-button-light:10%; //button lighten
+    @perc-button-dark:0%; //button darken
+
+    @color-light:50%; //lighten
+    @color-dark:0%; //darken
+    @color-hov-light:70%; //lighten
+    @color-hov-dark:0%; //darken
+
+    @color-purple:  desaturate(darken(lighten(@purple,@perc-light),@perc-dark),@perc-desat);
+    @color-blue:    desaturate(darken(lighten(@blue,@perc-light),@perc-dark),@perc-desat);
+    @color-turqoise:desaturate(darken(lighten(@turqoise,@perc-light),@perc-dark),@perc-desat);
+    @color-green:   desaturate(darken(lighten(@green,@perc-light),@perc-dark),@perc-desat);
+    @color-yellow:  desaturate(darken(lighten(@yellow,@perc-light),@perc-dark),@perc-desat);
+    @color-orange:  desaturate(darken(lighten(@orange,@perc-light),@perc-dark),@perc-desat);
+    @color-red:     desaturate(darken(lighten(@red,@perc-light),@perc-dark),@perc-desat);
+
+    @color-purple-hover:  desaturate(darken(lighten(@purple,@perc-hov-light),@perc-hov-desat),@perc-hov-dark);
+    @color-blue-hover:    desaturate(darken(lighten(@blue,@perc-hov-light),@perc-hov-desat),@perc-hov-dark);
+    @color-turqoise-hover:desaturate(darken(lighten(@turqoise,@perc-hov-light),@perc-hov-desat),@perc-hov-dark - 10);
+    @color-green-hover:   desaturate(darken(lighten(@green,@perc-hov-light),@perc-hov-desat),@perc-hov-dark);
+    @color-yellow-hover:  desaturate(darken(lighten(@yellow,@perc-hov-light),@perc-hov-desat),@perc-hov-dark - 5);
+    @color-orange-hover:  desaturate(darken(lighten(@orange,@perc-hov-light),@perc-hov-desat),@perc-hov-dark - 3);
+    @color-red-hover:     desaturate(darken(lighten(@red,@perc-hov-light),@perc-hov-desat),@perc-hov-dark);
+}
+
+.setupInterface(light){
+    //setup an interface that uses a light background color
+
+    @perc-light:45%; //lighten
+    @perc-dark:5%; //darken
+    @perc-desat:50%; //desaturate
+
+    @perc-hov-light:35%;  //hover lighten
+    @perc-hov-dark:30%;  //hover darken
+    @perc-hov-desat:50%;  //hover desaturate
+
+    @perc-field-light:20%; //input field lighten
+    @perc-field-dark:0%; //input field darken
+
+    @perc-button-light:0%; //button lighten
+    @perc-button-dark:10%; //button darken
+
+    @color-light:0%; //lighten
+    @color-dark:50%; //darken
+    @color-hov-light:0%; //lighten
+    @color-hov-dark:70%; //darken
+
+    @color-purple:  desaturate(darken(lighten(@purple,@perc-light),@perc-dark),@perc-desat);
+    @color-blue:    desaturate(darken(lighten(@blue,@perc-light),@perc-dark),@perc-desat);
+    @color-turqoise:desaturate(darken(lighten(@turqoise,@perc-light),@perc-dark),@perc-desat);
+    @color-green:   desaturate(darken(lighten(@green,@perc-light),@perc-dark),@perc-desat);
+    @color-yellow:  desaturate(darken(lighten(@yellow,@perc-light),@perc-dark),@perc-desat);
+    @color-orange:  desaturate(darken(lighten(@orange,@perc-light),@perc-dark),@perc-desat);
+    @color-red:     desaturate(darken(lighten(@red,@perc-light),@perc-dark),@perc-desat);
+
+    @color-purple-hover:  desaturate(lighten(@purple,@perc-hov-light),@perc-hov-desat);
+    @color-blue-hover:    desaturate(lighten(@blue,@perc-hov-light),@perc-hov-desat - 10);
+    @color-turqoise-hover:desaturate(lighten(@turqoise,@perc-hov-light),@perc-hov-desat - 10);
+    @color-green-hover:   desaturate(lighten(@green,@perc-hov-light),@perc-hov-desat);
+    @color-yellow-hover:  desaturate(lighten(@yellow,@perc-hov-light),@perc-hov-desat - 20);
+    @color-orange-hover:  desaturate(lighten(@orange,@perc-hov-light),@perc-hov-desat - 10);
+    @color-red-hover:     desaturate(lighten(@red,@perc-hov-light),@perc-hov-desat - 5);
+}
+
+//render all colors for an interface
+.renderInterface(@light-or-dark){
+    .setupInterface(@light-or-dark);
+
+    background-color:@window-bg; 
+
+    .grip{background-color:@window-grip;}
+    .title{color:@window-title;}
+    .close a:hover use{color:@window-close !important;}
+    &.arrow-top:after{border-bottom-color:@window-bg;}
+    .section-info{background-color:@window-header;}
+    .row.header{background-color:@window-header;}
+    .top-menu, .side-menu{background-color:@window-top-menu;}
+    .tabs .item{color:@window-color-faded;background-color:@window-tab;}
+    .tabs .item:hover{color:@window-color;background-color:@window-tab-hover;}
+    .tabs .item.selected{color:@window-color;border-bottom:2px solid @window-tab-selected;}
+
+    .top-menu{
+        .tabs .item{color:@window-color-faded;background-color:@window-tab;}
+        .tabs .item:hover{color:@window-color;background-color:@window-tab-hover;}
+        .tabs .item.selected{color:@window-color;border-bottom:2px solid @window-tab-selected;}
+    }
+
+    .help-info{color:@window-color; background-color:darken(@window-bg,5%);}
+    .column-help > div{color:@window-color-help; background-color:darken(@window-bg,5%);}
+    .column-help > div:after {border-right-color:darken(@window-bg,5%);}
+    .column-help .row.color:hover{color:darken(saturate(@window-color-help,20%),2%); background-color:darken(@window-bg,8%);}
+
+    & when(@has-colors = true){
+        .message.alert{background-color:@msg-alert-bg; color:@msg-alert-color;}
+        .message.alert a:link {color: @msg-alert-alink;}
+        .message.alert a:visited {color: @msg-alert-avisited;}
+        .message.alert a:hover {color: @msg-alert-ahover;}
+        .message.alert a:active {color: @msg-alert-aactive;}
+        .message.error{background-color:@msg-err-bg; color:@msg-err-color;}
+        .message.error a:link {color: @msg-err-alink;}
+        .message.error a:visited {color: @msg-err-avisited;}
+        .message.error a:hover {color: @msg-err-ahover;}
+        .message.error a:active {color: @msg-err-aactive;}
+    }
+    
+
+    @border:2%; 
+
+    .renderColor(@color-name, @color-hover){
+        @name:~'hover';
+        @bgcolor:@color-name;
+        @hovercolor:@color-hover;
+        @font-color:darken(lighten(@color-name,calc(@color-light * 2)),calc(@color-dark * 2));
+        @svg2-link:saturate(darken(lighten(@color-name,@color-light),@color-dark), @perc-desat - 10);
+        @svg2-hover:saturate(darken(lighten(@color-name,calc(@color-light * 3)),calc(@color-dark * 3)), @perc-hov-desat - 10);
+        @svg2-active:@svg2-hover;
+        @svg2-visited:@svg2-link;
+        @lighten-label: 3%;
+        @lighten-hover: 2%;
+        @font-alpha:80%;
+        @name-only:false;
+        @has-buttons:false;
+        @has-fields:false;
+        .colors();
+    }
+
+    // Color Default //////////////////////////////////////////////////////////////////////////////////////////////////
+    &{
+        @name:~'hover';
+        @bgcolor:@window-bg;
+        @hovercolor:@window-hover;
+        @font-color:@window-color;
+        @lighten-label: 3%;
+        @lighten-hover: 3%;
+        @font-alpha:70%;
+        @name-only:false;
+        .colors();
+    }
+        
+    // Color Dark //////////////////////////////////////////////////////////////////////////////////////////////////
+    &{
+        @name:~'hover-alt';
+        @bgcolor:darken(@window-bg,1%);
+        @hovercolor:@window-hover;
+        @font-color:@window-color;
+        @lighten-label: 3%;
+        @lighten-hover: 3%;
+        @font-alpha:70%;
+        @name-only:true;
+        .colors();
+    }
+
+    // Color Purple //////////////////////////////////////////////////////////////////////////////////////////////////
+    & .purple when (@has-colors = true){
+        .renderColor(@color-purple, @color-purple-hover);
+    }
+
+    // Color Blue //////////////////////////////////////////////////////////////////////////////////////////////////
+    & .blue when (@has-colors = true){
+        .renderColor(@color-blue, @color-blue-hover);
+    }
+
+    // Color Turqoise //////////////////////////////////////////////////////////////////////////////////////////////////
+    & .turqoise when (@has-colors = true){
+        .renderColor(@color-turqoise, @color-turqoise-hover);
+    }
+
+    // Color Green //////////////////////////////////////////////////////////////////////////////////////////////////
+    & .green when (@has-colors = true){
+        .renderColor(@color-green, @color-green-hover);
+    }
+
+    // Color Yellow //////////////////////////////////////////////////////////////////////////////////////////////////
+    & .yellow when (@has-colors = true){
+        .renderColor(@color-yellow, @color-yellow-hover);
+    }
+
+    // Color Orange //////////////////////////////////////////////////////////////////////////////////////////////////
+    & .orange when (@has-colors = true){
+        .renderColor(@color-orange, @color-orange-hover);
+    }
+
+    // Color Red //////////////////////////////////////////////////////////////////////////////////////////////////
+    & .red when (@has-colors = true){
+        .renderColor(@color-red, @color-red-hover);
+    }
+}
+
+//set colors for part of an interface
+.colors(){
+    //function to generate colored rows, columns, & tables
+
+    //setup offset colors
+    @label-bg:lighten(@bgcolor,@lighten-label);
+    @label-hover:lighten(@hovercolor,@lighten-hover);
+    @input-bg:@bgcolor;
+    @input-hover:@hovercolor;
+    @field-bg:darken(lighten(@bgcolor, @perc-field-light), @perc-field-dark);
+    @field-hover:darken(lighten(@bgcolor, @perc-field-light), @perc-field-dark);
+    @field-focus:darken(lighten(@bgcolor, @perc-field-light * 1.8), @perc-field-dark * 1.8);
+    @field-color:fade(@font-color, @font-alpha + 20%);
+    @field-hovercolor:@font-color;
+
+
+    & when (@name-only = false){
+        //font colors
+        color:@font-color;
+
+        a:link{color:@a-link;}
+        a:visited{color:@a-visited;}
+        a:hover{color:@a-hover;}
+        a:active{color:@a-active;}
+        .row, .col{
+            &.link a:link, &.link a:visited, &.link a:hover, &.link a:active{color:@font-color} 
+        }
+
+        //svg icon colors
+        a:link use{color:@svg2-link;}
+        a:visited use{color:@svg2-visited;}
+        a:hover use{color:@svg2-hover;}
+        a:active use{color:@svg2-active;}
+        .icon use{color:@svg2-link;}
+    
+        .bg{background-color:@bgcolor;}
+        .bg.dark{background-color:@hovercolor;}
+
+        //list items
+        .list-item{background-color:@label-bg;}
+        .list-item:hover{background-color:@label-hover;}
+    }
+
+    & when (@name-only = true){
+        //font colors
+        .@{name}{color:@font-color;}
+
+        .@{name} a:link{color:@a-link;}
+        .@{name} a:visited{color:@a-visited;}
+        .@{name} a:hover{color:@a-hover;}
+        .@{name} a:active{color:@a-active;}
+        .row.@{name} , .row.@{name} .col{
+            &.link a:link, &.link a:visited, &.link a:hover, &.link a:active{color:@font-color} 
+        }
+
+        //svg icon colors
+        .@{name} a:link use{color:@svg2-link;}
+        .@{name} a:visited use{color:@svg2-visited;}
+        .@{name} a:hover use{color:@svg2-hover;}
+        .@{name} a:active use{color:@svg2-active;}
+        .@{name} .icon use{color:@svg2-link;}
+
+        //list items
+        .@{name} .list-item{background-color:@label-bg;}
+        .@{name} .list-item:hover{background-color:@label-hover;}
+    }
+    
+    .bg{background-color:@bgcolor;}
+    .bg.dark{background-color:@hovercolor;} 
+
+    //row colors
+    div.row, div.row.@{name}, div.item.@{name}{.row-colors();}
+    tr.@{name}{.tr-colors();}
+
+    //row hover colors
+    .row.@{name}:hover, 
+    .row:hover > .col.@{name},
+    .item.@{name}:hover{.row-hover();}
+    tr.@{name}:hover{.tr-hover();}
+
+    .spreadsheet{
+        .row.@{name}.head{background:darken(lighten(@hovercolor,@color-light / 10),@color-dark / 10);}
+    }
+
+    //input field colors
+    & when (@has-fields = true){
+        .@{name} input, 
+        .@{name} textarea, 
+        .@{name} select{color:@field-color; background-color:@field-bg;}
+        .@{name}:hover input, 
+        .@{name}:hover textarea, 
+        .@{name}:hover select{color:@field-hovercolor; background-color:@field-hover;}
+        .@{name} input:focus, 
+        .@{name} textarea:focus, 
+        .@{name} select:focus{background-color:@field-focus;}
+        .@{name} .field-label{color:@field-label-color;}
+    }
+
+    //button colors
+    & when (@has-buttons = true){
+        .button{color:@button-color; background-color:@button-bg;}
+        .button:hover{color:@button-color; background-color:darken(lighten(@button-bg, @perc-button-light), @perc-button-dark);}
+        .button.apply{color:@button-apply-color; background-color:@button-apply-bg;}
+        .button.apply:hover{color:@button-apply-color; background-color:darken(lighten(@button-apply-bg, @perc-button-light), @perc-button-dark);}
+        .button.cancel{color:@button-cancel-color; background-color:@button-cancel-bg;}
+        .button.cancel:hover{color:@button-cancel-color; background-color:darken(lighten(@button-cancel-bg, @perc-button-light), @perc-button-dark);}
+        .button.outline{color:@button-outline-color; border-color:fade(@button-outline-bg, 30%);}
+        .button.outline:hover{color:@button-outline-color; border-color:fade(darken(lighten(@button-outline-bg, @perc-button-light), @perc-button-dark), 70%);}
+    }
+
+    & when (@has-buttons = false){
+        .button{color:@font-color; background-color:@bgcolor;}
+        .button:hover{color:@bgcolor; background-color:darken(lighten(@bgcolor, @perc-button-light), @perc-button-dark);}
+        .button.outline{color:@bgcolor; border-color:@bgcolor;}
+        .button.outline:hover{color:darken(lighten(@bgcolor, @perc-button-light), @perc-button-dark); border-color:darken(lighten(@bgcolor, @perc-button-light), @perc-button-dark);}
+        .button.circle{color:@font-color; background-color:@bgcolor;}
+        .button.circle:hover{color:@font-color; background-color:darken(lighten(@bgcolor, @perc-button-light), @perc-button-dark);}
+        .button.circle a:link use, .button.circle a:visited use{color:@font-color;}
+        .button.circle a:hover use, .button.circle a:active use{color:@font-color;}
+    }
+
+
+
+    //color sub-functions
+    .row-colors(){
+        @label-border:darken(@label-bg,@border);
+        @input-border:darken(@input-bg,@border);
+        background-color:@bgcolor;
+        > .column-label, .column-icon{color:fade(@font-color, @font-alpha); background-color:@label-bg; border-bottom:1px solid @label-border;}
+        > .column, > .column-input, > .empty, .column-button{background-color:@input-bg; border-bottom:1px solid @input-border;}
+    }
+
+    .row-hover(){
+        @label-border:darken(@label-hover,@border + 1);
+        @input-border:darken(@input-hover,@border + 1);
+        background-color:@input-hover;
+            > .column-label, .column-icon{color:@font-color; background-color:@label-hover; border-bottom:1px solid @label-border;}
+            > .column, > .column-input, > .empty, .column-button{background-color:@input-hover; border-bottom:1px solid @input-border;}
+    }
+
+    .tr-colors(){
+        @label-border:darken(@label-bg,@border);
+        td{background-color:@label-bg; border-bottom:1px solid @label-border;}
+    }
+
+    .tr-hover(){
+        @label-border:darken(@label-hover,@border);
+        @input-border:darken(@input-hover,@border);
+        td{background-color:@input-hover; border-bottom:1px solid @input-border;}
+        td:hover{background-color:@label-hover; border-bottom:1px solid @label-border;}
+    }
+}

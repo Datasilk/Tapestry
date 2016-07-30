@@ -1,0 +1,77 @@
+﻿@import "../lib/theme.less";
+
+//editor toolbar colors
+@bg-color:#efefef;
+@bg-color-hover:#C5E9E7;
+@bg-color-selected:#76c6c1;
+@color:#666;
+@color-faded:#aaaaaa;
+
+@link:#666;
+@hover:#33ffcc;
+@active:#00ffcc;
+@visited:#666;
+
+@svg-link:#009C75;
+@svg-hover:#00C561;
+@svg-active:#00945B;
+@svg-visited:#009C75;
+@svg-saving:#AB0050;
+@svg-selected:#007B80;
+
+///////////////////////////////////////
+// Setup Page Editor Interface Colors
+.box{
+    @window-bg:@bg-color;
+    @window-hover:@bg-color-hover;
+    @window-color:@color;
+    @window-color-faded:mix(@window-bg, @window-color, 50%);
+    @window-color-help:#009C75;
+    @window-title:darken(@window-color, 5%);
+    @window-grip:darken(@window-bg, 5%);
+    @window-header:darken(@window-bg, 5%);
+    @window-close:#cc0000;
+    @window-top-menu:darken(@window-bg, 7%);
+    @window-tab:darken(@window-bg, 7%);
+    @window-tab-hover:darken(@window-hover, 7%);
+    @window-tab-selected:@bg-color-selected;
+    @button-bg:#00AC83;
+    @button-color:#ffffff;
+    @button-apply-bg:#00AC83;
+    @button-apply-color:#ffffff;
+    @button-cancel-bg:#aaa;
+    @button-cancel-color:#ffffff;
+    @button-outline-bg:#ffffff;
+    @button-outline-color:#ffffff;
+    @a-link:@link;
+    @a-hover:@hover;
+    @a-active:@active;
+    @a-visited:@visited;
+    @svg2-link:@svg-link;
+    @svg2-hover:@svg-hover;
+    @svg2-active:@svg-active;
+    @svg2-visited:@svg-visited;
+    @select-bgcolor:#252525;
+    @select-hovercolor:#000000;
+    @select-color:#ffffff;
+    @select-panel-bgcolor:#3AA39D;
+    @select-panel-hovercolor:#3DABA6;
+    @select-panel-color:#ffffff;
+    @field-label-color:#00b98d;
+    @msg-alert-bg:#aed1e8;
+    @msg-alert-color:#003580;
+    @msg-alert-alink:#0034ff;
+    @msg-alert-avisited:#0034ff;
+    @msg-alert-ahover:#0005ff;
+    @msg-alert-aactive:#0005ff;
+    @msg-err-bg:#c28686;
+    @msg-err-color:#5c0000;
+    @msg-err-alink:#ff6500;
+    @msg-err-avisited:#ff6500;
+    @msg-err-ahover:#ff5600;
+    @msg-err-aactive:#ff5600;
+    @has-colors:true;
+    @has-fields:true;
+    @has-buttons:true;
+    .renderInterface(light);
+}
