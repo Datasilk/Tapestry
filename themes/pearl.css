@@ -1,1613 +1,5148 @@
+@import url(https://fonts.googleapis.com/css?family=Jaldi:400,700);
+/* fonts */
+body {
+  font-family: Jaldi;
+}
 .box {
-  background-color: #efefef;
-  color: #666666;
-}
-.box .grip {
-  background-color: #e2e2e2;
-}
-.box .title {
-  color: #595959;
-}
-.box .close a:hover use {
-  color: #cc0000 !important;
-}
-.box.arrow-top:after {
-  border-bottom-color: #efefef;
-}
-.box .section-info {
-  background-color: #e2e2e2;
-}
-.box .row.header {
-  background-color: #e2e2e2;
-}
-.box .top-menu,
-.box .side-menu {
-  background-color: #dddddd;
-}
-.box .tabs .item {
-  color: #ababab;
-  background-color: #dddddd;
-}
-.box .tabs .item:hover {
-  color: #666666;
-  background-color: #abdfdc;
-}
-.box .tabs .item.selected {
-  color: #666666;
-  border-bottom: 2px solid #76c6c1;
-}
-.box .top-menu .tabs .item {
-  color: #ababab;
-  background-color: #dddddd;
-}
-.box .top-menu .tabs .item:hover {
-  color: #666666;
-  background-color: #abdfdc;
-}
-.box .top-menu .tabs .item.selected {
-  color: #666666;
-  border-bottom: 2px solid #76c6c1;
-}
-.box .help-info {
-  color: #666666;
-  background-color: #e2e2e2;
-}
-.box .column-help > div {
-  color: #009c75;
-  background-color: #e2e2e2;
-}
-.box .column-help > div:after {
-  border-right-color: #e2e2e2;
-}
-.box .column-help .row.color:hover {
-  color: #00926d;
-  background-color: #dbdbdb;
-}
-.box .message.alert {
-  background-color: #aed1e8;
-  color: #003580;
-}
-.box .message.alert a:link {
-  color: #0034ff;
-}
-.box .message.alert a:visited {
-  color: #0034ff;
-}
-.box .message.alert a:hover {
-  color: #0005ff;
-}
-.box .message.alert a:active {
-  color: #0005ff;
-}
-.box .message.error {
-  background-color: #c28686;
-  color: #5c0000;
-}
-.box .message.error a:link {
-  color: #ff6500;
-}
-.box .message.error a:visited {
-  color: #ff6500;
-}
-.box .message.error a:hover {
-  color: #ff5600;
-}
-.box .message.error a:active {
-  color: #ff5600;
-}
-.box a:link {
-  color: #666666;
+  background: #efefef;
+  color: #444444;
 }
 .box a:visited {
-  color: #666666;
-}
-.box a:hover {
-  color: #33ffcc;
+  color: #009b87;
 }
 .box a:active {
-  color: #00ffcc;
+  color: #00c5c7;
 }
-.box .row.link a:link,
-.box .col.link a:link,
-.box .row.link a:visited,
-.box .col.link a:visited,
-.box .row.link a:hover,
-.box .col.link a:hover,
-.box .row.link a:active,
-.box .col.link a:active {
-  color: #666666;
+.box a:hover {
+  color: #00c5c7;
 }
-.box a:link use {
-  color: #009c75;
+.box a:link {
+  color: #009b87;
 }
 .box a:visited use {
-  color: #009c75;
-}
-.box a:hover use {
-  color: #00c561;
+  color: #009b87;
 }
 .box a:active use {
-  color: #00945b;
+  color: #00c5c7;
 }
-.box .icon use {
-  color: #009c75;
+.box a:hover use {
+  color: #00c5c7;
 }
-.box .bg {
-  background-color: #efefef;
+.box a:link use {
+  color: #009b87;
 }
-.box .bg.dark {
-  background-color: #c5e9e7;
+.box a.faded:visited {
+  color: #58cabb;
 }
-.box .list-item {
-  background-color: #f7f7f7;
+.box a.faded:active {
+  color: #66fdff;
 }
-.box .list-item:hover {
-  background-color: #d0edec;
+.box a.faded:hover {
+  color: #61d4d5;
 }
-.box .bg {
-  background-color: #efefef;
+.box a.faded:link {
+  color: #58cabb;
 }
-.box .bg.dark {
-  background-color: #c5e9e7;
+.box a.faded:visited use {
+  color: #58cabb;
 }
-.box div.row,
-.box div.row.hover,
-.box div.item.hover {
-  background-color: #efefef;
+.box a.faded:active use {
+  color: #66fdff;
 }
-.box div.row > .column-label,
-.box div.row.hover > .column-label,
-.box div.item.hover > .column-label,
-.box div.row .column-icon,
-.box div.row.hover .column-icon,
-.box div.item.hover .column-icon {
-  color: rgba(102, 102, 102, 0.7);
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #f2f2f2;
+.box a.faded:hover use {
+  color: #61d4d5;
 }
-.box div.row > .column,
-.box div.row.hover > .column,
-.box div.item.hover > .column,
-.box div.row > .column-input,
-.box div.row.hover > .column-input,
-.box div.item.hover > .column-input,
-.box div.row > .empty,
-.box div.row.hover > .empty,
-.box div.item.hover > .empty,
-.box div.row .column-button,
-.box div.row.hover .column-button,
-.box div.item.hover .column-button {
-  background-color: #efefef;
-  border-bottom: 1px solid #eaeaea;
+.box a.faded:link use {
+  color: #58cabb;
 }
-.box tr.hover td {
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #f2f2f2;
+.box .icon a:visited,
+.box .nolinks a:visited {
+  color: #555555 !important;
 }
-.box .row.hover:hover,
-.box .row:hover > .col.hover,
-.box .item.hover:hover {
-  background-color: #c5e9e7;
+.box .icon a:active,
+.box .nolinks a:active {
+  color: #00a46c !important;
 }
-.box .row.hover:hover > .column-label,
-.box .row:hover > .col.hover > .column-label,
-.box .item.hover:hover > .column-label,
-.box .row.hover:hover .column-icon,
-.box .row:hover > .col.hover .column-icon,
-.box .item.hover:hover .column-icon {
-  color: #666666;
-  background-color: #d0edec;
-  border-bottom: 1px solid #c5e9e7;
+.box .icon a:hover,
+.box .nolinks a:hover {
+  color: #009b87 !important;
 }
-.box .row.hover:hover > .column,
-.box .row:hover > .col.hover > .column,
-.box .item.hover:hover > .column,
-.box .row.hover:hover > .column-input,
-.box .row:hover > .col.hover > .column-input,
-.box .item.hover:hover > .column-input,
-.box .row.hover:hover > .empty,
-.box .row:hover > .col.hover > .empty,
-.box .item.hover:hover > .empty,
-.box .row.hover:hover .column-button,
-.box .row:hover > .col.hover .column-button,
-.box .item.hover:hover .column-button {
-  background-color: #c5e9e7;
-  border-bottom: 1px solid #bae5e2;
+.box .icon a:link,
+.box .nolinks a:link {
+  color: #555555 !important;
 }
-.box tr.hover:hover td {
-  background-color: #c5e9e7;
-  border-bottom: 1px solid #bee6e4;
+.box .icon a:visited use,
+.box .nolinks a:visited use {
+  color: #555555;
 }
-.box tr.hover:hover td:hover {
-  background-color: #d0edec;
-  border-bottom: 1px solid #c9eae9;
+.box .icon a:active use,
+.box .nolinks a:active use {
+  color: #00a46c;
 }
-.box .spreadsheet .row.hover.head {
-  background: #b3e2df;
+.box .icon a:hover use,
+.box .nolinks a:hover use {
+  color: #009b87;
 }
-.box .hover input,
-.box .hover textarea,
-.box .hover select {
-  color: rgba(102, 102, 102, 0.9);
-  background-color: #ffffff;
+.box .icon a:link use,
+.box .nolinks a:link use {
+  color: #555555;
 }
-.box .hover:hover input,
-.box .hover:hover textarea,
-.box .hover:hover select {
-  color: #666666;
-  background-color: #ffffff;
+.box .font-faded {
+  color: rgba(0, 0, 0, 0.3);
 }
-.box .hover input:focus,
-.box .hover textarea:focus,
-.box .hover select:focus {
-  background-color: #ffffff;
+.box .font-price {
+  color: #009b87;
 }
-.box .hover .field-label {
-  color: #00b98d;
+.box .font-positive {
+  color: #4da400;
 }
-.box .button {
+.box .font-negative {
+  color: #ff2222;
+}
+.box .font-time {
+  color: #376eb2;
+}
+.box .font-red {
+  color: #ff2222;
+}
+.box .font-orange {
+  color: #ff6b22;
+}
+.box .font-yelloworange {
+  color: #ff9f22;
+}
+.box .font-yellow {
+  color: #ffc822;
+}
+.box .font-yellowgreen {
+  color: #b2c700;
+}
+.box .font-green {
+  color: #4da400;
+}
+.box .font-turqoise {
+  color: #37b277;
+}
+.box .font-skyblue {
+  color: #37b2ab;
+}
+.box .font-blue {
+  color: #376eb2;
+}
+.box .font-purple {
+  color: #6b37b2;
+}
+.box .font-pink {
+  color: #c120b0;
+}
+.box .font-grey {
+  color: #6a6a6a;
+}
+.box .row {
+  background: transparent;
+  color: #444444;
+}
+.box .row a:visited {
+  color: #009b87;
+}
+.box .row a:active {
+  color: #00c5c7;
+}
+.box .row a:hover {
+  color: #00c5c7;
+}
+.box .row a:link {
+  color: #009b87;
+}
+.box .row a:visited use {
+  color: #555555;
+}
+.box .row a:active use {
+  color: #00a46c;
+}
+.box .row a:hover use {
+  color: #009b87;
+}
+.box .row a:link use {
+  color: #555555;
+}
+.box .row.hover:hover {
+  background: #a7d8db;
+  color: #33494c;
+}
+.box .row.selected {
+  background: #5ec7ce;
+  color: #13474f;
+}
+.box .row.selected a:visited {
+  color: #00b4ff;
+}
+.box .row.selected a:active {
+  color: #00c5c7;
+}
+.box .row.selected a:hover {
+  color: #00c5c7;
+}
+.box .row.selected a:link {
+  color: #00b4ff;
+}
+.box .row.selected a:visited use {
+  color: #185a64;
+}
+.box .row.selected a:active use {
+  color: #00a46c;
+}
+.box .row.selected a:hover use {
+  color: #009b87;
+}
+.box .row.selected a:link use {
+  color: #185a64;
+}
+.box .row.alt {
+  background: #d0d0d0;
+  color: #444444;
+}
+.box .row.alt a:visited {
+  color: #009b87;
+}
+.box .row.alt a:active {
+  color: #00c5c7;
+}
+.box .row.alt a:hover {
+  color: #00c5c7;
+}
+.box .row.alt a:link {
+  color: #009b87;
+}
+.box .row.alt a:visited use {
+  color: #555555;
+}
+.box .row.alt a:active use {
+  color: #00a46c;
+}
+.box .row.alt a:hover use {
+  color: #009b87;
+}
+.box .row.alt a:link use {
+  color: #555555;
+}
+.box .row.alt.hover.alt:hover {
+  background: #91cbcf;
+  color: #314747;
+}
+.box .row.alt.selected {
+  background: #43b9c1;
+  color: #1c4646;
+}
+.box .row.alt.selected a:visited {
+  color: #00b4ff;
+}
+.box .row.alt.selected a:active {
+  color: #00c5c7;
+}
+.box .row.alt.selected a:hover {
+  color: #00c5c7;
+}
+.box .row.alt.selected a:link {
+  color: #00b4ff;
+}
+.box .row.alt.selected a:visited use {
+  color: #185a64;
+}
+.box .row.alt.selected a:active use {
+  color: #00a46c;
+}
+.box .row.alt.selected a:hover use {
+  color: #009b87;
+}
+.box .row.alt.selected a:link use {
+  color: #185a64;
+}
+.box .col.input-label {
+  color: #007a8d;
+}
+.box .button,
+.box a.button {
+  background: #009b87;
+  border: transparent;
   color: #ffffff;
-  background-color: #00ac83;
 }
-.box .button:hover {
+.box .button:hover,
+.box a.button:hover {
+  background: #00a46c;
+  border: transparent;
   color: #ffffff;
-  background-color: #00795c;
 }
-.box .button.apply {
+.box .button:active,
+.box a.button:active {
+  background: #00c5c7;
+  border: transparent;
   color: #ffffff;
-  background-color: #00ac83;
 }
-.box .button.apply:hover {
+.box .button.selected,
+.box a.button.selected,
+.selected .box .button,
+.selected .box a.button {
+  background: #00a46c;
+  border: transparent;
   color: #ffffff;
-  background-color: #00795c;
 }
-.box .button.cancel {
+.box .button:visited,
+.box a.button:visited {
   color: #ffffff;
-  background-color: #aaaaaa;
 }
-.box .button.cancel:hover {
+.box .button:active,
+.box a.button:active {
   color: #ffffff;
-  background-color: #919191;
 }
-.box .button.outline {
+.box .button:hover,
+.box a.button:hover {
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.3);
 }
-.box .button.outline:hover {
+.box .button:link,
+.box a.button:link {
   color: #ffffff;
-  border-color: rgba(230, 230, 230, 0.7);
 }
-.box .hover-alt {
-  color: #666666;
-}
-.box .hover-alt a:link {
-  color: #666666;
-}
-.box .hover-alt a:visited {
-  color: #666666;
-}
-.box .hover-alt a:hover {
-  color: #33ffcc;
-}
-.box .hover-alt a:active {
-  color: #00ffcc;
-}
-.box .row.hover-alt.link a:link,
-.box .row.hover-alt .col.link a:link,
-.box .row.hover-alt.link a:visited,
-.box .row.hover-alt .col.link a:visited,
-.box .row.hover-alt.link a:hover,
-.box .row.hover-alt .col.link a:hover,
-.box .row.hover-alt.link a:active,
-.box .row.hover-alt .col.link a:active {
-  color: #666666;
-}
-.box .hover-alt a:link use {
-  color: #009c75;
-}
-.box .hover-alt a:visited use {
-  color: #009c75;
-}
-.box .hover-alt a:hover use {
-  color: #00c561;
-}
-.box .hover-alt a:active use {
-  color: #00945b;
-}
-.box .hover-alt .icon use {
-  color: #009c75;
-}
-.box .hover-alt .list-item {
-  background-color: #f4f4f4;
-}
-.box .hover-alt .list-item:hover {
-  background-color: #d0edec;
-}
-.box .bg {
-  background-color: #ececec;
-}
-.box .bg.dark {
-  background-color: #c5e9e7;
-}
-.box div.row,
-.box div.row.hover-alt,
-.box div.item.hover-alt {
-  background-color: #ececec;
-}
-.box div.row > .column-label,
-.box div.row.hover-alt > .column-label,
-.box div.item.hover-alt > .column-label,
-.box div.row .column-icon,
-.box div.row.hover-alt .column-icon,
-.box div.item.hover-alt .column-icon {
-  color: rgba(102, 102, 102, 0.7);
-  background-color: #f4f4f4;
-  border-bottom: 1px solid #efefef;
-}
-.box div.row > .column,
-.box div.row.hover-alt > .column,
-.box div.item.hover-alt > .column,
-.box div.row > .column-input,
-.box div.row.hover-alt > .column-input,
-.box div.item.hover-alt > .column-input,
-.box div.row > .empty,
-.box div.row.hover-alt > .empty,
-.box div.item.hover-alt > .empty,
-.box div.row .column-button,
-.box div.row.hover-alt .column-button,
-.box div.item.hover-alt .column-button {
-  background-color: #ececec;
-  border-bottom: 1px solid #e7e7e7;
-}
-.box tr.hover-alt td {
-  background-color: #f4f4f4;
-  border-bottom: 1px solid #efefef;
-}
-.box .row.hover-alt:hover,
-.box .row:hover > .col.hover-alt,
-.box .item.hover-alt:hover {
-  background-color: #c5e9e7;
-}
-.box .row.hover-alt:hover > .column-label,
-.box .row:hover > .col.hover-alt > .column-label,
-.box .item.hover-alt:hover > .column-label,
-.box .row.hover-alt:hover .column-icon,
-.box .row:hover > .col.hover-alt .column-icon,
-.box .item.hover-alt:hover .column-icon {
-  color: #666666;
-  background-color: #d0edec;
-  border-bottom: 1px solid #c5e9e7;
-}
-.box .row.hover-alt:hover > .column,
-.box .row:hover > .col.hover-alt > .column,
-.box .item.hover-alt:hover > .column,
-.box .row.hover-alt:hover > .column-input,
-.box .row:hover > .col.hover-alt > .column-input,
-.box .item.hover-alt:hover > .column-input,
-.box .row.hover-alt:hover > .empty,
-.box .row:hover > .col.hover-alt > .empty,
-.box .item.hover-alt:hover > .empty,
-.box .row.hover-alt:hover .column-button,
-.box .row:hover > .col.hover-alt .column-button,
-.box .item.hover-alt:hover .column-button {
-  background-color: #c5e9e7;
-  border-bottom: 1px solid #bae5e2;
-}
-.box tr.hover-alt:hover td {
-  background-color: #c5e9e7;
-  border-bottom: 1px solid #bee6e4;
-}
-.box tr.hover-alt:hover td:hover {
-  background-color: #d0edec;
-  border-bottom: 1px solid #c9eae9;
-}
-.box .spreadsheet .row.hover-alt.head {
-  background: #b3e2df;
-}
-.box .hover-alt input,
-.box .hover-alt textarea,
-.box .hover-alt select {
-  color: rgba(102, 102, 102, 0.9);
-  background-color: #ffffff;
-}
-.box .hover-alt:hover input,
-.box .hover-alt:hover textarea,
-.box .hover-alt:hover select {
-  color: #666666;
-  background-color: #ffffff;
-}
-.box .hover-alt input:focus,
-.box .hover-alt textarea:focus,
-.box .hover-alt select:focus {
-  background-color: #ffffff;
-}
-.box .hover-alt .field-label {
-  color: #00b98d;
-}
-.box .button {
+.box .button:visited use,
+.box a.button:visited use {
   color: #ffffff;
-  background-color: #00ac83;
 }
-.box .button:hover {
+.box .button:active use,
+.box a.button:active use {
   color: #ffffff;
-  background-color: #00795c;
 }
-.box .button.apply {
+.box .button:hover use,
+.box a.button:hover use {
   color: #ffffff;
-  background-color: #00ac83;
 }
-.box .button.apply:hover {
+.box .button:link use,
+.box a.button:link use {
   color: #ffffff;
-  background-color: #00795c;
 }
-.box .button.cancel {
+.box .button.apply,
+.box a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.apply:hover,
+.box a.button.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.apply:active,
+.box a.button.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.apply.selected,
+.box a.button.apply.selected,
+.selected .box .button.apply,
+.selected .box a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.apply:visited,
+.box a.button.apply:visited {
+  color: transparent;
+}
+.box .button.apply:active,
+.box a.button.apply:active {
+  color: transparent;
+}
+.box .button.apply:hover,
+.box a.button.apply:hover {
+  color: transparent;
+}
+.box .button.apply:link,
+.box a.button.apply:link {
+  color: transparent;
+}
+.box .button.apply:visited use,
+.box a.button.apply:visited use {
+  color: transparent;
+}
+.box .button.apply:active use,
+.box a.button.apply:active use {
+  color: transparent;
+}
+.box .button.apply:hover use,
+.box a.button.apply:hover use {
+  color: transparent;
+}
+.box .button.apply:link use,
+.box a.button.apply:link use {
+  color: transparent;
+}
+.box .button.cancel,
+.box a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.cancel:hover,
+.box a.button.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.cancel:active,
+.box a.button.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.cancel.selected,
+.box a.button.cancel.selected,
+.selected .box .button.cancel,
+.selected .box a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.cancel:visited,
+.box a.button.cancel:visited {
+  color: transparent;
+}
+.box .button.cancel:active,
+.box a.button.cancel:active {
+  color: transparent;
+}
+.box .button.cancel:hover,
+.box a.button.cancel:hover {
+  color: transparent;
+}
+.box .button.cancel:link,
+.box a.button.cancel:link {
+  color: transparent;
+}
+.box .button.cancel:visited use,
+.box a.button.cancel:visited use {
+  color: transparent;
+}
+.box .button.cancel:active use,
+.box a.button.cancel:active use {
+  color: transparent;
+}
+.box .button.cancel:hover use,
+.box a.button.cancel:hover use {
+  color: transparent;
+}
+.box .button.cancel:link use,
+.box a.button.cancel:link use {
+  color: transparent;
+}
+.box .button.delete,
+.box a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.delete:hover,
+.box a.button.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.delete:active,
+.box a.button.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.delete.selected,
+.box a.button.delete.selected,
+.selected .box .button.delete,
+.selected .box a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.delete:visited,
+.box a.button.delete:visited {
+  color: transparent;
+}
+.box .button.delete:active,
+.box a.button.delete:active {
+  color: transparent;
+}
+.box .button.delete:hover,
+.box a.button.delete:hover {
+  color: transparent;
+}
+.box .button.delete:link,
+.box a.button.delete:link {
+  color: transparent;
+}
+.box .button.delete:visited use,
+.box a.button.delete:visited use {
+  color: transparent;
+}
+.box .button.delete:active use,
+.box a.button.delete:active use {
+  color: transparent;
+}
+.box .button.delete:hover use,
+.box a.button.delete:hover use {
+  color: transparent;
+}
+.box .button.delete:link use,
+.box a.button.delete:link use {
+  color: transparent;
+}
+.box .button.special,
+.box a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.special:hover,
+.box a.button.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.special:active,
+.box a.button.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.special.selected,
+.box a.button.special.selected,
+.selected .box .button.special,
+.selected .box a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.special:visited,
+.box a.button.special:visited {
+  color: transparent;
+}
+.box .button.special:active,
+.box a.button.special:active {
+  color: transparent;
+}
+.box .button.special:hover,
+.box a.button.special:hover {
+  color: transparent;
+}
+.box .button.special:link,
+.box a.button.special:link {
+  color: transparent;
+}
+.box .button.special:visited use,
+.box a.button.special:visited use {
+  color: transparent;
+}
+.box .button.special:active use,
+.box a.button.special:active use {
+  color: transparent;
+}
+.box .button.special:hover use,
+.box a.button.special:hover use {
+  color: transparent;
+}
+.box .button.special:link use,
+.box a.button.special:link use {
+  color: transparent;
+}
+.box .button.disabled,
+.box a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.disabled:hover,
+.box a.button.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.disabled:active,
+.box a.button.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.disabled.selected,
+.box a.button.disabled.selected,
+.selected .box .button.disabled,
+.selected .box a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.disabled:visited,
+.box a.button.disabled:visited {
+  color: transparent;
+}
+.box .button.disabled:active,
+.box a.button.disabled:active {
+  color: transparent;
+}
+.box .button.disabled:hover,
+.box a.button.disabled:hover {
+  color: transparent;
+}
+.box .button.disabled:link,
+.box a.button.disabled:link {
+  color: transparent;
+}
+.box .button.disabled:visited use,
+.box a.button.disabled:visited use {
+  color: transparent;
+}
+.box .button.disabled:active use,
+.box a.button.disabled:active use {
+  color: transparent;
+}
+.box .button.disabled:hover use,
+.box a.button.disabled:hover use {
+  color: transparent;
+}
+.box .button.disabled:link use,
+.box a.button.disabled:link use {
+  color: transparent;
+}
+.box .button.outline,
+.box a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline:hover,
+.box a.button.outline:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline:active,
+.box a.button.outline:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.selected,
+.box a.button.outline.selected,
+.selected .box .button.outline,
+.selected .box a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline:visited,
+.box a.button.outline:visited {
+  color: transparent;
+}
+.box .button.outline:active,
+.box a.button.outline:active {
+  color: transparent;
+}
+.box .button.outline:hover,
+.box a.button.outline:hover {
+  color: transparent;
+}
+.box .button.outline:link,
+.box a.button.outline:link {
+  color: transparent;
+}
+.box .button.outline:visited use,
+.box a.button.outline:visited use {
+  color: transparent;
+}
+.box .button.outline:active use,
+.box a.button.outline:active use {
+  color: transparent;
+}
+.box .button.outline:hover use,
+.box a.button.outline:hover use {
+  color: transparent;
+}
+.box .button.outline:link use,
+.box a.button.outline:link use {
+  color: transparent;
+}
+.box .button.outline.apply,
+.box a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.apply:hover,
+.box a.button.outline.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.apply:active,
+.box a.button.outline.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.apply.selected,
+.box a.button.outline.apply.selected,
+.selected .box .button.outline.apply,
+.selected .box a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.apply:visited,
+.box a.button.outline.apply:visited {
+  color: transparent;
+}
+.box .button.outline.apply:active,
+.box a.button.outline.apply:active {
+  color: transparent;
+}
+.box .button.outline.apply:hover,
+.box a.button.outline.apply:hover {
+  color: transparent;
+}
+.box .button.outline.apply:link,
+.box a.button.outline.apply:link {
+  color: transparent;
+}
+.box .button.outline.apply:visited use,
+.box a.button.outline.apply:visited use {
+  color: transparent;
+}
+.box .button.outline.apply:active use,
+.box a.button.outline.apply:active use {
+  color: transparent;
+}
+.box .button.outline.apply:hover use,
+.box a.button.outline.apply:hover use {
+  color: transparent;
+}
+.box .button.outline.apply:link use,
+.box a.button.outline.apply:link use {
+  color: transparent;
+}
+.box .button.outline.cancel,
+.box a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.cancel:hover,
+.box a.button.outline.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.cancel:active,
+.box a.button.outline.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.cancel.selected,
+.box a.button.outline.cancel.selected,
+.selected .box .button.outline.cancel,
+.selected .box a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.cancel:visited,
+.box a.button.outline.cancel:visited {
+  color: transparent;
+}
+.box .button.outline.cancel:active,
+.box a.button.outline.cancel:active {
+  color: transparent;
+}
+.box .button.outline.cancel:hover,
+.box a.button.outline.cancel:hover {
+  color: transparent;
+}
+.box .button.outline.cancel:link,
+.box a.button.outline.cancel:link {
+  color: transparent;
+}
+.box .button.outline.cancel:visited use,
+.box a.button.outline.cancel:visited use {
+  color: transparent;
+}
+.box .button.outline.cancel:active use,
+.box a.button.outline.cancel:active use {
+  color: transparent;
+}
+.box .button.outline.cancel:hover use,
+.box a.button.outline.cancel:hover use {
+  color: transparent;
+}
+.box .button.outline.cancel:link use,
+.box a.button.outline.cancel:link use {
+  color: transparent;
+}
+.box .button.outline.delete,
+.box a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.delete:hover,
+.box a.button.outline.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.delete:active,
+.box a.button.outline.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.delete.selected,
+.box a.button.outline.delete.selected,
+.selected .box .button.outline.delete,
+.selected .box a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.delete:visited,
+.box a.button.outline.delete:visited {
+  color: transparent;
+}
+.box .button.outline.delete:active,
+.box a.button.outline.delete:active {
+  color: transparent;
+}
+.box .button.outline.delete:hover,
+.box a.button.outline.delete:hover {
+  color: transparent;
+}
+.box .button.outline.delete:link,
+.box a.button.outline.delete:link {
+  color: transparent;
+}
+.box .button.outline.delete:visited use,
+.box a.button.outline.delete:visited use {
+  color: transparent;
+}
+.box .button.outline.delete:active use,
+.box a.button.outline.delete:active use {
+  color: transparent;
+}
+.box .button.outline.delete:hover use,
+.box a.button.outline.delete:hover use {
+  color: transparent;
+}
+.box .button.outline.delete:link use,
+.box a.button.outline.delete:link use {
+  color: transparent;
+}
+.box .button.outline.special,
+.box a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.special:hover,
+.box a.button.outline.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.special:active,
+.box a.button.outline.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.special.selected,
+.box a.button.outline.special.selected,
+.selected .box .button.outline.special,
+.selected .box a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.special:visited,
+.box a.button.outline.special:visited {
+  color: transparent;
+}
+.box .button.outline.special:active,
+.box a.button.outline.special:active {
+  color: transparent;
+}
+.box .button.outline.special:hover,
+.box a.button.outline.special:hover {
+  color: transparent;
+}
+.box .button.outline.special:link,
+.box a.button.outline.special:link {
+  color: transparent;
+}
+.box .button.outline.special:visited use,
+.box a.button.outline.special:visited use {
+  color: transparent;
+}
+.box .button.outline.special:active use,
+.box a.button.outline.special:active use {
+  color: transparent;
+}
+.box .button.outline.special:hover use,
+.box a.button.outline.special:hover use {
+  color: transparent;
+}
+.box .button.outline.special:link use,
+.box a.button.outline.special:link use {
+  color: transparent;
+}
+.box .button.outline.disabled,
+.box a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.disabled:hover,
+.box a.button.outline.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.disabled:active,
+.box a.button.outline.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.disabled.selected,
+.box a.button.outline.disabled.selected,
+.selected .box .button.outline.disabled,
+.selected .box a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .button.outline.disabled:visited,
+.box a.button.outline.disabled:visited {
+  color: transparent;
+}
+.box .button.outline.disabled:active,
+.box a.button.outline.disabled:active {
+  color: transparent;
+}
+.box .button.outline.disabled:hover,
+.box a.button.outline.disabled:hover {
+  color: transparent;
+}
+.box .button.outline.disabled:link,
+.box a.button.outline.disabled:link {
+  color: transparent;
+}
+.box .button.outline.disabled:visited use,
+.box a.button.outline.disabled:visited use {
+  color: transparent;
+}
+.box .button.outline.disabled:active use,
+.box a.button.outline.disabled:active use {
+  color: transparent;
+}
+.box .button.outline.disabled:hover use,
+.box a.button.outline.disabled:hover use {
+  color: transparent;
+}
+.box .button.outline.disabled:link use,
+.box a.button.outline.disabled:link use {
+  color: transparent;
+}
+.box .button:visited use,
+.box a.button:visited use {
   color: #ffffff;
-  background-color: #aaaaaa;
 }
-.box .button.cancel:hover {
+.box .button:active use,
+.box a.button:active use {
   color: #ffffff;
-  background-color: #919191;
 }
-.box .button.outline {
+.box .button:hover use,
+.box a.button:hover use {
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.3);
 }
-.box .button.outline:hover {
+.box .button:link use,
+.box a.button:link use {
   color: #ffffff;
-  border-color: rgba(230, 230, 230, 0.7);
-}
-.box .purple {
-  color: #NaNNaNNaN;
-}
-.box .purple a:link {
-  color: #666666;
-}
-.box .purple a:visited {
-  color: #666666;
-}
-.box .purple a:hover {
-  color: #33ffcc;
-}
-.box .purple a:active {
-  color: #00ffcc;
-}
-.box .purple .row.link a:link,
-.box .purple .col.link a:link,
-.box .purple .row.link a:visited,
-.box .purple .col.link a:visited,
-.box .purple .row.link a:hover,
-.box .purple .col.link a:hover,
-.box .purple .row.link a:active,
-.box .purple .col.link a:active {
-  color: #NaNNaNNaN;
-}
-.box .purple a:link use {
-  color: #930ab8;
-}
-.box .purple a:visited use {
-  color: #930ab8;
-}
-.box .purple a:hover use {
-  color: #NaNNaNNaN;
-}
-.box .purple a:active use {
-  color: #NaNNaNNaN;
-}
-.box .purple .icon use {
-  color: #930ab8;
-}
-.box .purple .bg {
-  background-color: #e9d1f0;
-}
-.box .purple .bg.dark {
-  background-color: #e0bee9;
-}
-.box .purple .list-item {
-  background-color: #efddf4;
-}
-.box .purple .list-item:hover {
-  background-color: #e4c6ec;
-}
-.box .purple .bg {
-  background-color: #e9d1f0;
-}
-.box .purple .bg.dark {
-  background-color: #e0bee9;
-}
-.box .purple div.row,
-.box .purple div.row.hover,
-.box .purple div.item.hover {
-  background-color: #e9d1f0;
-}
-.box .purple div.row > .column-label,
-.box .purple div.row.hover > .column-label,
-.box .purple div.item.hover > .column-label,
-.box .purple div.row .column-icon,
-.box .purple div.row.hover .column-icon,
-.box .purple div.item.hover .column-icon {
-  color: rgba(NaN, NaN, NaN, 0.8);
-  background-color: #efddf4;
-  border-bottom: 1px solid #ebd5f1;
-}
-.box .purple div.row > .column,
-.box .purple div.row.hover > .column,
-.box .purple div.item.hover > .column,
-.box .purple div.row > .column-input,
-.box .purple div.row.hover > .column-input,
-.box .purple div.item.hover > .column-input,
-.box .purple div.row > .empty,
-.box .purple div.row.hover > .empty,
-.box .purple div.item.hover > .empty,
-.box .purple div.row .column-button,
-.box .purple div.row.hover .column-button,
-.box .purple div.item.hover .column-button {
-  background-color: #e9d1f0;
-  border-bottom: 1px solid #e6caed;
-}
-.box .purple tr.hover td {
-  background-color: #efddf4;
-  border-bottom: 1px solid #ebd5f1;
-}
-.box .purple .row.hover:hover,
-.box .purple .row:hover > .col.hover,
-.box .purple .item.hover:hover {
-  background-color: #e0bee9;
-}
-.box .purple .row.hover:hover > .column-label,
-.box .purple .row:hover > .col.hover > .column-label,
-.box .purple .item.hover:hover > .column-label,
-.box .purple .row.hover:hover .column-icon,
-.box .purple .row:hover > .col.hover .column-icon,
-.box .purple .item.hover:hover .column-icon {
-  color: #NaNNaNNaN;
-  background-color: #e4c6ec;
-  border-bottom: 1px solid #debae8;
-}
-.box .purple .row.hover:hover > .column,
-.box .purple .row:hover > .col.hover > .column,
-.box .purple .item.hover:hover > .column,
-.box .purple .row.hover:hover > .column-input,
-.box .purple .row:hover > .col.hover > .column-input,
-.box .purple .item.hover:hover > .column-input,
-.box .purple .row.hover:hover > .empty,
-.box .purple .row:hover > .col.hover > .empty,
-.box .purple .item.hover:hover > .empty,
-.box .purple .row.hover:hover .column-button,
-.box .purple .row:hover > .col.hover .column-button,
-.box .purple .item.hover:hover .column-button {
-  background-color: #e0bee9;
-  border-bottom: 1px solid #dbb3e6;
-}
-.box .purple tr.hover:hover td {
-  background-color: #e0bee9;
-  border-bottom: 1px solid #ddb6e7;
-}
-.box .purple tr.hover:hover td:hover {
-  background-color: #e4c6ec;
-  border-bottom: 1px solid #e0bee9;
-}
-.box .purple .spreadsheet .row.hover.head {
-  background: #d7abe3;
-}
-.box .purple .button {
-  color: #NaNNaNNaN;
-  background-color: #e9d1f0;
-}
-.box .purple .button:hover {
-  color: #e9d1f0;
-  background-color: #d7abe3;
-}
-.box .purple .button.outline {
-  color: #e9d1f0;
-  border-color: #e9d1f0;
-}
-.box .purple .button.outline:hover {
-  color: #d7abe3;
-  border-color: #d7abe3;
-}
-.box .purple .button.circle {
-  color: #NaNNaNNaN;
-  background-color: #e9d1f0;
-}
-.box .purple .button.circle:hover {
-  color: #NaNNaNNaN;
-  background-color: #d7abe3;
-}
-.box .purple .button.circle a:link use,
-.box .purple .button.circle a:visited use {
-  color: #NaNNaNNaN;
-}
-.box .purple .button.circle a:hover use,
-.box .purple .button.circle a:active use {
-  color: #NaNNaNNaN;
-}
-.box .blue {
-  color: #NaNNaNNaN;
-}
-.box .blue a:link {
-  color: #666666;
-}
-.box .blue a:visited {
-  color: #666666;
-}
-.box .blue a:hover {
-  color: #33ffcc;
-}
-.box .blue a:active {
-  color: #00ffcc;
-}
-.box .blue .row.link a:link,
-.box .blue .col.link a:link,
-.box .blue .row.link a:visited,
-.box .blue .col.link a:visited,
-.box .blue .row.link a:hover,
-.box .blue .col.link a:hover,
-.box .blue .row.link a:active,
-.box .blue .col.link a:active {
-  color: #NaNNaNNaN;
-}
-.box .blue a:link use {
-  color: #093aa9;
-}
-.box .blue a:visited use {
-  color: #093aa9;
-}
-.box .blue a:hover use {
-  color: #NaNNaNNaN;
-}
-.box .blue a:active use {
-  color: #NaNNaNNaN;
-}
-.box .blue .icon use {
-  color: #093aa9;
-}
-.box .blue .bg {
-  background-color: #c5d1ec;
-}
-.box .blue .bg.dark {
-  background-color: #adc0ea;
-}
-.box .blue .list-item {
-  background-color: #d1daf0;
-}
-.box .blue .list-item:hover {
-  background-color: #b5c6ed;
-}
-.box .blue .bg {
-  background-color: #c5d1ec;
-}
-.box .blue .bg.dark {
-  background-color: #adc0ea;
-}
-.box .blue div.row,
-.box .blue div.row.hover,
-.box .blue div.item.hover {
-  background-color: #c5d1ec;
-}
-.box .blue div.row > .column-label,
-.box .blue div.row.hover > .column-label,
-.box .blue div.item.hover > .column-label,
-.box .blue div.row .column-icon,
-.box .blue div.row.hover .column-icon,
-.box .blue div.item.hover .column-icon {
-  color: rgba(NaN, NaN, NaN, 0.8);
-  background-color: #d1daf0;
-  border-bottom: 1px solid #c9d4ed;
-}
-.box .blue div.row > .column,
-.box .blue div.row.hover > .column,
-.box .blue div.item.hover > .column,
-.box .blue div.row > .column-input,
-.box .blue div.row.hover > .column-input,
-.box .blue div.item.hover > .column-input,
-.box .blue div.row > .empty,
-.box .blue div.row.hover > .empty,
-.box .blue div.item.hover > .empty,
-.box .blue div.row .column-button,
-.box .blue div.row.hover .column-button,
-.box .blue div.item.hover .column-button {
-  background-color: #c5d1ec;
-  border-bottom: 1px solid #becbe9;
-}
-.box .blue tr.hover td {
-  background-color: #d1daf0;
-  border-bottom: 1px solid #c9d4ed;
-}
-.box .blue .row.hover:hover,
-.box .blue .row:hover > .col.hover,
-.box .blue .item.hover:hover {
-  background-color: #adc0ea;
-}
-.box .blue .row.hover:hover > .column-label,
-.box .blue .row:hover > .col.hover > .column-label,
-.box .blue .item.hover:hover > .column-label,
-.box .blue .row.hover:hover .column-icon,
-.box .blue .row:hover > .col.hover .column-icon,
-.box .blue .item.hover:hover .column-icon {
-  color: #NaNNaNNaN;
-  background-color: #b5c6ed;
-  border-bottom: 1px solid #a9bde9;
-}
-.box .blue .row.hover:hover > .column,
-.box .blue .row:hover > .col.hover > .column,
-.box .blue .item.hover:hover > .column,
-.box .blue .row.hover:hover > .column-input,
-.box .blue .row:hover > .col.hover > .column-input,
-.box .blue .item.hover:hover > .column-input,
-.box .blue .row.hover:hover > .empty,
-.box .blue .row:hover > .col.hover > .empty,
-.box .blue .item.hover:hover > .empty,
-.box .blue .row.hover:hover .column-button,
-.box .blue .row:hover > .col.hover .column-button,
-.box .blue .item.hover:hover .column-button {
-  background-color: #adc0ea;
-  border-bottom: 1px solid #a1b6e7;
-}
-.box .blue tr.hover:hover td {
-  background-color: #adc0ea;
-  border-bottom: 1px solid #a5bae8;
-}
-.box .blue tr.hover:hover td:hover {
-  background-color: #b5c6ed;
-  border-bottom: 1px solid #adc0ea;
-}
-.box .blue .spreadsheet .row.hover.head {
-  background: #99b0e5;
-}
-.box .blue .button {
-  color: #NaNNaNNaN;
-  background-color: #c5d1ec;
-}
-.box .blue .button:hover {
-  color: #c5d1ec;
-  background-color: #9fb3df;
-}
-.box .blue .button.outline {
-  color: #c5d1ec;
-  border-color: #c5d1ec;
-}
-.box .blue .button.outline:hover {
-  color: #9fb3df;
-  border-color: #9fb3df;
-}
-.box .blue .button.circle {
-  color: #NaNNaNNaN;
-  background-color: #c5d1ec;
-}
-.box .blue .button.circle:hover {
-  color: #NaNNaNNaN;
-  background-color: #9fb3df;
-}
-.box .blue .button.circle a:link use,
-.box .blue .button.circle a:visited use {
-  color: #NaNNaNNaN;
-}
-.box .blue .button.circle a:hover use,
-.box .blue .button.circle a:active use {
-  color: #NaNNaNNaN;
-}
-.box .turqoise {
-  color: #NaNNaNNaN;
-}
-.box .turqoise a:link {
-  color: #666666;
-}
-.box .turqoise a:visited {
-  color: #666666;
-}
-.box .turqoise a:hover {
-  color: #33ffcc;
-}
-.box .turqoise a:active {
-  color: #00ffcc;
-}
-.box .turqoise .row.link a:link,
-.box .turqoise .col.link a:link,
-.box .turqoise .row.link a:visited,
-.box .turqoise .col.link a:visited,
-.box .turqoise .row.link a:hover,
-.box .turqoise .col.link a:hover,
-.box .turqoise .row.link a:active,
-.box .turqoise .col.link a:active {
-  color: #NaNNaNNaN;
-}
-.box .turqoise a:link use {
-  color: #09ada8;
-}
-.box .turqoise a:visited use {
-  color: #09ada8;
-}
-.box .turqoise a:hover use {
-  color: #NaNNaNNaN;
-}
-.box .turqoise a:active use {
-  color: #NaNNaNNaN;
-}
-.box .turqoise .icon use {
-  color: #09ada8;
-}
-.box .turqoise .bg {
-  background-color: #c8edec;
-}
-.box .turqoise .bg.dark {
-  background-color: #b0ebea;
-}
-.box .turqoise .list-item {
-  background-color: #d4f1f0;
-}
-.box .turqoise .list-item:hover {
-  background-color: #b8edec;
-}
-.box .turqoise .bg {
-  background-color: #c8edec;
-}
-.box .turqoise .bg.dark {
-  background-color: #b0ebea;
-}
-.box .turqoise div.row,
-.box .turqoise div.row.hover,
-.box .turqoise div.item.hover {
-  background-color: #c8edec;
-}
-.box .turqoise div.row > .column-label,
-.box .turqoise div.row.hover > .column-label,
-.box .turqoise div.item.hover > .column-label,
-.box .turqoise div.row .column-icon,
-.box .turqoise div.row.hover .column-icon,
-.box .turqoise div.item.hover .column-icon {
-  color: rgba(NaN, NaN, NaN, 0.8);
-  background-color: #d4f1f0;
-  border-bottom: 1px solid #cceeed;
-}
-.box .turqoise div.row > .column,
-.box .turqoise div.row.hover > .column,
-.box .turqoise div.item.hover > .column,
-.box .turqoise div.row > .column-input,
-.box .turqoise div.row.hover > .column-input,
-.box .turqoise div.item.hover > .column-input,
-.box .turqoise div.row > .empty,
-.box .turqoise div.row.hover > .empty,
-.box .turqoise div.item.hover > .empty,
-.box .turqoise div.row .column-button,
-.box .turqoise div.row.hover .column-button,
-.box .turqoise div.item.hover .column-button {
-  background-color: #c8edec;
-  border-bottom: 1px solid #c1eae9;
-}
-.box .turqoise tr.hover td {
-  background-color: #d4f1f0;
-  border-bottom: 1px solid #cceeed;
-}
-.box .turqoise .row.hover:hover,
-.box .turqoise .row:hover > .col.hover,
-.box .turqoise .item.hover:hover {
-  background-color: #b0ebea;
-}
-.box .turqoise .row.hover:hover > .column-label,
-.box .turqoise .row:hover > .col.hover > .column-label,
-.box .turqoise .item.hover:hover > .column-label,
-.box .turqoise .row.hover:hover .column-icon,
-.box .turqoise .row:hover > .col.hover .column-icon,
-.box .turqoise .item.hover:hover .column-icon {
-  color: #NaNNaNNaN;
-  background-color: #b8edec;
-  border-bottom: 1px solid #aceae8;
-}
-.box .turqoise .row.hover:hover > .column,
-.box .turqoise .row:hover > .col.hover > .column,
-.box .turqoise .item.hover:hover > .column,
-.box .turqoise .row.hover:hover > .column-input,
-.box .turqoise .row:hover > .col.hover > .column-input,
-.box .turqoise .item.hover:hover > .column-input,
-.box .turqoise .row.hover:hover > .empty,
-.box .turqoise .row:hover > .col.hover > .empty,
-.box .turqoise .item.hover:hover > .empty,
-.box .turqoise .row.hover:hover .column-button,
-.box .turqoise .row:hover > .col.hover .column-button,
-.box .turqoise .item.hover:hover .column-button {
-  background-color: #b0ebea;
-  border-bottom: 1px solid #a4e8e6;
-}
-.box .turqoise tr.hover:hover td {
-  background-color: #b0ebea;
-  border-bottom: 1px solid #a8e9e7;
-}
-.box .turqoise tr.hover:hover td:hover {
-  background-color: #b8edec;
-  border-bottom: 1px solid #b0ebea;
-}
-.box .turqoise .spreadsheet .row.hover.head {
-  background: #9ce6e4;
-}
-.box .turqoise .button {
-  color: #NaNNaNNaN;
-  background-color: #c8edec;
-}
-.box .turqoise .button:hover {
-  color: #c8edec;
-  background-color: #a2e0de;
-}
-.box .turqoise .button.outline {
-  color: #c8edec;
-  border-color: #c8edec;
-}
-.box .turqoise .button.outline:hover {
-  color: #a2e0de;
-  border-color: #a2e0de;
-}
-.box .turqoise .button.circle {
-  color: #NaNNaNNaN;
-  background-color: #c8edec;
-}
-.box .turqoise .button.circle:hover {
-  color: #NaNNaNNaN;
-  background-color: #a2e0de;
-}
-.box .turqoise .button.circle a:link use,
-.box .turqoise .button.circle a:visited use {
-  color: #NaNNaNNaN;
-}
-.box .turqoise .button.circle a:hover use,
-.box .turqoise .button.circle a:active use {
-  color: #NaNNaNNaN;
-}
-.box .green {
-  color: #NaNNaNNaN;
-}
-.box .green a:link {
-  color: #666666;
-}
-.box .green a:visited {
-  color: #666666;
-}
-.box .green a:hover {
-  color: #33ffcc;
-}
-.box .green a:active {
-  color: #00ffcc;
-}
-.box .green .row.link a:link,
-.box .green .col.link a:link,
-.box .green .row.link a:visited,
-.box .green .col.link a:visited,
-.box .green .row.link a:hover,
-.box .green .col.link a:hover,
-.box .green .row.link a:active,
-.box .green .col.link a:active {
-  color: #NaNNaNNaN;
-}
-.box .green a:link use {
-  color: #09a438;
-}
-.box .green a:visited use {
-  color: #09a438;
-}
-.box .green a:hover use {
-  color: #NaNNaNNaN;
-}
-.box .green a:active use {
-  color: #NaNNaNNaN;
-}
-.box .green .icon use {
-  color: #09a438;
-}
-.box .green .bg {
-  background-color: #c1ebce;
-}
-.box .green .bg.dark {
-  background-color: #aee4bf;
-}
-.box .green .list-item {
-  background-color: #cdeed7;
-}
-.box .green .list-item:hover {
-  background-color: #b6e7c5;
-}
-.box .green .bg {
-  background-color: #c1ebce;
-}
-.box .green .bg.dark {
-  background-color: #aee4bf;
-}
-.box .green div.row,
-.box .green div.row.hover,
-.box .green div.item.hover {
-  background-color: #c1ebce;
-}
-.box .green div.row > .column-label,
-.box .green div.row.hover > .column-label,
-.box .green div.item.hover > .column-label,
-.box .green div.row .column-icon,
-.box .green div.row.hover .column-icon,
-.box .green div.item.hover .column-icon {
-  color: rgba(NaN, NaN, NaN, 0.8);
-  background-color: #cdeed7;
-  border-bottom: 1px solid #c5ecd1;
-}
-.box .green div.row > .column,
-.box .green div.row.hover > .column,
-.box .green div.item.hover > .column,
-.box .green div.row > .column-input,
-.box .green div.row.hover > .column-input,
-.box .green div.item.hover > .column-input,
-.box .green div.row > .empty,
-.box .green div.row.hover > .empty,
-.box .green div.item.hover > .empty,
-.box .green div.row .column-button,
-.box .green div.row.hover .column-button,
-.box .green div.item.hover .column-button {
-  background-color: #c1ebce;
-  border-bottom: 1px solid #bae8c8;
-}
-.box .green tr.hover td {
-  background-color: #cdeed7;
-  border-bottom: 1px solid #c5ecd1;
-}
-.box .green .row.hover:hover,
-.box .green .row:hover > .col.hover,
-.box .green .item.hover:hover {
-  background-color: #aee4bf;
-}
-.box .green .row.hover:hover > .column-label,
-.box .green .row:hover > .col.hover > .column-label,
-.box .green .item.hover:hover > .column-label,
-.box .green .row.hover:hover .column-icon,
-.box .green .row:hover > .col.hover .column-icon,
-.box .green .item.hover:hover .column-icon {
-  color: #NaNNaNNaN;
-  background-color: #b6e7c5;
-  border-bottom: 1px solid #abe3bc;
-}
-.box .green .row.hover:hover > .column,
-.box .green .row:hover > .col.hover > .column,
-.box .green .item.hover:hover > .column,
-.box .green .row.hover:hover > .column-input,
-.box .green .row:hover > .col.hover > .column-input,
-.box .green .item.hover:hover > .column-input,
-.box .green .row.hover:hover > .empty,
-.box .green .row:hover > .col.hover > .empty,
-.box .green .item.hover:hover > .empty,
-.box .green .row.hover:hover .column-button,
-.box .green .row:hover > .col.hover .column-button,
-.box .green .item.hover:hover .column-button {
-  background-color: #aee4bf;
-  border-bottom: 1px solid #a3e0b6;
-}
-.box .green tr.hover:hover td {
-  background-color: #aee4bf;
-  border-bottom: 1px solid #a7e2b9;
-}
-.box .green tr.hover:hover td:hover {
-  background-color: #b6e7c5;
-  border-bottom: 1px solid #aee4bf;
-}
-.box .green .spreadsheet .row.hover.head {
-  background: #9bdeaf;
-}
-.box .green .button {
-  color: #NaNNaNNaN;
-  background-color: #c1ebce;
-}
-.box .green .button:hover {
-  color: #c1ebce;
-  background-color: #9bdeaf;
-}
-.box .green .button.outline {
-  color: #c1ebce;
-  border-color: #c1ebce;
-}
-.box .green .button.outline:hover {
-  color: #9bdeaf;
-  border-color: #9bdeaf;
-}
-.box .green .button.circle {
-  color: #NaNNaNNaN;
-  background-color: #c1ebce;
-}
-.box .green .button.circle:hover {
-  color: #NaNNaNNaN;
-  background-color: #9bdeaf;
-}
-.box .green .button.circle a:link use,
-.box .green .button.circle a:visited use {
-  color: #NaNNaNNaN;
-}
-.box .green .button.circle a:hover use,
-.box .green .button.circle a:active use {
-  color: #NaNNaNNaN;
-}
-.box .yellow {
-  color: #NaNNaNNaN;
-}
-.box .yellow a:link {
-  color: #666666;
-}
-.box .yellow a:visited {
-  color: #666666;
-}
-.box .yellow a:hover {
-  color: #33ffcc;
-}
-.box .yellow a:active {
-  color: #00ffcc;
-}
-.box .yellow .row.link a:link,
-.box .yellow .col.link a:link,
-.box .yellow .row.link a:visited,
-.box .yellow .col.link a:visited,
-.box .yellow .row.link a:hover,
-.box .yellow .col.link a:hover,
-.box .yellow .row.link a:active,
-.box .yellow .col.link a:active {
-  color: #NaNNaNNaN;
-}
-.box .yellow a:link use {
-  color: #c2ab0a;
-}
-.box .yellow a:visited use {
-  color: #c2ab0a;
-}
-.box .yellow a:hover use {
-  color: #NaNNaNNaN;
-}
-.box .yellow a:active use {
-  color: #NaNNaNNaN;
-}
-.box .yellow .icon use {
-  color: #c2ab0a;
-}
-.box .yellow .bg {
-  background-color: #f2efd9;
-}
-.box .yellow .bg.dark {
-  background-color: #f4edbe;
-}
-.box .yellow .list-item {
-  background-color: #f6f4e4;
-}
-.box .yellow .list-item:hover {
-  background-color: #f5efc7;
-}
-.box .yellow .bg {
-  background-color: #f2efd9;
-}
-.box .yellow .bg.dark {
-  background-color: #f4edbe;
-}
-.box .yellow div.row,
-.box .yellow div.row.hover,
-.box .yellow div.item.hover {
-  background-color: #f2efd9;
-}
-.box .yellow div.row > .column-label,
-.box .yellow div.row.hover > .column-label,
-.box .yellow div.item.hover > .column-label,
-.box .yellow div.row .column-icon,
-.box .yellow div.row.hover .column-icon,
-.box .yellow div.item.hover .column-icon {
-  color: rgba(NaN, NaN, NaN, 0.8);
-  background-color: #f6f4e4;
-  border-bottom: 1px solid #f4f1dd;
-}
-.box .yellow div.row > .column,
-.box .yellow div.row.hover > .column,
-.box .yellow div.item.hover > .column,
-.box .yellow div.row > .column-input,
-.box .yellow div.row.hover > .column-input,
-.box .yellow div.item.hover > .column-input,
-.box .yellow div.row > .empty,
-.box .yellow div.row.hover > .empty,
-.box .yellow div.item.hover > .empty,
-.box .yellow div.row .column-button,
-.box .yellow div.row.hover .column-button,
-.box .yellow div.item.hover .column-button {
-  background-color: #f2efd9;
-  border-bottom: 1px solid #f0ecd1;
-}
-.box .yellow tr.hover td {
-  background-color: #f6f4e4;
-  border-bottom: 1px solid #f4f1dd;
-}
-.box .yellow .row.hover:hover,
-.box .yellow .row:hover > .col.hover,
-.box .yellow .item.hover:hover {
-  background-color: #f4edbe;
-}
-.box .yellow .row.hover:hover > .column-label,
-.box .yellow .row:hover > .col.hover > .column-label,
-.box .yellow .item.hover:hover > .column-label,
-.box .yellow .row.hover:hover .column-icon,
-.box .yellow .row:hover > .col.hover .column-icon,
-.box .yellow .item.hover:hover .column-icon {
-  color: #NaNNaNNaN;
-  background-color: #f5efc7;
-  border-bottom: 1px solid #f3ecba;
-}
-.box .yellow .row.hover:hover > .column,
-.box .yellow .row:hover > .col.hover > .column,
-.box .yellow .item.hover:hover > .column,
-.box .yellow .row.hover:hover > .column-input,
-.box .yellow .row:hover > .col.hover > .column-input,
-.box .yellow .item.hover:hover > .column-input,
-.box .yellow .row.hover:hover > .empty,
-.box .yellow .row:hover > .col.hover > .empty,
-.box .yellow .item.hover:hover > .empty,
-.box .yellow .row.hover:hover .column-button,
-.box .yellow .row:hover > .col.hover .column-button,
-.box .yellow .item.hover:hover .column-button {
-  background-color: #f4edbe;
-  border-bottom: 1px solid #f1e9b1;
-}
-.box .yellow tr.hover:hover td {
-  background-color: #f4edbe;
-  border-bottom: 1px solid #f2ebb5;
-}
-.box .yellow tr.hover:hover td:hover {
-  background-color: #f5efc7;
-  border-bottom: 1px solid #f4edbe;
-}
-.box .yellow .spreadsheet .row.hover.head {
-  background: #f0e7a8;
-}
-.box .yellow .button {
-  color: #NaNNaNNaN;
-  background-color: #f2efd9;
-}
-.box .yellow .button:hover {
-  color: #f2efd9;
-  background-color: #e5dfb3;
-}
-.box .yellow .button.outline {
-  color: #f2efd9;
-  border-color: #f2efd9;
-}
-.box .yellow .button.outline:hover {
-  color: #e5dfb3;
-  border-color: #e5dfb3;
-}
-.box .yellow .button.circle {
-  color: #NaNNaNNaN;
-  background-color: #f2efd9;
-}
-.box .yellow .button.circle:hover {
-  color: #NaNNaNNaN;
-  background-color: #e5dfb3;
-}
-.box .yellow .button.circle a:link use,
-.box .yellow .button.circle a:visited use {
-  color: #NaNNaNNaN;
-}
-.box .yellow .button.circle a:hover use,
-.box .yellow .button.circle a:active use {
-  color: #NaNNaNNaN;
-}
-.box .orange {
-  color: #NaNNaNNaN;
-}
-.box .orange a:link {
-  color: #666666;
-}
-.box .orange a:visited {
-  color: #666666;
-}
-.box .orange a:hover {
-  color: #33ffcc;
-}
-.box .orange a:active {
-  color: #00ffcc;
-}
-.box .orange .row.link a:link,
-.box .orange .col.link a:link,
-.box .orange .row.link a:visited,
-.box .orange .col.link a:visited,
-.box .orange .row.link a:hover,
-.box .orange .col.link a:hover,
-.box .orange .row.link a:active,
-.box .orange .col.link a:active {
-  color: #NaNNaNNaN;
-}
-.box .orange a:link use {
-  color: #c2650a;
-}
-.box .orange a:visited use {
-  color: #c2650a;
-}
-.box .orange a:hover use {
-  color: #NaNNaNNaN;
-}
-.box .orange a:active use {
-  color: #NaNNaNNaN;
-}
-.box .orange .icon use {
-  color: #c2650a;
-}
-.box .orange .bg {
-  background-color: #f2e5d9;
-}
-.box .orange .bg.dark {
-  background-color: #f0d8c2;
-}
-.box .orange .list-item {
-  background-color: #f6ede4;
-}
-.box .orange .list-item:hover {
-  background-color: #f2deca;
-}
-.box .orange .bg {
-  background-color: #f2e5d9;
-}
-.box .orange .bg.dark {
-  background-color: #f0d8c2;
-}
-.box .orange div.row,
-.box .orange div.row.hover,
-.box .orange div.item.hover {
-  background-color: #f2e5d9;
-}
-.box .orange div.row > .column-label,
-.box .orange div.row.hover > .column-label,
-.box .orange div.item.hover > .column-label,
-.box .orange div.row .column-icon,
-.box .orange div.row.hover .column-icon,
-.box .orange div.item.hover .column-icon {
-  color: rgba(NaN, NaN, NaN, 0.8);
-  background-color: #f6ede4;
-  border-bottom: 1px solid #f4e8dd;
-}
-.box .orange div.row > .column,
-.box .orange div.row.hover > .column,
-.box .orange div.item.hover > .column,
-.box .orange div.row > .column-input,
-.box .orange div.row.hover > .column-input,
-.box .orange div.item.hover > .column-input,
-.box .orange div.row > .empty,
-.box .orange div.row.hover > .empty,
-.box .orange div.item.hover > .empty,
-.box .orange div.row .column-button,
-.box .orange div.row.hover .column-button,
-.box .orange div.item.hover .column-button {
-  background-color: #f2e5d9;
-  border-bottom: 1px solid #f0e0d1;
-}
-.box .orange tr.hover td {
-  background-color: #f6ede4;
-  border-bottom: 1px solid #f4e8dd;
-}
-.box .orange .row.hover:hover,
-.box .orange .row:hover > .col.hover,
-.box .orange .item.hover:hover {
-  background-color: #f0d8c2;
-}
-.box .orange .row.hover:hover > .column-label,
-.box .orange .row:hover > .col.hover > .column-label,
-.box .orange .item.hover:hover > .column-label,
-.box .orange .row.hover:hover .column-icon,
-.box .orange .row:hover > .col.hover .column-icon,
-.box .orange .item.hover:hover .column-icon {
-  color: #NaNNaNNaN;
-  background-color: #f2deca;
-  border-bottom: 1px solid #efd6be;
-}
-.box .orange .row.hover:hover > .column,
-.box .orange .row:hover > .col.hover > .column,
-.box .orange .item.hover:hover > .column,
-.box .orange .row.hover:hover > .column-input,
-.box .orange .row:hover > .col.hover > .column-input,
-.box .orange .item.hover:hover > .column-input,
-.box .orange .row.hover:hover > .empty,
-.box .orange .row:hover > .col.hover > .empty,
-.box .orange .item.hover:hover > .empty,
-.box .orange .row.hover:hover .column-button,
-.box .orange .row:hover > .col.hover .column-button,
-.box .orange .item.hover:hover .column-button {
-  background-color: #f0d8c2;
-  border-bottom: 1px solid #edd1b6;
-}
-.box .orange tr.hover:hover td {
-  background-color: #f0d8c2;
-  border-bottom: 1px solid #eed3ba;
-}
-.box .orange tr.hover:hover td:hover {
-  background-color: #f2deca;
-  border-bottom: 1px solid #f0d8c2;
-}
-.box .orange .spreadsheet .row.hover.head {
-  background: #ebccad;
-}
-.box .orange .button {
-  color: #NaNNaNNaN;
-  background-color: #f2e5d9;
-}
-.box .orange .button:hover {
-  color: #f2e5d9;
-  background-color: #e5ccb3;
-}
-.box .orange .button.outline {
-  color: #f2e5d9;
-  border-color: #f2e5d9;
-}
-.box .orange .button.outline:hover {
-  color: #e5ccb3;
-  border-color: #e5ccb3;
-}
-.box .orange .button.circle {
-  color: #NaNNaNNaN;
-  background-color: #f2e5d9;
-}
-.box .orange .button.circle:hover {
-  color: #NaNNaNNaN;
-  background-color: #e5ccb3;
-}
-.box .orange .button.circle a:link use,
-.box .orange .button.circle a:visited use {
-  color: #NaNNaNNaN;
-}
-.box .orange .button.circle a:hover use,
-.box .orange .button.circle a:active use {
-  color: #NaNNaNNaN;
-}
-.box .red {
-  color: #NaNNaNNaN;
-}
-.box .red a:link {
-  color: #666666;
-}
-.box .red a:visited {
-  color: #666666;
-}
-.box .red a:hover {
-  color: #33ffcc;
-}
-.box .red a:active {
-  color: #00ffcc;
-}
-.box .red .row.link a:link,
-.box .red .col.link a:link,
-.box .red .row.link a:visited,
-.box .red .col.link a:visited,
-.box .red .row.link a:hover,
-.box .red .col.link a:hover,
-.box .red .row.link a:active,
-.box .red .col.link a:active {
-  color: #NaNNaNNaN;
-}
-.box .red a:link use {
-  color: #c20a0a;
-}
-.box .red a:visited use {
-  color: #c20a0a;
-}
-.box .red a:hover use {
-  color: #NaNNaNNaN;
-}
-.box .red a:active use {
-  color: #NaNNaNNaN;
-}
-.box .red .icon use {
-  color: #c20a0a;
-}
-.box .red .bg {
-  background-color: #f2d9d9;
-}
-.box .red .bg.dark {
-  background-color: #eec4c4;
-}
-.box .red .list-item {
-  background-color: #f6e4e4;
-}
-.box .red .list-item:hover {
-  background-color: #f0cccc;
-}
-.box .red .bg {
-  background-color: #f2d9d9;
-}
-.box .red .bg.dark {
-  background-color: #eec4c4;
-}
-.box .red div.row,
-.box .red div.row.hover,
-.box .red div.item.hover {
-  background-color: #f2d9d9;
-}
-.box .red div.row > .column-label,
-.box .red div.row.hover > .column-label,
-.box .red div.item.hover > .column-label,
-.box .red div.row .column-icon,
-.box .red div.row.hover .column-icon,
-.box .red div.item.hover .column-icon {
-  color: rgba(NaN, NaN, NaN, 0.8);
-  background-color: #f6e4e4;
-  border-bottom: 1px solid #f4dddd;
-}
-.box .red div.row > .column,
-.box .red div.row.hover > .column,
-.box .red div.item.hover > .column,
-.box .red div.row > .column-input,
-.box .red div.row.hover > .column-input,
-.box .red div.item.hover > .column-input,
-.box .red div.row > .empty,
-.box .red div.row.hover > .empty,
-.box .red div.item.hover > .empty,
-.box .red div.row .column-button,
-.box .red div.row.hover .column-button,
-.box .red div.item.hover .column-button {
-  background-color: #f2d9d9;
-  border-bottom: 1px solid #f0d1d1;
-}
-.box .red tr.hover td {
-  background-color: #f6e4e4;
-  border-bottom: 1px solid #f4dddd;
-}
-.box .red .row.hover:hover,
-.box .red .row:hover > .col.hover,
-.box .red .item.hover:hover {
-  background-color: #eec4c4;
-}
-.box .red .row.hover:hover > .column-label,
-.box .red .row:hover > .col.hover > .column-label,
-.box .red .item.hover:hover > .column-label,
-.box .red .row.hover:hover .column-icon,
-.box .red .row:hover > .col.hover .column-icon,
-.box .red .item.hover:hover .column-icon {
-  color: #NaNNaNNaN;
-  background-color: #f0cccc;
-  border-bottom: 1px solid #edc0c0;
-}
-.box .red .row.hover:hover > .column,
-.box .red .row:hover > .col.hover > .column,
-.box .red .item.hover:hover > .column,
-.box .red .row.hover:hover > .column-input,
-.box .red .row:hover > .col.hover > .column-input,
-.box .red .item.hover:hover > .column-input,
-.box .red .row.hover:hover > .empty,
-.box .red .row:hover > .col.hover > .empty,
-.box .red .item.hover:hover > .empty,
-.box .red .row.hover:hover .column-button,
-.box .red .row:hover > .col.hover .column-button,
-.box .red .item.hover:hover .column-button {
-  background-color: #eec4c4;
-  border-bottom: 1px solid #eab8b8;
-}
-.box .red tr.hover:hover td {
-  background-color: #eec4c4;
-  border-bottom: 1px solid #ebbcbc;
-}
-.box .red tr.hover:hover td:hover {
-  background-color: #f0cccc;
-  border-bottom: 1px solid #eec4c4;
-}
-.box .red .spreadsheet .row.hover.head {
-  background: #e8b0b0;
-}
-.box .red .button {
-  color: #NaNNaNNaN;
-  background-color: #f2d9d9;
-}
-.box .red .button:hover {
-  color: #f2d9d9;
-  background-color: #e5b3b3;
-}
-.box .red .button.outline {
-  color: #f2d9d9;
-  border-color: #f2d9d9;
-}
-.box .red .button.outline:hover {
-  color: #e5b3b3;
-  border-color: #e5b3b3;
-}
-.box .red .button.circle {
-  color: #NaNNaNNaN;
-  background-color: #f2d9d9;
-}
-.box .red .button.circle:hover {
-  color: #NaNNaNNaN;
-  background-color: #e5b3b3;
-}
-.box .red .button.circle a:link use,
-.box .red .button.circle a:visited use {
-  color: #NaNNaNNaN;
-}
-.box .red .button.circle a:hover use,
-.box .red .button.circle a:active use {
-  color: #NaNNaNNaN;
+}
+.box .button.apply:visited use,
+.box a.button.apply:visited use {
+  color: transparent;
+}
+.box .button.apply:active use,
+.box a.button.apply:active use {
+  color: transparent;
+}
+.box .button.apply:hover use,
+.box a.button.apply:hover use {
+  color: transparent;
+}
+.box .button.apply:link use,
+.box a.button.apply:link use {
+  color: transparent;
+}
+.box .button.cancel:visited use,
+.box a.button.cancel:visited use {
+  color: transparent;
+}
+.box .button.cancel:active use,
+.box a.button.cancel:active use {
+  color: transparent;
+}
+.box .button.cancel:hover use,
+.box a.button.cancel:hover use {
+  color: transparent;
+}
+.box .button.cancel:link use,
+.box a.button.cancel:link use {
+  color: transparent;
+}
+.box .button.delete:visited use,
+.box a.button.delete:visited use {
+  color: transparent;
+}
+.box .button.delete:active use,
+.box a.button.delete:active use {
+  color: transparent;
+}
+.box .button.delete:hover use,
+.box a.button.delete:hover use {
+  color: transparent;
+}
+.box .button.delete:link use,
+.box a.button.delete:link use {
+  color: transparent;
+}
+.box .button.special:visited use,
+.box a.button.special:visited use {
+  color: transparent;
+}
+.box .button.special:active use,
+.box a.button.special:active use {
+  color: transparent;
+}
+.box .button.special:hover use,
+.box a.button.special:hover use {
+  color: transparent;
+}
+.box .button.special:link use,
+.box a.button.special:link use {
+  color: transparent;
+}
+.box .button.disabled:visited use,
+.box a.button.disabled:visited use {
+  color: transparent;
+}
+.box .button.disabled:active use,
+.box a.button.disabled:active use {
+  color: transparent;
+}
+.box .button.disabled:hover use,
+.box a.button.disabled:hover use {
+  color: transparent;
+}
+.box .button.disabled:link use,
+.box a.button.disabled:link use {
+  color: transparent;
+}
+.box .section {
+  background: #fafafa;
+  border-color: #dadada;
+  color: #444444;
+}
+.box .section a:visited {
+  color: #009b87;
+}
+.box .section a:active {
+  color: #00c5c7;
+}
+.box .section a:hover {
+  color: #00c5c7;
+}
+.box .section a:link {
+  color: #009b87;
+}
+.box .section a:visited use {
+  color: #009b87;
+}
+.box .section a:active use {
+  color: #00c5c7;
+}
+.box .section a:hover use {
+  color: #00c5c7;
+}
+.box .section a:link use {
+  color: #009b87;
+}
+.box .section a.faded:visited {
+  color: #58cabb;
+}
+.box .section a.faded:active {
+  color: #66fdff;
+}
+.box .section a.faded:hover {
+  color: #61d4d5;
+}
+.box .section a.faded:link {
+  color: #58cabb;
+}
+.box .section a.faded:visited use {
+  color: #58cabb;
+}
+.box .section a.faded:active use {
+  color: #66fdff;
+}
+.box .section a.faded:hover use {
+  color: #61d4d5;
+}
+.box .section a.faded:link use {
+  color: #58cabb;
+}
+.box .section .icon a:visited,
+.box .section .nolinks a:visited {
+  color: #555555 !important;
+}
+.box .section .icon a:active,
+.box .section .nolinks a:active {
+  color: #00a46c !important;
+}
+.box .section .icon a:hover,
+.box .section .nolinks a:hover {
+  color: #009b87 !important;
+}
+.box .section .icon a:link,
+.box .section .nolinks a:link {
+  color: #555555 !important;
+}
+.box .section .icon a:visited use,
+.box .section .nolinks a:visited use {
+  color: #555555;
+}
+.box .section .icon a:active use,
+.box .section .nolinks a:active use {
+  color: #00a46c;
+}
+.box .section .icon a:hover use,
+.box .section .nolinks a:hover use {
+  color: #009b87;
+}
+.box .section .icon a:link use,
+.box .section .nolinks a:link use {
+  color: #555555;
+}
+.box .section .font-faded {
+  color: rgba(0, 0, 0, 0.3);
+}
+.box .section .font-price {
+  color: #009b87;
+}
+.box .section .font-positive {
+  color: #4da400;
+}
+.box .section .font-negative {
+  color: #ff2222;
+}
+.box .section .font-time {
+  color: #376eb2;
+}
+.box .section .font-red {
+  color: #ff2222;
+}
+.box .section .font-orange {
+  color: #ff6b22;
+}
+.box .section .font-yelloworange {
+  color: #ff9f22;
+}
+.box .section .font-yellow {
+  color: #ffc822;
+}
+.box .section .font-yellowgreen {
+  color: #b2c700;
+}
+.box .section .font-green {
+  color: #4da400;
+}
+.box .section .font-turqoise {
+  color: #37b277;
+}
+.box .section .font-skyblue {
+  color: #37b2ab;
+}
+.box .section .font-blue {
+  color: #376eb2;
+}
+.box .section .font-purple {
+  color: #6b37b2;
+}
+.box .section .font-pink {
+  color: #c120b0;
+}
+.box .section .font-grey {
+  color: #6a6a6a;
+}
+.box .section .row {
+  background: transparent;
+  color: #444444;
+}
+.box .section .row a:visited {
+  color: #009b87;
+}
+.box .section .row a:active {
+  color: #00c5c7;
+}
+.box .section .row a:hover {
+  color: #00c5c7;
+}
+.box .section .row a:link {
+  color: #009b87;
+}
+.box .section .row a:visited use {
+  color: #555555;
+}
+.box .section .row a:active use {
+  color: #00a46c;
+}
+.box .section .row a:hover use {
+  color: #009b87;
+}
+.box .section .row a:link use {
+  color: #555555;
+}
+.box .section .row.hover:hover {
+  background: #a7d8db;
+  color: #33494c;
+}
+.box .section .row.selected {
+  background: #5ec7ce;
+  color: #13474f;
+}
+.box .section .row.selected a:visited {
+  color: #00b4ff;
+}
+.box .section .row.selected a:active {
+  color: #00c5c7;
+}
+.box .section .row.selected a:hover {
+  color: #00c5c7;
+}
+.box .section .row.selected a:link {
+  color: #00b4ff;
+}
+.box .section .row.selected a:visited use {
+  color: #185a64;
+}
+.box .section .row.selected a:active use {
+  color: #00a46c;
+}
+.box .section .row.selected a:hover use {
+  color: #009b87;
+}
+.box .section .row.selected a:link use {
+  color: #185a64;
+}
+.box .section .row.alt {
+  background: #d0d0d0;
+  color: #444444;
+}
+.box .section .row.alt a:visited {
+  color: #009b87;
+}
+.box .section .row.alt a:active {
+  color: #00c5c7;
+}
+.box .section .row.alt a:hover {
+  color: #00c5c7;
+}
+.box .section .row.alt a:link {
+  color: #009b87;
+}
+.box .section .row.alt a:visited use {
+  color: #555555;
+}
+.box .section .row.alt a:active use {
+  color: #00a46c;
+}
+.box .section .row.alt a:hover use {
+  color: #009b87;
+}
+.box .section .row.alt a:link use {
+  color: #555555;
+}
+.box .section .row.alt.hover.alt:hover {
+  background: #91cbcf;
+  color: #314747;
+}
+.box .section .row.alt.selected {
+  background: #43b9c1;
+  color: #1c4646;
+}
+.box .section .row.alt.selected a:visited {
+  color: #00b4ff;
+}
+.box .section .row.alt.selected a:active {
+  color: #00c5c7;
+}
+.box .section .row.alt.selected a:hover {
+  color: #00c5c7;
+}
+.box .section .row.alt.selected a:link {
+  color: #00b4ff;
+}
+.box .section .row.alt.selected a:visited use {
+  color: #185a64;
+}
+.box .section .row.alt.selected a:active use {
+  color: #00a46c;
+}
+.box .section .row.alt.selected a:hover use {
+  color: #009b87;
+}
+.box .section .row.alt.selected a:link use {
+  color: #185a64;
+}
+.box .section .col.input-label {
+  color: #007a8d;
+}
+.box .section .button,
+.box .section a.button {
+  background: #009b87;
+  border: transparent;
+  color: #ffffff;
+}
+.box .section .button:hover,
+.box .section a.button:hover {
+  background: #00a46c;
+  border: transparent;
+  color: #ffffff;
+}
+.box .section .button:active,
+.box .section a.button:active {
+  background: #00c5c7;
+  border: transparent;
+  color: #ffffff;
+}
+.box .section .button.selected,
+.box .section a.button.selected,
+.selected .box .section .button,
+.selected .box .section a.button {
+  background: #00a46c;
+  border: transparent;
+  color: #ffffff;
+}
+.box .section .button:visited,
+.box .section a.button:visited {
+  color: #ffffff;
+}
+.box .section .button:active,
+.box .section a.button:active {
+  color: #ffffff;
+}
+.box .section .button:hover,
+.box .section a.button:hover {
+  color: #ffffff;
+}
+.box .section .button:link,
+.box .section a.button:link {
+  color: #ffffff;
+}
+.box .section .button:visited use,
+.box .section a.button:visited use {
+  color: #ffffff;
+}
+.box .section .button:active use,
+.box .section a.button:active use {
+  color: #ffffff;
+}
+.box .section .button:hover use,
+.box .section a.button:hover use {
+  color: #ffffff;
+}
+.box .section .button:link use,
+.box .section a.button:link use {
+  color: #ffffff;
+}
+.box .section .button.apply,
+.box .section a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.apply:hover,
+.box .section a.button.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.apply:active,
+.box .section a.button.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.apply.selected,
+.box .section a.button.apply.selected,
+.selected .box .section .button.apply,
+.selected .box .section a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.apply:visited,
+.box .section a.button.apply:visited {
+  color: transparent;
+}
+.box .section .button.apply:active,
+.box .section a.button.apply:active {
+  color: transparent;
+}
+.box .section .button.apply:hover,
+.box .section a.button.apply:hover {
+  color: transparent;
+}
+.box .section .button.apply:link,
+.box .section a.button.apply:link {
+  color: transparent;
+}
+.box .section .button.apply:visited use,
+.box .section a.button.apply:visited use {
+  color: transparent;
+}
+.box .section .button.apply:active use,
+.box .section a.button.apply:active use {
+  color: transparent;
+}
+.box .section .button.apply:hover use,
+.box .section a.button.apply:hover use {
+  color: transparent;
+}
+.box .section .button.apply:link use,
+.box .section a.button.apply:link use {
+  color: transparent;
+}
+.box .section .button.cancel,
+.box .section a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.cancel:hover,
+.box .section a.button.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.cancel:active,
+.box .section a.button.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.cancel.selected,
+.box .section a.button.cancel.selected,
+.selected .box .section .button.cancel,
+.selected .box .section a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.cancel:visited,
+.box .section a.button.cancel:visited {
+  color: transparent;
+}
+.box .section .button.cancel:active,
+.box .section a.button.cancel:active {
+  color: transparent;
+}
+.box .section .button.cancel:hover,
+.box .section a.button.cancel:hover {
+  color: transparent;
+}
+.box .section .button.cancel:link,
+.box .section a.button.cancel:link {
+  color: transparent;
+}
+.box .section .button.cancel:visited use,
+.box .section a.button.cancel:visited use {
+  color: transparent;
+}
+.box .section .button.cancel:active use,
+.box .section a.button.cancel:active use {
+  color: transparent;
+}
+.box .section .button.cancel:hover use,
+.box .section a.button.cancel:hover use {
+  color: transparent;
+}
+.box .section .button.cancel:link use,
+.box .section a.button.cancel:link use {
+  color: transparent;
+}
+.box .section .button.delete,
+.box .section a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.delete:hover,
+.box .section a.button.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.delete:active,
+.box .section a.button.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.delete.selected,
+.box .section a.button.delete.selected,
+.selected .box .section .button.delete,
+.selected .box .section a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.delete:visited,
+.box .section a.button.delete:visited {
+  color: transparent;
+}
+.box .section .button.delete:active,
+.box .section a.button.delete:active {
+  color: transparent;
+}
+.box .section .button.delete:hover,
+.box .section a.button.delete:hover {
+  color: transparent;
+}
+.box .section .button.delete:link,
+.box .section a.button.delete:link {
+  color: transparent;
+}
+.box .section .button.delete:visited use,
+.box .section a.button.delete:visited use {
+  color: transparent;
+}
+.box .section .button.delete:active use,
+.box .section a.button.delete:active use {
+  color: transparent;
+}
+.box .section .button.delete:hover use,
+.box .section a.button.delete:hover use {
+  color: transparent;
+}
+.box .section .button.delete:link use,
+.box .section a.button.delete:link use {
+  color: transparent;
+}
+.box .section .button.special,
+.box .section a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.special:hover,
+.box .section a.button.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.special:active,
+.box .section a.button.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.special.selected,
+.box .section a.button.special.selected,
+.selected .box .section .button.special,
+.selected .box .section a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.special:visited,
+.box .section a.button.special:visited {
+  color: transparent;
+}
+.box .section .button.special:active,
+.box .section a.button.special:active {
+  color: transparent;
+}
+.box .section .button.special:hover,
+.box .section a.button.special:hover {
+  color: transparent;
+}
+.box .section .button.special:link,
+.box .section a.button.special:link {
+  color: transparent;
+}
+.box .section .button.special:visited use,
+.box .section a.button.special:visited use {
+  color: transparent;
+}
+.box .section .button.special:active use,
+.box .section a.button.special:active use {
+  color: transparent;
+}
+.box .section .button.special:hover use,
+.box .section a.button.special:hover use {
+  color: transparent;
+}
+.box .section .button.special:link use,
+.box .section a.button.special:link use {
+  color: transparent;
+}
+.box .section .button.disabled,
+.box .section a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.disabled:hover,
+.box .section a.button.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.disabled:active,
+.box .section a.button.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.disabled.selected,
+.box .section a.button.disabled.selected,
+.selected .box .section .button.disabled,
+.selected .box .section a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.disabled:visited,
+.box .section a.button.disabled:visited {
+  color: transparent;
+}
+.box .section .button.disabled:active,
+.box .section a.button.disabled:active {
+  color: transparent;
+}
+.box .section .button.disabled:hover,
+.box .section a.button.disabled:hover {
+  color: transparent;
+}
+.box .section .button.disabled:link,
+.box .section a.button.disabled:link {
+  color: transparent;
+}
+.box .section .button.disabled:visited use,
+.box .section a.button.disabled:visited use {
+  color: transparent;
+}
+.box .section .button.disabled:active use,
+.box .section a.button.disabled:active use {
+  color: transparent;
+}
+.box .section .button.disabled:hover use,
+.box .section a.button.disabled:hover use {
+  color: transparent;
+}
+.box .section .button.disabled:link use,
+.box .section a.button.disabled:link use {
+  color: transparent;
+}
+.box .section .button.outline,
+.box .section a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline:hover,
+.box .section a.button.outline:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline:active,
+.box .section a.button.outline:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.selected,
+.box .section a.button.outline.selected,
+.selected .box .section .button.outline,
+.selected .box .section a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline:visited,
+.box .section a.button.outline:visited {
+  color: transparent;
+}
+.box .section .button.outline:active,
+.box .section a.button.outline:active {
+  color: transparent;
+}
+.box .section .button.outline:hover,
+.box .section a.button.outline:hover {
+  color: transparent;
+}
+.box .section .button.outline:link,
+.box .section a.button.outline:link {
+  color: transparent;
+}
+.box .section .button.outline:visited use,
+.box .section a.button.outline:visited use {
+  color: transparent;
+}
+.box .section .button.outline:active use,
+.box .section a.button.outline:active use {
+  color: transparent;
+}
+.box .section .button.outline:hover use,
+.box .section a.button.outline:hover use {
+  color: transparent;
+}
+.box .section .button.outline:link use,
+.box .section a.button.outline:link use {
+  color: transparent;
+}
+.box .section .button.outline.apply,
+.box .section a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.apply:hover,
+.box .section a.button.outline.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.apply:active,
+.box .section a.button.outline.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.apply.selected,
+.box .section a.button.outline.apply.selected,
+.selected .box .section .button.outline.apply,
+.selected .box .section a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.apply:visited,
+.box .section a.button.outline.apply:visited {
+  color: transparent;
+}
+.box .section .button.outline.apply:active,
+.box .section a.button.outline.apply:active {
+  color: transparent;
+}
+.box .section .button.outline.apply:hover,
+.box .section a.button.outline.apply:hover {
+  color: transparent;
+}
+.box .section .button.outline.apply:link,
+.box .section a.button.outline.apply:link {
+  color: transparent;
+}
+.box .section .button.outline.apply:visited use,
+.box .section a.button.outline.apply:visited use {
+  color: transparent;
+}
+.box .section .button.outline.apply:active use,
+.box .section a.button.outline.apply:active use {
+  color: transparent;
+}
+.box .section .button.outline.apply:hover use,
+.box .section a.button.outline.apply:hover use {
+  color: transparent;
+}
+.box .section .button.outline.apply:link use,
+.box .section a.button.outline.apply:link use {
+  color: transparent;
+}
+.box .section .button.outline.cancel,
+.box .section a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.cancel:hover,
+.box .section a.button.outline.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.cancel:active,
+.box .section a.button.outline.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.cancel.selected,
+.box .section a.button.outline.cancel.selected,
+.selected .box .section .button.outline.cancel,
+.selected .box .section a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.cancel:visited,
+.box .section a.button.outline.cancel:visited {
+  color: transparent;
+}
+.box .section .button.outline.cancel:active,
+.box .section a.button.outline.cancel:active {
+  color: transparent;
+}
+.box .section .button.outline.cancel:hover,
+.box .section a.button.outline.cancel:hover {
+  color: transparent;
+}
+.box .section .button.outline.cancel:link,
+.box .section a.button.outline.cancel:link {
+  color: transparent;
+}
+.box .section .button.outline.cancel:visited use,
+.box .section a.button.outline.cancel:visited use {
+  color: transparent;
+}
+.box .section .button.outline.cancel:active use,
+.box .section a.button.outline.cancel:active use {
+  color: transparent;
+}
+.box .section .button.outline.cancel:hover use,
+.box .section a.button.outline.cancel:hover use {
+  color: transparent;
+}
+.box .section .button.outline.cancel:link use,
+.box .section a.button.outline.cancel:link use {
+  color: transparent;
+}
+.box .section .button.outline.delete,
+.box .section a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.delete:hover,
+.box .section a.button.outline.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.delete:active,
+.box .section a.button.outline.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.delete.selected,
+.box .section a.button.outline.delete.selected,
+.selected .box .section .button.outline.delete,
+.selected .box .section a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.delete:visited,
+.box .section a.button.outline.delete:visited {
+  color: transparent;
+}
+.box .section .button.outline.delete:active,
+.box .section a.button.outline.delete:active {
+  color: transparent;
+}
+.box .section .button.outline.delete:hover,
+.box .section a.button.outline.delete:hover {
+  color: transparent;
+}
+.box .section .button.outline.delete:link,
+.box .section a.button.outline.delete:link {
+  color: transparent;
+}
+.box .section .button.outline.delete:visited use,
+.box .section a.button.outline.delete:visited use {
+  color: transparent;
+}
+.box .section .button.outline.delete:active use,
+.box .section a.button.outline.delete:active use {
+  color: transparent;
+}
+.box .section .button.outline.delete:hover use,
+.box .section a.button.outline.delete:hover use {
+  color: transparent;
+}
+.box .section .button.outline.delete:link use,
+.box .section a.button.outline.delete:link use {
+  color: transparent;
+}
+.box .section .button.outline.special,
+.box .section a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.special:hover,
+.box .section a.button.outline.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.special:active,
+.box .section a.button.outline.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.special.selected,
+.box .section a.button.outline.special.selected,
+.selected .box .section .button.outline.special,
+.selected .box .section a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.special:visited,
+.box .section a.button.outline.special:visited {
+  color: transparent;
+}
+.box .section .button.outline.special:active,
+.box .section a.button.outline.special:active {
+  color: transparent;
+}
+.box .section .button.outline.special:hover,
+.box .section a.button.outline.special:hover {
+  color: transparent;
+}
+.box .section .button.outline.special:link,
+.box .section a.button.outline.special:link {
+  color: transparent;
+}
+.box .section .button.outline.special:visited use,
+.box .section a.button.outline.special:visited use {
+  color: transparent;
+}
+.box .section .button.outline.special:active use,
+.box .section a.button.outline.special:active use {
+  color: transparent;
+}
+.box .section .button.outline.special:hover use,
+.box .section a.button.outline.special:hover use {
+  color: transparent;
+}
+.box .section .button.outline.special:link use,
+.box .section a.button.outline.special:link use {
+  color: transparent;
+}
+.box .section .button.outline.disabled,
+.box .section a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.disabled:hover,
+.box .section a.button.outline.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.disabled:active,
+.box .section a.button.outline.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.disabled.selected,
+.box .section a.button.outline.disabled.selected,
+.selected .box .section .button.outline.disabled,
+.selected .box .section a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .button.outline.disabled:visited,
+.box .section a.button.outline.disabled:visited {
+  color: transparent;
+}
+.box .section .button.outline.disabled:active,
+.box .section a.button.outline.disabled:active {
+  color: transparent;
+}
+.box .section .button.outline.disabled:hover,
+.box .section a.button.outline.disabled:hover {
+  color: transparent;
+}
+.box .section .button.outline.disabled:link,
+.box .section a.button.outline.disabled:link {
+  color: transparent;
+}
+.box .section .button.outline.disabled:visited use,
+.box .section a.button.outline.disabled:visited use {
+  color: transparent;
+}
+.box .section .button.outline.disabled:active use,
+.box .section a.button.outline.disabled:active use {
+  color: transparent;
+}
+.box .section .button.outline.disabled:hover use,
+.box .section a.button.outline.disabled:hover use {
+  color: transparent;
+}
+.box .section .button.outline.disabled:link use,
+.box .section a.button.outline.disabled:link use {
+  color: transparent;
+}
+.box .section .button:visited use,
+.box .section a.button:visited use {
+  color: #ffffff;
+}
+.box .section .button:active use,
+.box .section a.button:active use {
+  color: #ffffff;
+}
+.box .section .button:hover use,
+.box .section a.button:hover use {
+  color: #ffffff;
+}
+.box .section .button:link use,
+.box .section a.button:link use {
+  color: #ffffff;
+}
+.box .section .button.apply:visited use,
+.box .section a.button.apply:visited use {
+  color: transparent;
+}
+.box .section .button.apply:active use,
+.box .section a.button.apply:active use {
+  color: transparent;
+}
+.box .section .button.apply:hover use,
+.box .section a.button.apply:hover use {
+  color: transparent;
+}
+.box .section .button.apply:link use,
+.box .section a.button.apply:link use {
+  color: transparent;
+}
+.box .section .button.cancel:visited use,
+.box .section a.button.cancel:visited use {
+  color: transparent;
+}
+.box .section .button.cancel:active use,
+.box .section a.button.cancel:active use {
+  color: transparent;
+}
+.box .section .button.cancel:hover use,
+.box .section a.button.cancel:hover use {
+  color: transparent;
+}
+.box .section .button.cancel:link use,
+.box .section a.button.cancel:link use {
+  color: transparent;
+}
+.box .section .button.delete:visited use,
+.box .section a.button.delete:visited use {
+  color: transparent;
+}
+.box .section .button.delete:active use,
+.box .section a.button.delete:active use {
+  color: transparent;
+}
+.box .section .button.delete:hover use,
+.box .section a.button.delete:hover use {
+  color: transparent;
+}
+.box .section .button.delete:link use,
+.box .section a.button.delete:link use {
+  color: transparent;
+}
+.box .section .button.special:visited use,
+.box .section a.button.special:visited use {
+  color: transparent;
+}
+.box .section .button.special:active use,
+.box .section a.button.special:active use {
+  color: transparent;
+}
+.box .section .button.special:hover use,
+.box .section a.button.special:hover use {
+  color: transparent;
+}
+.box .section .button.special:link use,
+.box .section a.button.special:link use {
+  color: transparent;
+}
+.box .section .button.disabled:visited use,
+.box .section a.button.disabled:visited use {
+  color: transparent;
+}
+.box .section .button.disabled:active use,
+.box .section a.button.disabled:active use {
+  color: transparent;
+}
+.box .section .button.disabled:hover use,
+.box .section a.button.disabled:hover use {
+  color: transparent;
+}
+.box .section .button.disabled:link use,
+.box .section a.button.disabled:link use {
+  color: transparent;
+}
+.box .section .row.header {
+  background: transparent;
+  color: #444444;
+}
+.box .section .row.header a:visited {
+  color: #009b87;
+}
+.box .section .row.header a:active {
+  color: #00c5c7;
+}
+.box .section .row.header a:hover {
+  color: #00c5c7;
+}
+.box .section .row.header a:link {
+  color: #009b87;
+}
+.box .section .row.header a:visited use {
+  color: #009b87;
+}
+.box .section .row.header a:active use {
+  color: #00c5c7;
+}
+.box .section .row.header a:hover use {
+  color: #00c5c7;
+}
+.box .section .row.header a:link use {
+  color: #009b87;
+}
+.box .section .row.header a.faded:visited {
+  color: #58cabb;
+}
+.box .section .row.header a.faded:active {
+  color: #66fdff;
+}
+.box .section .row.header a.faded:hover {
+  color: #61d4d5;
+}
+.box .section .row.header a.faded:link {
+  color: #58cabb;
+}
+.box .section .row.header a.faded:visited use {
+  color: #58cabb;
+}
+.box .section .row.header a.faded:active use {
+  color: #66fdff;
+}
+.box .section .row.header a.faded:hover use {
+  color: #61d4d5;
+}
+.box .section .row.header a.faded:link use {
+  color: #58cabb;
+}
+.box .section .row.header .icon a:visited,
+.box .section .row.header .nolinks a:visited {
+  color: #555555 !important;
+}
+.box .section .row.header .icon a:active,
+.box .section .row.header .nolinks a:active {
+  color: #00a46c !important;
+}
+.box .section .row.header .icon a:hover,
+.box .section .row.header .nolinks a:hover {
+  color: #009b87 !important;
+}
+.box .section .row.header .icon a:link,
+.box .section .row.header .nolinks a:link {
+  color: #555555 !important;
+}
+.box .section .row.header .icon a:visited use,
+.box .section .row.header .nolinks a:visited use {
+  color: #555555;
+}
+.box .section .row.header .icon a:active use,
+.box .section .row.header .nolinks a:active use {
+  color: #00a46c;
+}
+.box .section .row.header .icon a:hover use,
+.box .section .row.header .nolinks a:hover use {
+  color: #009b87;
+}
+.box .section .row.header .icon a:link use,
+.box .section .row.header .nolinks a:link use {
+  color: #555555;
+}
+.box .section .row.header .font-faded {
+  color: rgba(0, 0, 0, 0.3);
+}
+.box .section .row.header .font-price {
+  color: #009b87;
+}
+.box .section .row.header .font-positive {
+  color: #4da400;
+}
+.box .section .row.header .font-negative {
+  color: #ff2222;
+}
+.box .section .row.header .font-time {
+  color: #376eb2;
+}
+.box .section .row.header .row {
+  background: transparent;
+  color: #444444;
+}
+.box .section .row.header .row a:visited {
+  color: #009b87;
+}
+.box .section .row.header .row a:active {
+  color: #00c5c7;
+}
+.box .section .row.header .row a:hover {
+  color: #00c5c7;
+}
+.box .section .row.header .row a:link {
+  color: #009b87;
+}
+.box .section .row.header .row a:visited use {
+  color: #555555;
+}
+.box .section .row.header .row a:active use {
+  color: #00a46c;
+}
+.box .section .row.header .row a:hover use {
+  color: #009b87;
+}
+.box .section .row.header .row a:link use {
+  color: #555555;
+}
+.box .section .row.header .row.hover:hover {
+  background: #a7d8db;
+  color: #33494c;
+}
+.box .section .row.header .row.selected {
+  background: #5ec7ce;
+  color: #13474f;
+}
+.box .section .row.header .row.selected a:visited {
+  color: #00b4ff;
+}
+.box .section .row.header .row.selected a:active {
+  color: #00c5c7;
+}
+.box .section .row.header .row.selected a:hover {
+  color: #00c5c7;
+}
+.box .section .row.header .row.selected a:link {
+  color: #00b4ff;
+}
+.box .section .row.header .row.selected a:visited use {
+  color: #185a64;
+}
+.box .section .row.header .row.selected a:active use {
+  color: #00a46c;
+}
+.box .section .row.header .row.selected a:hover use {
+  color: #009b87;
+}
+.box .section .row.header .row.selected a:link use {
+  color: #185a64;
+}
+.box .section .row.header .row.alt {
+  background: #d0d0d0;
+  color: #444444;
+}
+.box .section .row.header .row.alt a:visited {
+  color: #009b87;
+}
+.box .section .row.header .row.alt a:active {
+  color: #00c5c7;
+}
+.box .section .row.header .row.alt a:hover {
+  color: #00c5c7;
+}
+.box .section .row.header .row.alt a:link {
+  color: #009b87;
+}
+.box .section .row.header .row.alt a:visited use {
+  color: #555555;
+}
+.box .section .row.header .row.alt a:active use {
+  color: #00a46c;
+}
+.box .section .row.header .row.alt a:hover use {
+  color: #009b87;
+}
+.box .section .row.header .row.alt a:link use {
+  color: #555555;
+}
+.box .section .row.header .row.alt.hover.alt:hover {
+  background: #91cbcf;
+  color: #314747;
+}
+.box .section .row.header .row.alt.selected {
+  background: #43b9c1;
+  color: #1c4646;
+}
+.box .section .row.header .row.alt.selected a:visited {
+  color: #00b4ff;
+}
+.box .section .row.header .row.alt.selected a:active {
+  color: #00c5c7;
+}
+.box .section .row.header .row.alt.selected a:hover {
+  color: #00c5c7;
+}
+.box .section .row.header .row.alt.selected a:link {
+  color: #00b4ff;
+}
+.box .section .row.header .row.alt.selected a:visited use {
+  color: #185a64;
+}
+.box .section .row.header .row.alt.selected a:active use {
+  color: #00a46c;
+}
+.box .section .row.header .row.alt.selected a:hover use {
+  color: #009b87;
+}
+.box .section .row.header .row.alt.selected a:link use {
+  color: #185a64;
+}
+.box .section .row.header .col.input-label {
+  color: #007a8d;
+}
+.box .section .row.header .button,
+.box .section .row.header a.button {
+  background: #009b87;
+  border: transparent;
+  color: #ffffff;
+}
+.box .section .row.header .button:hover,
+.box .section .row.header a.button:hover {
+  background: #00a46c;
+  border: transparent;
+  color: #ffffff;
+}
+.box .section .row.header .button:active,
+.box .section .row.header a.button:active {
+  background: #00c5c7;
+  border: transparent;
+  color: #ffffff;
+}
+.box .section .row.header .button.selected,
+.box .section .row.header a.button.selected,
+.selected .box .section .row.header .button,
+.selected .box .section .row.header a.button {
+  background: #00a46c;
+  border: transparent;
+  color: #ffffff;
+}
+.box .section .row.header .button:visited,
+.box .section .row.header a.button:visited {
+  color: #ffffff;
+}
+.box .section .row.header .button:active,
+.box .section .row.header a.button:active {
+  color: #ffffff;
+}
+.box .section .row.header .button:hover,
+.box .section .row.header a.button:hover {
+  color: #ffffff;
+}
+.box .section .row.header .button:link,
+.box .section .row.header a.button:link {
+  color: #ffffff;
+}
+.box .section .row.header .button:visited use,
+.box .section .row.header a.button:visited use {
+  color: #ffffff;
+}
+.box .section .row.header .button:active use,
+.box .section .row.header a.button:active use {
+  color: #ffffff;
+}
+.box .section .row.header .button:hover use,
+.box .section .row.header a.button:hover use {
+  color: #ffffff;
+}
+.box .section .row.header .button:link use,
+.box .section .row.header a.button:link use {
+  color: #ffffff;
+}
+.box .section .row.header .button.apply,
+.box .section .row.header a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.apply:hover,
+.box .section .row.header a.button.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.apply:active,
+.box .section .row.header a.button.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.apply.selected,
+.box .section .row.header a.button.apply.selected,
+.selected .box .section .row.header .button.apply,
+.selected .box .section .row.header a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.apply:visited,
+.box .section .row.header a.button.apply:visited {
+  color: transparent;
+}
+.box .section .row.header .button.apply:active,
+.box .section .row.header a.button.apply:active {
+  color: transparent;
+}
+.box .section .row.header .button.apply:hover,
+.box .section .row.header a.button.apply:hover {
+  color: transparent;
+}
+.box .section .row.header .button.apply:link,
+.box .section .row.header a.button.apply:link {
+  color: transparent;
+}
+.box .section .row.header .button.apply:visited use,
+.box .section .row.header a.button.apply:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.apply:active use,
+.box .section .row.header a.button.apply:active use {
+  color: transparent;
+}
+.box .section .row.header .button.apply:hover use,
+.box .section .row.header a.button.apply:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.apply:link use,
+.box .section .row.header a.button.apply:link use {
+  color: transparent;
+}
+.box .section .row.header .button.cancel,
+.box .section .row.header a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.cancel:hover,
+.box .section .row.header a.button.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.cancel:active,
+.box .section .row.header a.button.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.cancel.selected,
+.box .section .row.header a.button.cancel.selected,
+.selected .box .section .row.header .button.cancel,
+.selected .box .section .row.header a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.cancel:visited,
+.box .section .row.header a.button.cancel:visited {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:active,
+.box .section .row.header a.button.cancel:active {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:hover,
+.box .section .row.header a.button.cancel:hover {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:link,
+.box .section .row.header a.button.cancel:link {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:visited use,
+.box .section .row.header a.button.cancel:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:active use,
+.box .section .row.header a.button.cancel:active use {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:hover use,
+.box .section .row.header a.button.cancel:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:link use,
+.box .section .row.header a.button.cancel:link use {
+  color: transparent;
+}
+.box .section .row.header .button.delete,
+.box .section .row.header a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.delete:hover,
+.box .section .row.header a.button.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.delete:active,
+.box .section .row.header a.button.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.delete.selected,
+.box .section .row.header a.button.delete.selected,
+.selected .box .section .row.header .button.delete,
+.selected .box .section .row.header a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.delete:visited,
+.box .section .row.header a.button.delete:visited {
+  color: transparent;
+}
+.box .section .row.header .button.delete:active,
+.box .section .row.header a.button.delete:active {
+  color: transparent;
+}
+.box .section .row.header .button.delete:hover,
+.box .section .row.header a.button.delete:hover {
+  color: transparent;
+}
+.box .section .row.header .button.delete:link,
+.box .section .row.header a.button.delete:link {
+  color: transparent;
+}
+.box .section .row.header .button.delete:visited use,
+.box .section .row.header a.button.delete:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.delete:active use,
+.box .section .row.header a.button.delete:active use {
+  color: transparent;
+}
+.box .section .row.header .button.delete:hover use,
+.box .section .row.header a.button.delete:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.delete:link use,
+.box .section .row.header a.button.delete:link use {
+  color: transparent;
+}
+.box .section .row.header .button.special,
+.box .section .row.header a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.special:hover,
+.box .section .row.header a.button.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.special:active,
+.box .section .row.header a.button.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.special.selected,
+.box .section .row.header a.button.special.selected,
+.selected .box .section .row.header .button.special,
+.selected .box .section .row.header a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.special:visited,
+.box .section .row.header a.button.special:visited {
+  color: transparent;
+}
+.box .section .row.header .button.special:active,
+.box .section .row.header a.button.special:active {
+  color: transparent;
+}
+.box .section .row.header .button.special:hover,
+.box .section .row.header a.button.special:hover {
+  color: transparent;
+}
+.box .section .row.header .button.special:link,
+.box .section .row.header a.button.special:link {
+  color: transparent;
+}
+.box .section .row.header .button.special:visited use,
+.box .section .row.header a.button.special:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.special:active use,
+.box .section .row.header a.button.special:active use {
+  color: transparent;
+}
+.box .section .row.header .button.special:hover use,
+.box .section .row.header a.button.special:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.special:link use,
+.box .section .row.header a.button.special:link use {
+  color: transparent;
+}
+.box .section .row.header .button.disabled,
+.box .section .row.header a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.disabled:hover,
+.box .section .row.header a.button.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.disabled:active,
+.box .section .row.header a.button.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.disabled.selected,
+.box .section .row.header a.button.disabled.selected,
+.selected .box .section .row.header .button.disabled,
+.selected .box .section .row.header a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.disabled:visited,
+.box .section .row.header a.button.disabled:visited {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:active,
+.box .section .row.header a.button.disabled:active {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:hover,
+.box .section .row.header a.button.disabled:hover {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:link,
+.box .section .row.header a.button.disabled:link {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:visited use,
+.box .section .row.header a.button.disabled:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:active use,
+.box .section .row.header a.button.disabled:active use {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:hover use,
+.box .section .row.header a.button.disabled:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:link use,
+.box .section .row.header a.button.disabled:link use {
+  color: transparent;
+}
+.box .section .row.header .button.outline,
+.box .section .row.header a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline:hover,
+.box .section .row.header a.button.outline:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline:active,
+.box .section .row.header a.button.outline:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.selected,
+.box .section .row.header a.button.outline.selected,
+.selected .box .section .row.header .button.outline,
+.selected .box .section .row.header a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline:visited,
+.box .section .row.header a.button.outline:visited {
+  color: transparent;
+}
+.box .section .row.header .button.outline:active,
+.box .section .row.header a.button.outline:active {
+  color: transparent;
+}
+.box .section .row.header .button.outline:hover,
+.box .section .row.header a.button.outline:hover {
+  color: transparent;
+}
+.box .section .row.header .button.outline:link,
+.box .section .row.header a.button.outline:link {
+  color: transparent;
+}
+.box .section .row.header .button.outline:visited use,
+.box .section .row.header a.button.outline:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.outline:active use,
+.box .section .row.header a.button.outline:active use {
+  color: transparent;
+}
+.box .section .row.header .button.outline:hover use,
+.box .section .row.header a.button.outline:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.outline:link use,
+.box .section .row.header a.button.outline:link use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply,
+.box .section .row.header a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:hover,
+.box .section .row.header a.button.outline.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:active,
+.box .section .row.header a.button.outline.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply.selected,
+.box .section .row.header a.button.outline.apply.selected,
+.selected .box .section .row.header .button.outline.apply,
+.selected .box .section .row.header a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:visited,
+.box .section .row.header a.button.outline.apply:visited {
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:active,
+.box .section .row.header a.button.outline.apply:active {
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:hover,
+.box .section .row.header a.button.outline.apply:hover {
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:link,
+.box .section .row.header a.button.outline.apply:link {
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:visited use,
+.box .section .row.header a.button.outline.apply:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:active use,
+.box .section .row.header a.button.outline.apply:active use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:hover use,
+.box .section .row.header a.button.outline.apply:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.apply:link use,
+.box .section .row.header a.button.outline.apply:link use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel,
+.box .section .row.header a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:hover,
+.box .section .row.header a.button.outline.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:active,
+.box .section .row.header a.button.outline.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel.selected,
+.box .section .row.header a.button.outline.cancel.selected,
+.selected .box .section .row.header .button.outline.cancel,
+.selected .box .section .row.header a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:visited,
+.box .section .row.header a.button.outline.cancel:visited {
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:active,
+.box .section .row.header a.button.outline.cancel:active {
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:hover,
+.box .section .row.header a.button.outline.cancel:hover {
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:link,
+.box .section .row.header a.button.outline.cancel:link {
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:visited use,
+.box .section .row.header a.button.outline.cancel:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:active use,
+.box .section .row.header a.button.outline.cancel:active use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:hover use,
+.box .section .row.header a.button.outline.cancel:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.cancel:link use,
+.box .section .row.header a.button.outline.cancel:link use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete,
+.box .section .row.header a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:hover,
+.box .section .row.header a.button.outline.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:active,
+.box .section .row.header a.button.outline.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete.selected,
+.box .section .row.header a.button.outline.delete.selected,
+.selected .box .section .row.header .button.outline.delete,
+.selected .box .section .row.header a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:visited,
+.box .section .row.header a.button.outline.delete:visited {
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:active,
+.box .section .row.header a.button.outline.delete:active {
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:hover,
+.box .section .row.header a.button.outline.delete:hover {
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:link,
+.box .section .row.header a.button.outline.delete:link {
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:visited use,
+.box .section .row.header a.button.outline.delete:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:active use,
+.box .section .row.header a.button.outline.delete:active use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:hover use,
+.box .section .row.header a.button.outline.delete:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.delete:link use,
+.box .section .row.header a.button.outline.delete:link use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.special,
+.box .section .row.header a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:hover,
+.box .section .row.header a.button.outline.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:active,
+.box .section .row.header a.button.outline.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.special.selected,
+.box .section .row.header a.button.outline.special.selected,
+.selected .box .section .row.header .button.outline.special,
+.selected .box .section .row.header a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:visited,
+.box .section .row.header a.button.outline.special:visited {
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:active,
+.box .section .row.header a.button.outline.special:active {
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:hover,
+.box .section .row.header a.button.outline.special:hover {
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:link,
+.box .section .row.header a.button.outline.special:link {
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:visited use,
+.box .section .row.header a.button.outline.special:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:active use,
+.box .section .row.header a.button.outline.special:active use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:hover use,
+.box .section .row.header a.button.outline.special:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.special:link use,
+.box .section .row.header a.button.outline.special:link use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled,
+.box .section .row.header a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:hover,
+.box .section .row.header a.button.outline.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:active,
+.box .section .row.header a.button.outline.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled.selected,
+.box .section .row.header a.button.outline.disabled.selected,
+.selected .box .section .row.header .button.outline.disabled,
+.selected .box .section .row.header a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:visited,
+.box .section .row.header a.button.outline.disabled:visited {
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:active,
+.box .section .row.header a.button.outline.disabled:active {
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:hover,
+.box .section .row.header a.button.outline.disabled:hover {
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:link,
+.box .section .row.header a.button.outline.disabled:link {
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:visited use,
+.box .section .row.header a.button.outline.disabled:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:active use,
+.box .section .row.header a.button.outline.disabled:active use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:hover use,
+.box .section .row.header a.button.outline.disabled:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.outline.disabled:link use,
+.box .section .row.header a.button.outline.disabled:link use {
+  color: transparent;
+}
+.box .section .row.header .button:visited use,
+.box .section .row.header a.button:visited use {
+  color: #ffffff;
+}
+.box .section .row.header .button:active use,
+.box .section .row.header a.button:active use {
+  color: #ffffff;
+}
+.box .section .row.header .button:hover use,
+.box .section .row.header a.button:hover use {
+  color: #ffffff;
+}
+.box .section .row.header .button:link use,
+.box .section .row.header a.button:link use {
+  color: #ffffff;
+}
+.box .section .row.header .button.apply:visited use,
+.box .section .row.header a.button.apply:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.apply:active use,
+.box .section .row.header a.button.apply:active use {
+  color: transparent;
+}
+.box .section .row.header .button.apply:hover use,
+.box .section .row.header a.button.apply:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.apply:link use,
+.box .section .row.header a.button.apply:link use {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:visited use,
+.box .section .row.header a.button.cancel:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:active use,
+.box .section .row.header a.button.cancel:active use {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:hover use,
+.box .section .row.header a.button.cancel:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.cancel:link use,
+.box .section .row.header a.button.cancel:link use {
+  color: transparent;
+}
+.box .section .row.header .button.delete:visited use,
+.box .section .row.header a.button.delete:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.delete:active use,
+.box .section .row.header a.button.delete:active use {
+  color: transparent;
+}
+.box .section .row.header .button.delete:hover use,
+.box .section .row.header a.button.delete:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.delete:link use,
+.box .section .row.header a.button.delete:link use {
+  color: transparent;
+}
+.box .section .row.header .button.special:visited use,
+.box .section .row.header a.button.special:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.special:active use,
+.box .section .row.header a.button.special:active use {
+  color: transparent;
+}
+.box .section .row.header .button.special:hover use,
+.box .section .row.header a.button.special:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.special:link use,
+.box .section .row.header a.button.special:link use {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:visited use,
+.box .section .row.header a.button.disabled:visited use {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:active use,
+.box .section .row.header a.button.disabled:active use {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:hover use,
+.box .section .row.header a.button.disabled:hover use {
+  color: transparent;
+}
+.box .section .row.header .button.disabled:link use,
+.box .section .row.header a.button.disabled:link use {
+  color: transparent;
+}
+.sidebar {
+  background: #71a596;
+  color: #ffffff;
+}
+.sidebar a:visited {
+  color: #fdffc7;
+}
+.sidebar a:active {
+  color: #ffef69;
+}
+.sidebar a:hover {
+  color: #fbff83;
+}
+.sidebar a:link {
+  color: #fdffc7;
+}
+.sidebar a:visited use {
+  color: #fdffc7;
+}
+.sidebar a:active use {
+  color: #ffef69;
+}
+.sidebar a:hover use {
+  color: #fbff83;
+}
+.sidebar a:link use {
+  color: #fdffc7;
+}
+.sidebar a.faded:visited {
+  color: rgba(253, 255, 199, 0.5);
+}
+.sidebar a.faded:active {
+  color: rgba(255, 239, 105, 0.5);
+}
+.sidebar a.faded:hover {
+  color: rgba(251, 255, 131, 0.5);
+}
+.sidebar a.faded:link {
+  color: rgba(253, 255, 199, 0.5);
+}
+.sidebar a.faded:visited use {
+  color: rgba(253, 255, 199, 0.5);
+}
+.sidebar a.faded:active use {
+  color: rgba(255, 239, 105, 0.5);
+}
+.sidebar a.faded:hover use {
+  color: rgba(251, 255, 131, 0.5);
+}
+.sidebar a.faded:link use {
+  color: rgba(253, 255, 199, 0.5);
+}
+.sidebar .icon a:visited,
+.sidebar .nolinks a:visited {
+  color: #ffffff !important;
+}
+.sidebar .icon a:active,
+.sidebar .nolinks a:active {
+  color: #ffef69 !important;
+}
+.sidebar .icon a:hover,
+.sidebar .nolinks a:hover {
+  color: #fbff83 !important;
+}
+.sidebar .icon a:link,
+.sidebar .nolinks a:link {
+  color: #ffffff !important;
+}
+.sidebar .icon a:visited use,
+.sidebar .nolinks a:visited use {
+  color: #ffffff;
+}
+.sidebar .icon a:active use,
+.sidebar .nolinks a:active use {
+  color: #ffef69;
+}
+.sidebar .icon a:hover use,
+.sidebar .nolinks a:hover use {
+  color: #fbff83;
+}
+.sidebar .icon a:link use,
+.sidebar .nolinks a:link use {
+  color: #ffffff;
+}
+.sidebar .font-faded {
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidebar .font-price {
+  color: #009b87;
+}
+.sidebar .font-positive {
+  color: #4da400;
+}
+.sidebar .font-negative {
+  color: #ff2222;
+}
+.sidebar .font-time {
+  color: #376eb2;
+}
+.sidebar .row {
+  background: transparent;
+  color: #d0f3ee;
+}
+.sidebar .row a:visited {
+  color: #fdffc7;
+}
+.sidebar .row a:active {
+  color: #ffef69;
+}
+.sidebar .row a:hover {
+  color: #fbff83;
+}
+.sidebar .row a:link {
+  color: #fdffc7;
+}
+.sidebar .row a:visited use {
+  color: #ffffff;
+}
+.sidebar .row a:active use {
+  color: #ffef69;
+}
+.sidebar .row a:hover use {
+  color: #fbff83;
+}
+.sidebar .row a:link use {
+  color: #ffffff;
+}
+.sidebar .row.hover:hover {
+  background: #47947e;
+  color: #ffffff;
+}
+.sidebar .row.selected {
+  background: #1a9484;
+  color: #a9f6ec;
+}
+.sidebar .row.selected a:visited {
+  color: #00b4ff;
+}
+.sidebar .row.selected a:active {
+  color: #ffef69;
+}
+.sidebar .row.selected a:hover {
+  color: #fbff83;
+}
+.sidebar .row.selected a:link {
+  color: #00b4ff;
+}
+.sidebar .row.selected a:visited use {
+  color: #185a64;
+}
+.sidebar .row.selected a:active use {
+  color: #ffef69;
+}
+.sidebar .row.selected a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.selected a:link use {
+  color: #185a64;
+}
+.sidebar .row.alt {
+  background: #689d8e;
+  color: #d0f3ee;
+}
+.sidebar .row.alt a:visited {
+  color: #fdffc7;
+}
+.sidebar .row.alt a:active {
+  color: #ffef69;
+}
+.sidebar .row.alt a:hover {
+  color: #fbff83;
+}
+.sidebar .row.alt a:link {
+  color: #fdffc7;
+}
+.sidebar .row.alt a:visited use {
+  color: #ffffff;
+}
+.sidebar .row.alt a:active use {
+  color: #ffef69;
+}
+.sidebar .row.alt a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.alt a:link use {
+  color: #ffffff;
+}
+.sidebar .row.alt.hover.alt:hover {
+  background: #3c8c75;
+  color: #ffffff;
+}
+.sidebar .row.alt.selected {
+  background: #178b7c;
+  color: #a9f6ec;
+}
+.sidebar .row.alt.selected a:visited {
+  color: #00b4ff;
+}
+.sidebar .row.alt.selected a:active {
+  color: #ffef69;
+}
+.sidebar .row.alt.selected a:hover {
+  color: #fbff83;
+}
+.sidebar .row.alt.selected a:link {
+  color: #00b4ff;
+}
+.sidebar .row.alt.selected a:visited use {
+  color: #185a64;
+}
+.sidebar .row.alt.selected a:active use {
+  color: #ffef69;
+}
+.sidebar .row.alt.selected a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.alt.selected a:link use {
+  color: #185a64;
+}
+.sidebar .col.input-label {
+  color: #007a8d;
+}
+.sidebar .button,
+.sidebar a.button {
+  background: #009b87;
+  border: transparent;
+  color: #ffffff;
+}
+.sidebar .button:hover,
+.sidebar a.button:hover {
+  background: #00a46c;
+  border: transparent;
+  color: #ffffff;
+}
+.sidebar .button:active,
+.sidebar a.button:active {
+  background: #00c5c7;
+  border: transparent;
+  color: #ffffff;
+}
+.sidebar .button.selected,
+.sidebar a.button.selected,
+.selected .sidebar .button,
+.selected .sidebar a.button {
+  background: #00a46c;
+  border: transparent;
+  color: #ffffff;
+}
+.sidebar .button:visited,
+.sidebar a.button:visited {
+  color: #ffffff;
+}
+.sidebar .button:active,
+.sidebar a.button:active {
+  color: #ffffff;
+}
+.sidebar .button:hover,
+.sidebar a.button:hover {
+  color: #ffffff;
+}
+.sidebar .button:link,
+.sidebar a.button:link {
+  color: #ffffff;
+}
+.sidebar .button:visited use,
+.sidebar a.button:visited use {
+  color: #ffffff;
+}
+.sidebar .button:active use,
+.sidebar a.button:active use {
+  color: #ffffff;
+}
+.sidebar .button:hover use,
+.sidebar a.button:hover use {
+  color: #ffffff;
+}
+.sidebar .button:link use,
+.sidebar a.button:link use {
+  color: #ffffff;
+}
+.sidebar .button.apply,
+.sidebar a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.apply:hover,
+.sidebar a.button.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.apply:active,
+.sidebar a.button.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.apply.selected,
+.sidebar a.button.apply.selected,
+.selected .sidebar .button.apply,
+.selected .sidebar a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.apply:visited,
+.sidebar a.button.apply:visited {
+  color: transparent;
+}
+.sidebar .button.apply:active,
+.sidebar a.button.apply:active {
+  color: transparent;
+}
+.sidebar .button.apply:hover,
+.sidebar a.button.apply:hover {
+  color: transparent;
+}
+.sidebar .button.apply:link,
+.sidebar a.button.apply:link {
+  color: transparent;
+}
+.sidebar .button.apply:visited use,
+.sidebar a.button.apply:visited use {
+  color: transparent;
+}
+.sidebar .button.apply:active use,
+.sidebar a.button.apply:active use {
+  color: transparent;
+}
+.sidebar .button.apply:hover use,
+.sidebar a.button.apply:hover use {
+  color: transparent;
+}
+.sidebar .button.apply:link use,
+.sidebar a.button.apply:link use {
+  color: transparent;
+}
+.sidebar .button.cancel,
+.sidebar a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.cancel:hover,
+.sidebar a.button.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.cancel:active,
+.sidebar a.button.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.cancel.selected,
+.sidebar a.button.cancel.selected,
+.selected .sidebar .button.cancel,
+.selected .sidebar a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.cancel:visited,
+.sidebar a.button.cancel:visited {
+  color: transparent;
+}
+.sidebar .button.cancel:active,
+.sidebar a.button.cancel:active {
+  color: transparent;
+}
+.sidebar .button.cancel:hover,
+.sidebar a.button.cancel:hover {
+  color: transparent;
+}
+.sidebar .button.cancel:link,
+.sidebar a.button.cancel:link {
+  color: transparent;
+}
+.sidebar .button.cancel:visited use,
+.sidebar a.button.cancel:visited use {
+  color: transparent;
+}
+.sidebar .button.cancel:active use,
+.sidebar a.button.cancel:active use {
+  color: transparent;
+}
+.sidebar .button.cancel:hover use,
+.sidebar a.button.cancel:hover use {
+  color: transparent;
+}
+.sidebar .button.cancel:link use,
+.sidebar a.button.cancel:link use {
+  color: transparent;
+}
+.sidebar .button.delete,
+.sidebar a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.delete:hover,
+.sidebar a.button.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.delete:active,
+.sidebar a.button.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.delete.selected,
+.sidebar a.button.delete.selected,
+.selected .sidebar .button.delete,
+.selected .sidebar a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.delete:visited,
+.sidebar a.button.delete:visited {
+  color: transparent;
+}
+.sidebar .button.delete:active,
+.sidebar a.button.delete:active {
+  color: transparent;
+}
+.sidebar .button.delete:hover,
+.sidebar a.button.delete:hover {
+  color: transparent;
+}
+.sidebar .button.delete:link,
+.sidebar a.button.delete:link {
+  color: transparent;
+}
+.sidebar .button.delete:visited use,
+.sidebar a.button.delete:visited use {
+  color: transparent;
+}
+.sidebar .button.delete:active use,
+.sidebar a.button.delete:active use {
+  color: transparent;
+}
+.sidebar .button.delete:hover use,
+.sidebar a.button.delete:hover use {
+  color: transparent;
+}
+.sidebar .button.delete:link use,
+.sidebar a.button.delete:link use {
+  color: transparent;
+}
+.sidebar .button.special,
+.sidebar a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.special:hover,
+.sidebar a.button.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.special:active,
+.sidebar a.button.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.special.selected,
+.sidebar a.button.special.selected,
+.selected .sidebar .button.special,
+.selected .sidebar a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.special:visited,
+.sidebar a.button.special:visited {
+  color: transparent;
+}
+.sidebar .button.special:active,
+.sidebar a.button.special:active {
+  color: transparent;
+}
+.sidebar .button.special:hover,
+.sidebar a.button.special:hover {
+  color: transparent;
+}
+.sidebar .button.special:link,
+.sidebar a.button.special:link {
+  color: transparent;
+}
+.sidebar .button.special:visited use,
+.sidebar a.button.special:visited use {
+  color: transparent;
+}
+.sidebar .button.special:active use,
+.sidebar a.button.special:active use {
+  color: transparent;
+}
+.sidebar .button.special:hover use,
+.sidebar a.button.special:hover use {
+  color: transparent;
+}
+.sidebar .button.special:link use,
+.sidebar a.button.special:link use {
+  color: transparent;
+}
+.sidebar .button.disabled,
+.sidebar a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.disabled:hover,
+.sidebar a.button.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.disabled:active,
+.sidebar a.button.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.disabled.selected,
+.sidebar a.button.disabled.selected,
+.selected .sidebar .button.disabled,
+.selected .sidebar a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.disabled:visited,
+.sidebar a.button.disabled:visited {
+  color: transparent;
+}
+.sidebar .button.disabled:active,
+.sidebar a.button.disabled:active {
+  color: transparent;
+}
+.sidebar .button.disabled:hover,
+.sidebar a.button.disabled:hover {
+  color: transparent;
+}
+.sidebar .button.disabled:link,
+.sidebar a.button.disabled:link {
+  color: transparent;
+}
+.sidebar .button.disabled:visited use,
+.sidebar a.button.disabled:visited use {
+  color: transparent;
+}
+.sidebar .button.disabled:active use,
+.sidebar a.button.disabled:active use {
+  color: transparent;
+}
+.sidebar .button.disabled:hover use,
+.sidebar a.button.disabled:hover use {
+  color: transparent;
+}
+.sidebar .button.disabled:link use,
+.sidebar a.button.disabled:link use {
+  color: transparent;
+}
+.sidebar .button.outline,
+.sidebar a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline:hover,
+.sidebar a.button.outline:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline:active,
+.sidebar a.button.outline:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.selected,
+.sidebar a.button.outline.selected,
+.selected .sidebar .button.outline,
+.selected .sidebar a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline:visited,
+.sidebar a.button.outline:visited {
+  color: transparent;
+}
+.sidebar .button.outline:active,
+.sidebar a.button.outline:active {
+  color: transparent;
+}
+.sidebar .button.outline:hover,
+.sidebar a.button.outline:hover {
+  color: transparent;
+}
+.sidebar .button.outline:link,
+.sidebar a.button.outline:link {
+  color: transparent;
+}
+.sidebar .button.outline:visited use,
+.sidebar a.button.outline:visited use {
+  color: transparent;
+}
+.sidebar .button.outline:active use,
+.sidebar a.button.outline:active use {
+  color: transparent;
+}
+.sidebar .button.outline:hover use,
+.sidebar a.button.outline:hover use {
+  color: transparent;
+}
+.sidebar .button.outline:link use,
+.sidebar a.button.outline:link use {
+  color: transparent;
+}
+.sidebar .button.outline.apply,
+.sidebar a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.apply:hover,
+.sidebar a.button.outline.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.apply:active,
+.sidebar a.button.outline.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.apply.selected,
+.sidebar a.button.outline.apply.selected,
+.selected .sidebar .button.outline.apply,
+.selected .sidebar a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.apply:visited,
+.sidebar a.button.outline.apply:visited {
+  color: transparent;
+}
+.sidebar .button.outline.apply:active,
+.sidebar a.button.outline.apply:active {
+  color: transparent;
+}
+.sidebar .button.outline.apply:hover,
+.sidebar a.button.outline.apply:hover {
+  color: transparent;
+}
+.sidebar .button.outline.apply:link,
+.sidebar a.button.outline.apply:link {
+  color: transparent;
+}
+.sidebar .button.outline.apply:visited use,
+.sidebar a.button.outline.apply:visited use {
+  color: transparent;
+}
+.sidebar .button.outline.apply:active use,
+.sidebar a.button.outline.apply:active use {
+  color: transparent;
+}
+.sidebar .button.outline.apply:hover use,
+.sidebar a.button.outline.apply:hover use {
+  color: transparent;
+}
+.sidebar .button.outline.apply:link use,
+.sidebar a.button.outline.apply:link use {
+  color: transparent;
+}
+.sidebar .button.outline.cancel,
+.sidebar a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.cancel:hover,
+.sidebar a.button.outline.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.cancel:active,
+.sidebar a.button.outline.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.cancel.selected,
+.sidebar a.button.outline.cancel.selected,
+.selected .sidebar .button.outline.cancel,
+.selected .sidebar a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.cancel:visited,
+.sidebar a.button.outline.cancel:visited {
+  color: transparent;
+}
+.sidebar .button.outline.cancel:active,
+.sidebar a.button.outline.cancel:active {
+  color: transparent;
+}
+.sidebar .button.outline.cancel:hover,
+.sidebar a.button.outline.cancel:hover {
+  color: transparent;
+}
+.sidebar .button.outline.cancel:link,
+.sidebar a.button.outline.cancel:link {
+  color: transparent;
+}
+.sidebar .button.outline.cancel:visited use,
+.sidebar a.button.outline.cancel:visited use {
+  color: transparent;
+}
+.sidebar .button.outline.cancel:active use,
+.sidebar a.button.outline.cancel:active use {
+  color: transparent;
+}
+.sidebar .button.outline.cancel:hover use,
+.sidebar a.button.outline.cancel:hover use {
+  color: transparent;
+}
+.sidebar .button.outline.cancel:link use,
+.sidebar a.button.outline.cancel:link use {
+  color: transparent;
+}
+.sidebar .button.outline.delete,
+.sidebar a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.delete:hover,
+.sidebar a.button.outline.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.delete:active,
+.sidebar a.button.outline.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.delete.selected,
+.sidebar a.button.outline.delete.selected,
+.selected .sidebar .button.outline.delete,
+.selected .sidebar a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.delete:visited,
+.sidebar a.button.outline.delete:visited {
+  color: transparent;
+}
+.sidebar .button.outline.delete:active,
+.sidebar a.button.outline.delete:active {
+  color: transparent;
+}
+.sidebar .button.outline.delete:hover,
+.sidebar a.button.outline.delete:hover {
+  color: transparent;
+}
+.sidebar .button.outline.delete:link,
+.sidebar a.button.outline.delete:link {
+  color: transparent;
+}
+.sidebar .button.outline.delete:visited use,
+.sidebar a.button.outline.delete:visited use {
+  color: transparent;
+}
+.sidebar .button.outline.delete:active use,
+.sidebar a.button.outline.delete:active use {
+  color: transparent;
+}
+.sidebar .button.outline.delete:hover use,
+.sidebar a.button.outline.delete:hover use {
+  color: transparent;
+}
+.sidebar .button.outline.delete:link use,
+.sidebar a.button.outline.delete:link use {
+  color: transparent;
+}
+.sidebar .button.outline.special,
+.sidebar a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.special:hover,
+.sidebar a.button.outline.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.special:active,
+.sidebar a.button.outline.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.special.selected,
+.sidebar a.button.outline.special.selected,
+.selected .sidebar .button.outline.special,
+.selected .sidebar a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.special:visited,
+.sidebar a.button.outline.special:visited {
+  color: transparent;
+}
+.sidebar .button.outline.special:active,
+.sidebar a.button.outline.special:active {
+  color: transparent;
+}
+.sidebar .button.outline.special:hover,
+.sidebar a.button.outline.special:hover {
+  color: transparent;
+}
+.sidebar .button.outline.special:link,
+.sidebar a.button.outline.special:link {
+  color: transparent;
+}
+.sidebar .button.outline.special:visited use,
+.sidebar a.button.outline.special:visited use {
+  color: transparent;
+}
+.sidebar .button.outline.special:active use,
+.sidebar a.button.outline.special:active use {
+  color: transparent;
+}
+.sidebar .button.outline.special:hover use,
+.sidebar a.button.outline.special:hover use {
+  color: transparent;
+}
+.sidebar .button.outline.special:link use,
+.sidebar a.button.outline.special:link use {
+  color: transparent;
+}
+.sidebar .button.outline.disabled,
+.sidebar a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.disabled:hover,
+.sidebar a.button.outline.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.disabled:active,
+.sidebar a.button.outline.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.disabled.selected,
+.sidebar a.button.outline.disabled.selected,
+.selected .sidebar .button.outline.disabled,
+.selected .sidebar a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .button.outline.disabled:visited,
+.sidebar a.button.outline.disabled:visited {
+  color: transparent;
+}
+.sidebar .button.outline.disabled:active,
+.sidebar a.button.outline.disabled:active {
+  color: transparent;
+}
+.sidebar .button.outline.disabled:hover,
+.sidebar a.button.outline.disabled:hover {
+  color: transparent;
+}
+.sidebar .button.outline.disabled:link,
+.sidebar a.button.outline.disabled:link {
+  color: transparent;
+}
+.sidebar .button.outline.disabled:visited use,
+.sidebar a.button.outline.disabled:visited use {
+  color: transparent;
+}
+.sidebar .button.outline.disabled:active use,
+.sidebar a.button.outline.disabled:active use {
+  color: transparent;
+}
+.sidebar .button.outline.disabled:hover use,
+.sidebar a.button.outline.disabled:hover use {
+  color: transparent;
+}
+.sidebar .button.outline.disabled:link use,
+.sidebar a.button.outline.disabled:link use {
+  color: transparent;
+}
+.sidebar .button:visited use,
+.sidebar a.button:visited use {
+  color: #ffffff;
+}
+.sidebar .button:active use,
+.sidebar a.button:active use {
+  color: #ffffff;
+}
+.sidebar .button:hover use,
+.sidebar a.button:hover use {
+  color: #ffffff;
+}
+.sidebar .button:link use,
+.sidebar a.button:link use {
+  color: #ffffff;
+}
+.sidebar .button.apply:visited use,
+.sidebar a.button.apply:visited use {
+  color: transparent;
+}
+.sidebar .button.apply:active use,
+.sidebar a.button.apply:active use {
+  color: transparent;
+}
+.sidebar .button.apply:hover use,
+.sidebar a.button.apply:hover use {
+  color: transparent;
+}
+.sidebar .button.apply:link use,
+.sidebar a.button.apply:link use {
+  color: transparent;
+}
+.sidebar .button.cancel:visited use,
+.sidebar a.button.cancel:visited use {
+  color: transparent;
+}
+.sidebar .button.cancel:active use,
+.sidebar a.button.cancel:active use {
+  color: transparent;
+}
+.sidebar .button.cancel:hover use,
+.sidebar a.button.cancel:hover use {
+  color: transparent;
+}
+.sidebar .button.cancel:link use,
+.sidebar a.button.cancel:link use {
+  color: transparent;
+}
+.sidebar .button.delete:visited use,
+.sidebar a.button.delete:visited use {
+  color: transparent;
+}
+.sidebar .button.delete:active use,
+.sidebar a.button.delete:active use {
+  color: transparent;
+}
+.sidebar .button.delete:hover use,
+.sidebar a.button.delete:hover use {
+  color: transparent;
+}
+.sidebar .button.delete:link use,
+.sidebar a.button.delete:link use {
+  color: transparent;
+}
+.sidebar .button.special:visited use,
+.sidebar a.button.special:visited use {
+  color: transparent;
+}
+.sidebar .button.special:active use,
+.sidebar a.button.special:active use {
+  color: transparent;
+}
+.sidebar .button.special:hover use,
+.sidebar a.button.special:hover use {
+  color: transparent;
+}
+.sidebar .button.special:link use,
+.sidebar a.button.special:link use {
+  color: transparent;
+}
+.sidebar .button.disabled:visited use,
+.sidebar a.button.disabled:visited use {
+  color: transparent;
+}
+.sidebar .button.disabled:active use,
+.sidebar a.button.disabled:active use {
+  color: transparent;
+}
+.sidebar .button.disabled:hover use,
+.sidebar a.button.disabled:hover use {
+  color: transparent;
+}
+.sidebar .button.disabled:link use,
+.sidebar a.button.disabled:link use {
+  color: transparent;
+}
+.sidebar .row.header {
+  background: #5b9987;
+  color: #ffffff;
+}
+.sidebar .row.header a:visited {
+  color: #fdffc7;
+}
+.sidebar .row.header a:active {
+  color: #ffef69;
+}
+.sidebar .row.header a:hover {
+  color: #fbff83;
+}
+.sidebar .row.header a:link {
+  color: #fdffc7;
+}
+.sidebar .row.header a:visited use {
+  color: #fdffc7;
+}
+.sidebar .row.header a:active use {
+  color: #ffef69;
+}
+.sidebar .row.header a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.header a:link use {
+  color: #fdffc7;
+}
+.sidebar .row.header a.faded:visited {
+  color: rgba(253, 255, 199, 0.5);
+}
+.sidebar .row.header a.faded:active {
+  color: rgba(255, 239, 105, 0.5);
+}
+.sidebar .row.header a.faded:hover {
+  color: rgba(251, 255, 131, 0.5);
+}
+.sidebar .row.header a.faded:link {
+  color: rgba(253, 255, 199, 0.5);
+}
+.sidebar .row.header a.faded:visited use {
+  color: rgba(253, 255, 199, 0.5);
+}
+.sidebar .row.header a.faded:active use {
+  color: rgba(255, 239, 105, 0.5);
+}
+.sidebar .row.header a.faded:hover use {
+  color: rgba(251, 255, 131, 0.5);
+}
+.sidebar .row.header a.faded:link use {
+  color: rgba(253, 255, 199, 0.5);
+}
+.sidebar .row.header .icon a:visited,
+.sidebar .row.header .nolinks a:visited {
+  color: #ffffff !important;
+}
+.sidebar .row.header .icon a:active,
+.sidebar .row.header .nolinks a:active {
+  color: #ffef69 !important;
+}
+.sidebar .row.header .icon a:hover,
+.sidebar .row.header .nolinks a:hover {
+  color: #fbff83 !important;
+}
+.sidebar .row.header .icon a:link,
+.sidebar .row.header .nolinks a:link {
+  color: #ffffff !important;
+}
+.sidebar .row.header .icon a:visited use,
+.sidebar .row.header .nolinks a:visited use {
+  color: #ffffff;
+}
+.sidebar .row.header .icon a:active use,
+.sidebar .row.header .nolinks a:active use {
+  color: #ffef69;
+}
+.sidebar .row.header .icon a:hover use,
+.sidebar .row.header .nolinks a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.header .icon a:link use,
+.sidebar .row.header .nolinks a:link use {
+  color: #ffffff;
+}
+.sidebar .row.header .font-faded {
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidebar .row.header .font-price {
+  color: #009b87;
+}
+.sidebar .row.header .font-positive {
+  color: #4da400;
+}
+.sidebar .row.header .font-negative {
+  color: #ff2222;
+}
+.sidebar .row.header .font-time {
+  color: #376eb2;
+}
+.sidebar .row.header .row {
+  background: transparent;
+  color: #d0f3ee;
+}
+.sidebar .row.header .row a:visited {
+  color: #fdffc7;
+}
+.sidebar .row.header .row a:active {
+  color: #ffef69;
+}
+.sidebar .row.header .row a:hover {
+  color: #fbff83;
+}
+.sidebar .row.header .row a:link {
+  color: #fdffc7;
+}
+.sidebar .row.header .row a:visited use {
+  color: #ffffff;
+}
+.sidebar .row.header .row a:active use {
+  color: #ffef69;
+}
+.sidebar .row.header .row a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.header .row a:link use {
+  color: #ffffff;
+}
+.sidebar .row.header .row.hover:hover {
+  background: #47947e;
+  color: #ffffff;
+}
+.sidebar .row.header .row.selected {
+  background: #1a9484;
+  color: #a9f6ec;
+}
+.sidebar .row.header .row.selected a:visited {
+  color: #00b4ff;
+}
+.sidebar .row.header .row.selected a:active {
+  color: #ffef69;
+}
+.sidebar .row.header .row.selected a:hover {
+  color: #fbff83;
+}
+.sidebar .row.header .row.selected a:link {
+  color: #00b4ff;
+}
+.sidebar .row.header .row.selected a:visited use {
+  color: #185a64;
+}
+.sidebar .row.header .row.selected a:active use {
+  color: #ffef69;
+}
+.sidebar .row.header .row.selected a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.header .row.selected a:link use {
+  color: #185a64;
+}
+.sidebar .row.header .row.alt {
+  background: #689d8e;
+  color: #d0f3ee;
+}
+.sidebar .row.header .row.alt a:visited {
+  color: #fdffc7;
+}
+.sidebar .row.header .row.alt a:active {
+  color: #ffef69;
+}
+.sidebar .row.header .row.alt a:hover {
+  color: #fbff83;
+}
+.sidebar .row.header .row.alt a:link {
+  color: #fdffc7;
+}
+.sidebar .row.header .row.alt a:visited use {
+  color: #ffffff;
+}
+.sidebar .row.header .row.alt a:active use {
+  color: #ffef69;
+}
+.sidebar .row.header .row.alt a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.header .row.alt a:link use {
+  color: #ffffff;
+}
+.sidebar .row.header .row.alt.hover.alt:hover {
+  background: #3c8c75;
+  color: #ffffff;
+}
+.sidebar .row.header .row.alt.selected {
+  background: #178b7c;
+  color: #a9f6ec;
+}
+.sidebar .row.header .row.alt.selected a:visited {
+  color: #00b4ff;
+}
+.sidebar .row.header .row.alt.selected a:active {
+  color: #ffef69;
+}
+.sidebar .row.header .row.alt.selected a:hover {
+  color: #fbff83;
+}
+.sidebar .row.header .row.alt.selected a:link {
+  color: #00b4ff;
+}
+.sidebar .row.header .row.alt.selected a:visited use {
+  color: #185a64;
+}
+.sidebar .row.header .row.alt.selected a:active use {
+  color: #ffef69;
+}
+.sidebar .row.header .row.alt.selected a:hover use {
+  color: #fbff83;
+}
+.sidebar .row.header .row.alt.selected a:link use {
+  color: #185a64;
+}
+.sidebar .row.header .col.input-label {
+  color: #007a8d;
+}
+.sidebar .row.header .button,
+.sidebar .row.header a.button {
+  background: #009b87;
+  border: transparent;
+  color: #ffffff;
+}
+.sidebar .row.header .button:hover,
+.sidebar .row.header a.button:hover {
+  background: #00a46c;
+  border: transparent;
+  color: #ffffff;
+}
+.sidebar .row.header .button:active,
+.sidebar .row.header a.button:active {
+  background: #00c5c7;
+  border: transparent;
+  color: #ffffff;
+}
+.sidebar .row.header .button.selected,
+.sidebar .row.header a.button.selected,
+.selected .sidebar .row.header .button,
+.selected .sidebar .row.header a.button {
+  background: #00a46c;
+  border: transparent;
+  color: #ffffff;
+}
+.sidebar .row.header .button:visited,
+.sidebar .row.header a.button:visited {
+  color: #ffffff;
+}
+.sidebar .row.header .button:active,
+.sidebar .row.header a.button:active {
+  color: #ffffff;
+}
+.sidebar .row.header .button:hover,
+.sidebar .row.header a.button:hover {
+  color: #ffffff;
+}
+.sidebar .row.header .button:link,
+.sidebar .row.header a.button:link {
+  color: #ffffff;
+}
+.sidebar .row.header .button:visited use,
+.sidebar .row.header a.button:visited use {
+  color: #ffffff;
+}
+.sidebar .row.header .button:active use,
+.sidebar .row.header a.button:active use {
+  color: #ffffff;
+}
+.sidebar .row.header .button:hover use,
+.sidebar .row.header a.button:hover use {
+  color: #ffffff;
+}
+.sidebar .row.header .button:link use,
+.sidebar .row.header a.button:link use {
+  color: #ffffff;
+}
+.sidebar .row.header .button.apply,
+.sidebar .row.header a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.apply:hover,
+.sidebar .row.header a.button.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.apply:active,
+.sidebar .row.header a.button.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.apply.selected,
+.sidebar .row.header a.button.apply.selected,
+.selected .sidebar .row.header .button.apply,
+.selected .sidebar .row.header a.button.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.apply:visited,
+.sidebar .row.header a.button.apply:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:active,
+.sidebar .row.header a.button.apply:active {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:hover,
+.sidebar .row.header a.button.apply:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:link,
+.sidebar .row.header a.button.apply:link {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:visited use,
+.sidebar .row.header a.button.apply:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:active use,
+.sidebar .row.header a.button.apply:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:hover use,
+.sidebar .row.header a.button.apply:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:link use,
+.sidebar .row.header a.button.apply:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel,
+.sidebar .row.header a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:hover,
+.sidebar .row.header a.button.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:active,
+.sidebar .row.header a.button.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.cancel.selected,
+.sidebar .row.header a.button.cancel.selected,
+.selected .sidebar .row.header .button.cancel,
+.selected .sidebar .row.header a.button.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:visited,
+.sidebar .row.header a.button.cancel:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:active,
+.sidebar .row.header a.button.cancel:active {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:hover,
+.sidebar .row.header a.button.cancel:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:link,
+.sidebar .row.header a.button.cancel:link {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:visited use,
+.sidebar .row.header a.button.cancel:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:active use,
+.sidebar .row.header a.button.cancel:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:hover use,
+.sidebar .row.header a.button.cancel:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:link use,
+.sidebar .row.header a.button.cancel:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.delete,
+.sidebar .row.header a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.delete:hover,
+.sidebar .row.header a.button.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.delete:active,
+.sidebar .row.header a.button.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.delete.selected,
+.sidebar .row.header a.button.delete.selected,
+.selected .sidebar .row.header .button.delete,
+.selected .sidebar .row.header a.button.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.delete:visited,
+.sidebar .row.header a.button.delete:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:active,
+.sidebar .row.header a.button.delete:active {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:hover,
+.sidebar .row.header a.button.delete:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:link,
+.sidebar .row.header a.button.delete:link {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:visited use,
+.sidebar .row.header a.button.delete:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:active use,
+.sidebar .row.header a.button.delete:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:hover use,
+.sidebar .row.header a.button.delete:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:link use,
+.sidebar .row.header a.button.delete:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.special,
+.sidebar .row.header a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.special:hover,
+.sidebar .row.header a.button.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.special:active,
+.sidebar .row.header a.button.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.special.selected,
+.sidebar .row.header a.button.special.selected,
+.selected .sidebar .row.header .button.special,
+.selected .sidebar .row.header a.button.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.special:visited,
+.sidebar .row.header a.button.special:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.special:active,
+.sidebar .row.header a.button.special:active {
+  color: transparent;
+}
+.sidebar .row.header .button.special:hover,
+.sidebar .row.header a.button.special:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.special:link,
+.sidebar .row.header a.button.special:link {
+  color: transparent;
+}
+.sidebar .row.header .button.special:visited use,
+.sidebar .row.header a.button.special:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.special:active use,
+.sidebar .row.header a.button.special:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.special:hover use,
+.sidebar .row.header a.button.special:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.special:link use,
+.sidebar .row.header a.button.special:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled,
+.sidebar .row.header a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:hover,
+.sidebar .row.header a.button.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:active,
+.sidebar .row.header a.button.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.disabled.selected,
+.sidebar .row.header a.button.disabled.selected,
+.selected .sidebar .row.header .button.disabled,
+.selected .sidebar .row.header a.button.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:visited,
+.sidebar .row.header a.button.disabled:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:active,
+.sidebar .row.header a.button.disabled:active {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:hover,
+.sidebar .row.header a.button.disabled:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:link,
+.sidebar .row.header a.button.disabled:link {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:visited use,
+.sidebar .row.header a.button.disabled:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:active use,
+.sidebar .row.header a.button.disabled:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:hover use,
+.sidebar .row.header a.button.disabled:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:link use,
+.sidebar .row.header a.button.disabled:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline,
+.sidebar .row.header a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline:hover,
+.sidebar .row.header a.button.outline:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline:active,
+.sidebar .row.header a.button.outline:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.selected,
+.sidebar .row.header a.button.outline.selected,
+.selected .sidebar .row.header .button.outline,
+.selected .sidebar .row.header a.button.outline {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline:visited,
+.sidebar .row.header a.button.outline:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.outline:active,
+.sidebar .row.header a.button.outline:active {
+  color: transparent;
+}
+.sidebar .row.header .button.outline:hover,
+.sidebar .row.header a.button.outline:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.outline:link,
+.sidebar .row.header a.button.outline:link {
+  color: transparent;
+}
+.sidebar .row.header .button.outline:visited use,
+.sidebar .row.header a.button.outline:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline:active use,
+.sidebar .row.header a.button.outline:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline:hover use,
+.sidebar .row.header a.button.outline:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline:link use,
+.sidebar .row.header a.button.outline:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply,
+.sidebar .row.header a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:hover,
+.sidebar .row.header a.button.outline.apply:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:active,
+.sidebar .row.header a.button.outline.apply:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply.selected,
+.sidebar .row.header a.button.outline.apply.selected,
+.selected .sidebar .row.header .button.outline.apply,
+.selected .sidebar .row.header a.button.outline.apply {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:visited,
+.sidebar .row.header a.button.outline.apply:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:active,
+.sidebar .row.header a.button.outline.apply:active {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:hover,
+.sidebar .row.header a.button.outline.apply:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:link,
+.sidebar .row.header a.button.outline.apply:link {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:visited use,
+.sidebar .row.header a.button.outline.apply:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:active use,
+.sidebar .row.header a.button.outline.apply:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:hover use,
+.sidebar .row.header a.button.outline.apply:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.apply:link use,
+.sidebar .row.header a.button.outline.apply:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel,
+.sidebar .row.header a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:hover,
+.sidebar .row.header a.button.outline.cancel:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:active,
+.sidebar .row.header a.button.outline.cancel:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel.selected,
+.sidebar .row.header a.button.outline.cancel.selected,
+.selected .sidebar .row.header .button.outline.cancel,
+.selected .sidebar .row.header a.button.outline.cancel {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:visited,
+.sidebar .row.header a.button.outline.cancel:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:active,
+.sidebar .row.header a.button.outline.cancel:active {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:hover,
+.sidebar .row.header a.button.outline.cancel:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:link,
+.sidebar .row.header a.button.outline.cancel:link {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:visited use,
+.sidebar .row.header a.button.outline.cancel:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:active use,
+.sidebar .row.header a.button.outline.cancel:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:hover use,
+.sidebar .row.header a.button.outline.cancel:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.cancel:link use,
+.sidebar .row.header a.button.outline.cancel:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete,
+.sidebar .row.header a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:hover,
+.sidebar .row.header a.button.outline.delete:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:active,
+.sidebar .row.header a.button.outline.delete:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete.selected,
+.sidebar .row.header a.button.outline.delete.selected,
+.selected .sidebar .row.header .button.outline.delete,
+.selected .sidebar .row.header a.button.outline.delete {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:visited,
+.sidebar .row.header a.button.outline.delete:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:active,
+.sidebar .row.header a.button.outline.delete:active {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:hover,
+.sidebar .row.header a.button.outline.delete:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:link,
+.sidebar .row.header a.button.outline.delete:link {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:visited use,
+.sidebar .row.header a.button.outline.delete:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:active use,
+.sidebar .row.header a.button.outline.delete:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:hover use,
+.sidebar .row.header a.button.outline.delete:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.delete:link use,
+.sidebar .row.header a.button.outline.delete:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special,
+.sidebar .row.header a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:hover,
+.sidebar .row.header a.button.outline.special:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:active,
+.sidebar .row.header a.button.outline.special:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special.selected,
+.sidebar .row.header a.button.outline.special.selected,
+.selected .sidebar .row.header .button.outline.special,
+.selected .sidebar .row.header a.button.outline.special {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:visited,
+.sidebar .row.header a.button.outline.special:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:active,
+.sidebar .row.header a.button.outline.special:active {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:hover,
+.sidebar .row.header a.button.outline.special:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:link,
+.sidebar .row.header a.button.outline.special:link {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:visited use,
+.sidebar .row.header a.button.outline.special:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:active use,
+.sidebar .row.header a.button.outline.special:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:hover use,
+.sidebar .row.header a.button.outline.special:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.special:link use,
+.sidebar .row.header a.button.outline.special:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled,
+.sidebar .row.header a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:hover,
+.sidebar .row.header a.button.outline.disabled:hover {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:active,
+.sidebar .row.header a.button.outline.disabled:active {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled.selected,
+.sidebar .row.header a.button.outline.disabled.selected,
+.selected .sidebar .row.header .button.outline.disabled,
+.selected .sidebar .row.header a.button.outline.disabled {
+  background: transparent;
+  border: transparent;
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:visited,
+.sidebar .row.header a.button.outline.disabled:visited {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:active,
+.sidebar .row.header a.button.outline.disabled:active {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:hover,
+.sidebar .row.header a.button.outline.disabled:hover {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:link,
+.sidebar .row.header a.button.outline.disabled:link {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:visited use,
+.sidebar .row.header a.button.outline.disabled:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:active use,
+.sidebar .row.header a.button.outline.disabled:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:hover use,
+.sidebar .row.header a.button.outline.disabled:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.outline.disabled:link use,
+.sidebar .row.header a.button.outline.disabled:link use {
+  color: transparent;
+}
+.sidebar .row.header .button:visited use,
+.sidebar .row.header a.button:visited use {
+  color: #ffffff;
+}
+.sidebar .row.header .button:active use,
+.sidebar .row.header a.button:active use {
+  color: #ffffff;
+}
+.sidebar .row.header .button:hover use,
+.sidebar .row.header a.button:hover use {
+  color: #ffffff;
+}
+.sidebar .row.header .button:link use,
+.sidebar .row.header a.button:link use {
+  color: #ffffff;
+}
+.sidebar .row.header .button.apply:visited use,
+.sidebar .row.header a.button.apply:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:active use,
+.sidebar .row.header a.button.apply:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:hover use,
+.sidebar .row.header a.button.apply:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.apply:link use,
+.sidebar .row.header a.button.apply:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:visited use,
+.sidebar .row.header a.button.cancel:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:active use,
+.sidebar .row.header a.button.cancel:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:hover use,
+.sidebar .row.header a.button.cancel:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.cancel:link use,
+.sidebar .row.header a.button.cancel:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:visited use,
+.sidebar .row.header a.button.delete:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:active use,
+.sidebar .row.header a.button.delete:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:hover use,
+.sidebar .row.header a.button.delete:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.delete:link use,
+.sidebar .row.header a.button.delete:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.special:visited use,
+.sidebar .row.header a.button.special:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.special:active use,
+.sidebar .row.header a.button.special:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.special:hover use,
+.sidebar .row.header a.button.special:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.special:link use,
+.sidebar .row.header a.button.special:link use {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:visited use,
+.sidebar .row.header a.button.disabled:visited use {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:active use,
+.sidebar .row.header a.button.disabled:active use {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:hover use,
+.sidebar .row.header a.button.disabled:hover use {
+  color: transparent;
+}
+.sidebar .row.header .button.disabled:link use,
+.sidebar .row.header a.button.disabled:link use {
+  color: transparent;
 }
