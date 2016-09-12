@@ -30,23 +30,11 @@
             })();
         </script>
         <style type="text/css">
-            body
-            {
-            /*background-color:#636363;
-            background-image: radial-gradient(50% 50%, circle cover, #636363, #333333 33%)*/
-            background-color:#d0d0d0;
-            }
+            body{background-color:#d0d0d0;}
             #svglist{display:none;}
             .sidebar{width:12%; min-width:200px;}
             .sidebar > .header > .title{white-space:normal;}
             .dash-body{width:88%; max-width:calc(100% - 200px); padding:0 10px 0 20px;}
-            .grid-test{width:90%; margin:30px auto; text-align:center; font-size:26px;}
-            .grid-test > .box{ border:5px solid #000; box-sizing:border-box;}
-            .grid-test .col > .bg{padding-top:250px;}
-            .demo-two-forms .demo-input-wide{width:calc(100% - 110px);}
-            .demo-file-system{height:320px;}
-            .size-med .demo-file-system{height:330px;}
-            .size-lg .demo-file-system{height:390px;}
         </style>
     </head>
     <body class="box hidden flex-container">
@@ -2535,16 +2523,17 @@
             </div>
             <div id="sidebar-menu">
                 <li>
-                    <div class="row hover">
-                        <span class="col icon pad-right-sm">
-                            <a href="#">
+                    <div class="row hover{{row-class}}">
+                        {{gutter}}
+                        <span class="col icon small pad-right-sm">
+                            <a href="{{href}}">
                                 <svg viewBox="0 0 36 36">
                                     <use xlink:href="#icon-{{icon}}" x="0" y="0" width="36" height="36"></use>
                                 </svg>
                             </a>
                         </span>
-                        <span class="col label">
-                            <a href="#">
+                        <span class="col label nolinks">
+                            <a href="{{href}}">
                                 {{label}}
                             </a>
                         </span>
@@ -2558,385 +2547,7 @@
             </div>
         </div>
 
-        <div class="col dash-body">
-            <!-- //////////////////////////////////////////////////////////////////////////-->
-            <!-- Main UI (gets duplicated into 3 sizes (small, medium, & large) /////////// -->
-            <div id="ui">
-                <div class="size-{{size}} pad-bottom-xl">
-                    <div class="row flex-container mobile margin-bottom-sm">
-                        <!-- dashboard menu /////////////////////////////////////////////////////-->
-                        <div class="col two mobile flex pad-sm">
-                            <div class="section">
-                                <div class="row menu">
-                                    <div class="col three text-center">
-                                        <div class="row icon xlarge">
-                                            <a href="#" target="_blank">
-                                                <svg viewBox="0 0 36 36">
-                                                    <use xlink:href="#icon-settings" x="0" y="0" width="36" height="36"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <div class="row text pad-top-xs pad-bottom">
-                                            Settings
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- dashboard traffic /////////////////////////////////////////////////////-->
-                        <div class="col ten mobile flex pad-sm">
-                            <div class="section">
-                                <div class="col title pad-lg">
-                                    www.Websilk.com
-                                </div>
-                                <div class="line-chart">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row flex-container margin-bottom">
-                        <!-- blog post entry form ///////////////////////////////////////////////-->
-                        <div class="col six desktop flex pad-sm">
-                            <!-- (floating messages & icons) -->
-                            <div class="col hidden right">
-                                <div class="tag red">
-                                    <div class="bg dark pad-sm">
-                                        Urgent!
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- (section) -->
-                            <div class="section">
-                                <!-- (header) -->
-                                <div class="row header">
-                                    <div class="col five nowrap tablet">
-                                        <div class="col icon pad-right-sm">
-                                            <a href="/dashboard" target="_blank">
-                                                <svg viewBox="0 0 15 15">
-                                                    <use xlink:href="#icon-dashboard" x="0" y="0" width="15" height="15"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <div class="col title">{{name}} Header With Buttons (16x16)</div>
-                                    </div>
-                                    <div class="col seven buttons right nowrap overflow tablet text-right">
-                                        <a href="#" class="button">Default</a>
-                                        <a href="#" class="button apply">Apply</a>
-                                        <a href="#" class="button delete">Delete</a>
-                                        <a href="#" class="button special">Special</a>
-                                        <a href="#" class="button cancel">Cancel</a>
-                                    </div>
-                                </div>
-                                <!-- (body) -->
-                                <div class="row">
-                                    <div class="col field-label"></div>
-                                    <div class="col field-text">
-                                        This is a {{name}} Form with fields &amp; buttons
-                                    </div>
-                                </div>
-                                <div class="row hover">
-                                    <div class="col field-label">Full Name</div>
-                                    <div class="col field-input">
-                                        <input type="text" class="short" value="Mark Entingh" />
-                                    </div>
-                                    <div class="col field-icon icon hover-faded">
-                                        <a href="#">
-                                            <svg viewBox="0 0 15 15">
-                                                <use xlink:href="#icon-help" x="0" y="0" width="15" height="15"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="row hover">
-                                    <div class="col field-label">Title</div>
-                                    <div class="col field-input four">
-                                        <input type="text" class="long" value="Websilk UI Composition" />
-                                    </div>
-                                    <div class="col field-icon icon hover-faded">
-                                        <a href="#">
-                                            <svg viewBox="0 0 15 15">
-                                                <use xlink:href="#icon-help" x="0" y="0" width="15" height="15"></use>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="row hover">
-                                    <div class="col field-label">Description</div>
-                                    <div class="col field-input expand">
-                                        <textarea class="medium">This dashboard page is suppose to be used as a reference for web developers to use while building components &amp; apps for the Websilk platform. Every available interface element &amp; combinations of interface parts is provided within this page. It is very important for you to use the HTML source code that makes up these elements as a basis for when you develop your component or application. Feel free to copy &amp; paste the HTML source code directly from this page where you need to use it.</textarea>
-                                    </div>
-                                </div>
-                                <div class="row pad">
-                                    <div class="col buttons">
-                                        <a href="#" class="button apply">Apply</a>
-                                        <a href="#" class="button">Default</a>
-                                        <a href="#" class="button cancel">Cancel</a>
-                                        <a href="#" class="button delete">Delete</a>
-                                        <a href="#" class="button special">Special</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- file structure ////////////////////////////////////////////////////-->
-                        <div class="col six desktop flex pad-sm">
-                            <!-- inner box section with file structure -->
-                            <div class="section shadow">
-                                <!-- (header) -->
-                                <div class="row header">
-                                    <div class="col six tablet nowrap">
-                                        <div class="col icon pad-right-sm">
-                                            <a href="/dashboard" target="_blank">
-                                                <svg viewBox="0 0 15 15">
-                                                    <use xlink:href="#icon-dashboard" x="0" y="0" width="15" height="15"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <div class="col title">{{name}} Header With Circle Buttons (16x16)</div>
-                                    </div>
-                                    <div class="col six right tablet nowrap text-right">
-                                        <div class="col label pad-right">
-                                            Label
-                                        </div>
-                                        <div class="col label pad-right">
-                                            <a href="#">External Link</a>
-                                        </div>
-                                        <div class="col pad-right">
-                                            <a href="#" class="button icon">
-                                                <svg viewBox="0 0 36 36">
-                                                    <use xlink:href="#icon-settings" x="0" y="0" width="36" height="36"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <div class="col pad-right">
-                                            <a href="#" class="button circle special">
-                                                <svg viewBox="0 0 36 36">
-                                                    <use xlink:href="#icon-settings" x="0" y="0" width="36" height="36"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <div class="col pad-right">
-                                            <a href="#" class="button circle">
-                                                <svg viewBox="0 0 36 36">
-                                                    <use xlink:href="#icon-settings" x="0" y="0" width="36" height="36"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <div class="col">
-                                            <a href="#" class="button circle large">
-                                                <svg viewBox="0 0 36 36">
-                                                    <use xlink:href="#icon-settings" x="0" y="0" width="36" height="36"></use>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- (ui elements) -->
-                                <div id="{{size}}filelist_ui">
-                                    <div class="row hover">
-                                        <div class="color-tag {{color}}">
-                                            <div class="bg dark">&nbsp;</div>
-                                        </div>
-                                        <div class="col color-contents pad-sm clear">
-                                            <div class="col" style="cursor:pointer">
-                                                <div class="col icon small pad-right-sm">
-                                                    {{iconfolder}}
-                                                    <a href="#" title="View a list of sub-pages for '{{label}}'">
-                                                        <svg viewBox="0 0 15 15">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-folder" x="0" y="0" width="15" height="15"></use>
-                                                        </svg>
-                                                    </a>
-                                                    {{/iconfolder}}
-                                                </div>
-                                                <div class="col label">{{label}}</div>
-                                            </div>
-                                            <div class="col hover-only right pad-left">
-                                                {{icondelete}}
-                                                <div class="col icon small right pad-right">
-                                                    <a href="#" title="Permanently delete the page '{{label}}' and all of its sub-pages">
-                                                        <svg viewBox="0 0 15 15">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close" x="0" y="0" width="36" height="36"></use>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                                {{/icondelete}}
-                                                {{iconsettings}}
-                                                <div class="col icon small right pad-right">
-                                                    <a href="#" title="Page Settings for '{{label}}'">
-                                                        <svg viewBox="0 0 36 36">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-settings" x="0" y="0" width="36" height="36"></use>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                                {{/iconsettings}}
-                                                {{iconadd}}
-                                                <div class="col icon small right pad-right">
-                                                    <a href="#" title="Create a new Sub-Page for '{{label}}'">
-                                                        <svg viewBox="0 0 15 15">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-add" x="0" y="0" width="15" height="15"></use>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                                {{/iconadd}}
-                                                {{iconopen}}
-                                                <div class="col icon small right pad-right">
-                                                    <a href="#" title="View Web Page">
-                                                        <svg viewBox="0 0 15 15">
-                                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-openwindow" x="0" y="0" width="15" height="15"></use>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                                {{/iconopen}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--(body)-->
-                                <div class="demo-file-system">
-                                    <ul id="{{size}}filelist" class="columns-list"></ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UI container /////////////////////////////////////////////////////////////-->
-            <div id="container" class="box container pad-top"></div>
-            <!-- //////////////////////////////////////////////////////////////////////////-->
-            <!-- grid system test /////////////////////////////////////////////////////////-->
-            <div class="grid-test clear">
-                <div class="row">
-                    <div class="col pad-bottom-lg">
-                        <h3>Grid System</h3>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="col twelve purple">
-                        <div class="bg height-lg">Twelve</div>
-                    </div>
-                    <div class="col six green">
-                        <div class="bg height-lg">Six</div>
-                    </div>
-                    <div class="col six yellow">
-                        <div class="bg height-lg">Six</div>
-                    </div>
-                    <div class="col four blue">
-                        <div class="bg height-lg">Four</div>
-                    </div>
-                    <div class="col four orange">
-                        <div class="bg height-lg">Four</div>
-                    </div>
-                    <div class="col four red">
-                        <div class="bg height-lg">Four</div>
-                    </div>
-                    <div class="col three yellow">
-                        <div class="bg height-lg">Three</div>
-                    </div>
-                    <div class="col three green">
-                        <div class="bg height-lg">Three</div>
-                    </div>
-                    <div class="col three purple">
-                        <div class="bg height-lg">Three</div>
-                    </div>
-                    <div class="col three blue">
-                        <div class="bg height-lg">Three</div>
-                    </div>
-                    <div class="col two blue">
-                        <div class="bg height-lg">Two</div>
-                    </div>
-                    <div class="col two orange">
-                        <div class="bg height-lg">Two</div>
-                    </div>
-                    <div class="col two red">
-                        <div class="bg height-lg">Two</div>
-                    </div>
-                    <div class="col two yellow">
-                        <div class="bg height-lg">Two</div>
-                    </div>
-                    <div class="col two green">
-                        <div class="bg height-lg">Two</div>
-                    </div>
-                    <div class="col two red">
-                        <div class="bg height-lg">Two</div>
-                    </div>
-                    <div class="col one purple">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one red">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one green">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one blue">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one yellow">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one purple">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one orange">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one blue">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one red">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one yellow">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one purple">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col one green">
-                        <div class="bg height-lg">One</div>
-                    </div>
-                    <div class="col five orange">
-                        <div class="bg height-lg">Five</div>
-                    </div>
-                    <div class="col four green">
-                        <div class="bg height-lg">Four</div>
-                    </div>
-                    <div class="col three yellow">
-                        <div class="bg height-lg">Three</div>
-                    </div>
-                    <div class="col seven blue">
-                        <div class="bg height-lg">Seven</div>
-                    </div>
-                    <div class="col five red">
-                        <div class="bg height-lg">Five</div>
-                    </div>
-                    <div class="col eight purple">
-                        <div class="bg height-lg">Eight</div>
-                    </div>
-                    <div class="col four orange">
-                        <div class="bg height-lg">Four</div>
-                    </div>
-                    <div class="col nine blue">
-                        <div class="bg height-lg">Nine</div>
-                    </div>
-                    <div class="col three red">
-                        <div class="bg height-lg">Three</div>
-                    </div>
-                    <div class="col ten purple">
-                        <div class="bg height-lg">Ten</div>
-                    </div>
-                    <div class="col two orange">
-                        <div class="bg height-lg">Two</div>
-                    </div>
-                    <div class="col eleven blue">
-                        <div class="bg height-lg">Eleven</div>
-                    </div>
-                    <div class="col one red">
-                        <div class="bg height-lg">one</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="col dash-body"></div>
 
         <!-- javascript libraries /////////////////////////////////////////////////////////-->
         <script type="text/javascript" src="/js/raphael.min.js"></script>
@@ -2945,252 +2556,221 @@
         <!-- //////////////////////////////////////////////////////////////////////////////-->
         <!-- Javascript Initial Page Load Rendering ///////////////////////////////////////-->
         <script>
-            (function(){
+            (function(){ //contained
                 
                 var htm = '';
                 var html = []; 
                 var body = document.getElementsByTagName('body')[0];
-                var ui = document.getElementById('ui');
 
                 //load sidebar
                 var sidebar = document.getElementById('sidebar-menu');
                 var sidebar_container = document.getElementById('sidebar-menu-container');
                 var sidebar_items = [
-                    {label:'Website', icon:'settings', href:'', submenu:[
-                        {label:'Home', icon:'settings', href:''},
-                        {label:'Blog', icon:'settings', href:''},
-                        {label:'Projects', icon:'settings', href:''},
-                        {label:'Galleries', icon:'settings', href:''},
-                        {label:'Catalog', icon:'settings', href:''},
-                        {label:'Wiki', icon:'settings', href:''},
-                        {label:'About', icon:'settings', href:''},
-                        {label:'Content', icon:'settings', href:''},
-                        {label:'Log In', icon:'settings', href:''},
-                        {label:'404 Error', icon:'settings', href:''},
-                        {label:'About', icon:'settings', href:''}
+                    {label:'Website', icon:'settings', href:'', isroot:true, submenu:[
+                        {label:'Home', icon:'settings', href:'', submenu:[
+                            {label:'Storefront', icon:'settings', href:'javascript:loadPage("storefront", true)'},
+                            {label:'Mobile App', icon:'settings', href:'javascript:loadPage("mobile-app", true)'},
+                            {label:'Magazine', icon:'settings', href:'javascript:loadPage("magazine", true)'},
+                            {label:'Musician', icon:'settings', href:'javascript:loadPage("musician", true)'},
+                            {label:'Real Estate', icon:'settings', href:'javascript:loadPage("real-estate", true)'}
+                        ]},
+                        {label:'Blog', icon:'settings', href:'javascript:loadPage("blog", true)'},
+                        {label:'Projects', icon:'settings', href:'javascript:loadPage("projects", true)'},
+                        {label:'Galleries', icon:'settings', href:'javascript:loadPage("galleries", true)'},
+                        {label:'Catalog', icon:'settings', href:'javascript:loadPage("catalog", true)'},
+                        {label:'Wiki', icon:'settings', href:'javascript:loadPage("wiki", true)'},
+                        {label:'About', icon:'settings', href:'javascript:loadPage("about", true)'},
+                        {label:'Content', icon:'settings', href:'javascript:loadPage("content", true)'},
+                        {label:'Log In', icon:'settings', href:'javascript:loadPage("login", true)'},
+                        {label:'404 Error', icon:'settings', href:'javascript:loadPage("404-error", true)'},
+                        {label:'About', icon:'settings', href:'javascript:loadPage("about", true)'}
                     ]},
-                    {label:'Dashboards', icon:'settings', href:'', submenu:[
-                        {label:'Style A', icon:'settings', href:''},
-                        {label:'Style B', icon:'settings', href:''},
-                        {label:'Style C', icon:'settings', href:''}
+                    {label:'Dashboards', icon:'settings', href:'', isroot:true, submenu:[
+                        {label:'Style A', icon:'settings', href:'javascript:loadPage("dashboard-1", true)'},
+                        {label:'Style B', icon:'settings', href:'javascript:loadPage("dashboard-2", true)'},
+                        {label:'Style C', icon:'settings', href:'javascript:loadPage("dashboard-3", true)'}
                     ]},
-                    {label:'Forms', icon:'settings', href:'', submenu:[
-                        {label:'General', icon:'settings', href:''},
-                        {label:'Advanced', icon:'settings', href:''},
-                        {label:'Validation', icon:'settings', href:''},
-                        {label:'Wizard', icon:'settings', href:''},
-                        {label:'Upload', icon:'settings', href:''}
+                    {label:'Forms', icon:'settings', href:'", true)', isroot:true, submenu:[
+                        {label:'General', icon:'settings', href:'javascript:loadPage("forms-general", true)'},
+                        {label:'Advanced', icon:'settings', href:'javascript:loadPage("forms-advanced", true)'},
+                        {label:'Validation', icon:'settings', href:'javascript:loadPage("forms-validation", true)'},
+                        {label:'Wizard', icon:'settings', href:'javascript:loadPage("forms-wizard", true)'},
+                        {label:'Upload', icon:'settings', href:'javascript:loadPage("forms-upload", true)'}
                     ]},
-                    {label:'Elements', icon:'settings', href:'', submenu:[
-                        {label:'General', icon:'settings', href:''},
-                        {label:'Typography', icon:'settings', href:''},
-                        {label:'Buttons', icon:'settings', href:''},
-                        {label:'Icons', icon:'settings', href:''},
-                        {label:'Menus', icon:'settings', href:''},
-                        {label:'Widgets', icon:'settings', href:''}
+                    {label:'Elements', icon:'settings', href:'', isroot:true, submenu:[
+                        {label:'General', icon:'settings', href:'javascript:loadPage("elem-general", true)'},
+                        {label:'Typography', icon:'settings', href:'javascript:loadPage("elem-typography", true)'},
+                        {label:'Buttons', icon:'settings', href:'javascript:loadPage("elem-buttons", true)'},
+                        {label:'Icons', icon:'settings', href:'javascript:loadPage("elem-icons", true)'},
+                        {label:'Menus', icon:'settings', href:'javascript:loadPage("elem-menus", true)'},
+                        {label:'Widgets', icon:'settings', href:'javascript:loadPage("elem-widgets", true)'}
                     ]},
-                    {label:'Spreadsheets', icon:'settings', href:''},
-                    {label:'Charts', icon:'settings', href:''},
-                    {label:'Layout', icon:'settings', href:'', submenu:[
-                        {label:'Fixed Sidebar', icon:'settings', href:''},
-                        {label:'Fixed Header', icon:'settings', href:''},
-                        {label:'Shrinking Header', icon:'settings', href:''},
-                        {label:'Music Player', icon:'settings', href:''},
-                        {label:'Mini Cart', icon:'settings', href:''}
+                    {label:'Spreadsheets', icon:'settings', href:'javascript:loadPage("spreadsheets", true)', isroot:true},
+                    {label:'Charts', icon:'settings', href:'javascript:loadPage("charts", true)', isroot:true},
+                    {label:'Layout', icon:'settings', href:'', isroot:true, submenu:[
+                        {label:'Fixed Sidebar', icon:'settings', href:'javascript:loadPage("fixed-sidebar", true)'},
+                        {label:'Fixed Header', icon:'settings', href:'javascript:loadPage("fixed-header", true)'},
+                        {label:'Shrinking Header', icon:'settings', href:'javascript:loadPage("shrink-header", true)'},
+                        {label:'Music Player', icon:'settings', href:'javascript:loadPage("music-player", true)'},
+                        {label:'Mini Cart', icon:'settings', href:'javascript:loadPage("mini-cart", true)'},
+                        {label:'Grid System', icon:'settings', href:'javascript:loadPage("grid-test", true)'}
                     ]}
                 ];
-                
 
-                addHtm('ul',sidebar_container, addMenuItems(sidebar.innerHTML, sidebar_items), "menu");
+                addHtm('ul',sidebar_container, addMenuItems(sidebar.innerHTML, sidebar_items, 0), "menu");
                 sidebar.parentNode.removeChild(sidebar);
-            
-                //duplicate interface 3 times to create small, medium, & large versions of the Tapestry UI
-                var interfaces = [
-                            {size:"sm", name:"Small"},
-                            {size:"med", name:"Medium"},
-                            {size:"lg", name:"Large"}
-                            ];
-                htm = ui.innerHTML;
-                for(var x = 0; x < interfaces.length; x++){
-                    html.push(replace(replace(htm
-                                ,'{{size}}',interfaces[x].size)
-                                , '{{name}}',interfaces[x].name));
-                }
-                var container = document.getElementById('container');
-            
-                //finally, duplicate interface into three sizes (small, medium, large)
-                addHtm('div',container, html[0]);
-                addHtm('div',container, html[1]);
-                addHtm('div',container, html[2]);
-                ui.parentNode.removeChild(ui);
-            
-                //generate different elements for all three interfaces
-                var filelist =  [
-                                {label:'Home', hasfolder: false, color:'blue', sort:'01', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Login', hasfolder: false, color:'yellow', sort:'02', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Contact Us', hasfolder: false, color:'yellow', sort:'03', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Error 404', hasfolder: false, color:'red', sort:'04', icondelete:false, iconsettings:true, iconadd:false, iconopen: true},
-                                {label:'Access Denied', hasfolder: false, color:'red', sort:'05', icondelete:false, iconsettings:true, iconadd:false, iconopen: true},
-                                {label:'Blog', hasfolder: true, color:'empty', sort:'99', icondelete:true, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Projects', hasfolder: true, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Biography', hasfolder: true, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Products', hasfolder: true, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'History', hasfolder: true, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Timeline', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Job Resume', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Friends', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Live Chat', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Locations', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Map', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Subscription', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Newsletter', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Forum', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Catalog', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Documentation', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Store', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Search', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Latest News', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Media Kit', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'References', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Awards', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Terms & Conditions', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Support', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Our Team', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Dashboard', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'Site Map', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true},
-                                {label:'RSS Feeds', hasfolder: false, color:'empty', sort:'99', icondelete:false, iconsettings:true, iconadd:true, iconopen: true}
-                                ];
-                filelist.sort(function(a, b){
-                    var c = (a.hasfolder ? '1' : '2') + a.sort.toString() + a.label;
-                    var d = (b.hasfolder ? '1' : '2') + b.sort.toString() + b.label;
-                    if (c < d) {
-                        return -1;
-                    }
-                    if (c > d) {
-                        return 1;
-                    }
-                    return 0;
-                });
-            
-                for(var x = 0; x < interfaces.length; x++){
-            
-                    //generate file list
-                    var fileui = document.getElementById(interfaces[x].size + 'filelist_ui');
-                    var filecontainer = document.getElementById(interfaces[x].size + 'filelist');
-                    htm = fileui.innerHTML;
-                    html = [''];
-                    for(var y = 0; y < filelist.length; y++){
-                        html[0] =  renderTemplate(htm, 
-                                [
-                                ['{{id}}', y], 
-                                ['{{label}}', filelist[y].label], 
-                                ['{{color}}', filelist[y].color],
-                                ['{{iconfolder}}', filelist[y].hasfolder],
-                                ['{{icondelete}}', filelist[y].icondelete],
-                                ['{{iconsettings}}', filelist[y].iconsettings],
-                                ['{{iconadd}}', filelist[y].iconadd],
-                                ['{{iconopen}}', filelist[y].iconopen]
-                                ]);
-                        addHtm('li',filecontainer, html[0]);
-                    }
-                    fileui.parentNode.removeChild(fileui);
-                }
-            
+
+                //load first page
+                loadPage('dashboard-1', true);
+
                 //finally, show the body of the web page
                 body.className = body.className.replace(' hidden','');
 
                 //bind events to elements
-                Tapestry.on(document.querySelectorAll('.box ul.menu > li > .row > .col > a'), 'click', Tapestry.menu.click);
+                Tapestry.on(document.querySelectorAll('.box .sidebar ul.menu > li'), 'click', Tapestry.menu.click);
+                
             
-                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                // internal functions ///////////////////////////////////////////////////////////////////////////////////////////////
-                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            })(); //end contained function
+            
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // internal Demo functions //////////////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-                function addHtm(parent, el, str, classes, styles) {
-                    var div = document.createElement(parent);
-                    if(classes != null){
-                        div.className = classes;
+            function loadPage(name, hasjs){
+                var xobj = new XMLHttpRequest();
+                xobj.open('GET', 'pages/'+name+'.html', true);
+                xobj.onreadystatechange = function () {
+                    if (xobj.readyState == 4 && xobj.status == "200") {
+                        getElementsByClassName(document, 'dash-body')[0].innerHTML = xobj.responseText;
+                        if(hasjs == true){
+                            //remove old page script (if exists)
+                            var old = document.getElementById("pagejs");
+                            if(old){
+                                document.head.removeChild(old);
+                            }
+                            //add new page script
+                            var script = document.createElement('script');
+                            script.id = 'pagejs';
+                            script.src = 'pages/'+name+'.js';
+                            //script.onload = function () {};
+                            document.head.appendChild(script);
+                        }
                     }
-                    if(styles != null){
-                        div.setAttribute('style', styles);
-                    }
-                    div.innerHTML = str;
-                    el.appendChild(div);
-                }
+                };
+                xobj.send(null);  
+            }
 
-                function addMenuItems(ui, items){
-                    var htm = '';
-                    for(var i = 0; i < items.length; i++){
-                        htm += ui
-                                .replace('{{label}}', items[i].label)
-                                .replace('{{icon}}', items[i].icon)
-                                .replace('{{submenu}}', 
-                                    items[i].submenu != null 
-                                    ?   '<div class="row submenu">' + 
-                                            '<div class="gutter"></div>' + 
-                                            '<ul class="menu">' + addMenuItems(ui, items[i].submenu) + '</ul>' +
-                                        '</div>' 
-                                    : '')
-                                + '\n';
-                    }
-                    return htm;
+            function addHtm(parent, el, str, classes, styles) {
+                var div = document.createElement(parent);
+                if(classes != null){
+                    div.className = classes;
                 }
-            
-                function replace(str, find, rpl){
-                    return str.replace(new RegExp(find, 'g'), rpl);
+                if(styles != null){
+                    div.setAttribute('style', styles);
                 }
-            
-                //renders a scaffolding template, replacing scaffold elements with variables (e.g. "{{label}}"" ), and also
-                //showing or hiding blocks of HTML between scaffold element blocks  (e.g. "{{my-block}}<img src="#"/>{{/my-block}}" )
-                function renderTemplate(htm, elements){
-                    var find = [0,0,0,0];
-                    var ischanged = true;
-                    for(var x = 0; x < elements.length; x++){
-                        ischanged = true;
-                        while(ischanged == true){
-                            ischanged = false;
-                            //check for scaffold closing first
-                            find[0] = htm.indexOf(elements[x][0].replace('{{','{{/'));
-                            if(htm.indexOf(elements[x][0].replace('{{','{{/')) >= 0){
-                                //found a group of html to show or hide based on scaffold element boolean value
-                                find[1] = htm.indexOf("}}", find[0]);
-                                if(find[1] > 0){
-                                    //find beginning of tag
-                                    find[2] = htm.indexOf(elements[x][0]);
-                                    find[3] = htm.indexOf("}}", find[2]);
-                                    if(find[2] >= 0){
-                                        if(elements[x][1] === false){
-                                            //hide group of html
-                                            htm = htm.substr(0, find[2]) + htm.substr(find[1]+2);
-                                            ischanged = true;
-                                        }else if(elements[x][1] === true){
-                                            //show group of html
-                                            htm = htm.substr(0, find[2]) + htm.substr(find[3]+2, find[0] - (find[3]+2)) + htm.substr(find[1]+2);
-                                            ischanged = true;
-                                        }
+                div.innerHTML = str;
+                el.appendChild(div);
+            }
+
+            function addMenuItems(ui, items, level){
+                var htm = '';
+                var gutter = '';
+                for(var i = 0; i < level; i++){
+                    gutter += '<div class="gutter"></div>';
+                }
+                for(var i = 0; i < items.length; i++){
+                    htm += ui + '\n';
+                    htm = replace(htm, '{{label}}', items[i].label);
+                    htm = replace(htm, '{{href}}', items[i].href == '' ? 'javascript:' : replace(items[i].href, '"', "'"));
+                    htm = replace(htm, '{{icon}}', items[i].icon);
+                    htm = replace(htm, '{{row-class}}', (items[i].isroot ? '' : ''));
+                    htm = replace(htm, '{{gutter}}', gutter);
+                    htm = replace(htm, '{{submenu}}', 
+                                items[i].submenu != null 
+                                ?   '<div class="row submenu">' + 
+                                        '<ul class="menu">' + addMenuItems(ui, items[i].submenu, level + 1) + '</ul>' +
+                                    '</div>' 
+                                : '');
+                }
+                return htm;
+            }
+        
+            function replace(str, find, rpl){
+                return str.replace(new RegExp(find, 'g'), rpl);
+            }
+        
+            //renders a scaffolding template, replacing scaffold elements with variables (e.g. "{{label}}"" ), and also
+            //showing or hiding blocks of HTML between scaffold element blocks  (e.g. "{{my-block}}<img src="#"/>{{/my-block}}" )
+            function renderTemplate(htm, elements){
+                var find = [0,0,0,0];
+                var ischanged = true;
+                for(var x = 0; x < elements.length; x++){
+                    ischanged = true;
+                    while(ischanged == true){
+                        ischanged = false;
+                        //check for scaffold closing first
+                        find[0] = htm.indexOf(elements[x][0].replace('{{','{{/'));
+                        if(htm.indexOf(elements[x][0].replace('{{','{{/')) >= 0){
+                            //found a group of html to show or hide based on scaffold element boolean value
+                            find[1] = htm.indexOf("}}", find[0]);
+                            if(find[1] > 0){
+                                //find beginning of tag
+                                find[2] = htm.indexOf(elements[x][0]);
+                                find[3] = htm.indexOf("}}", find[2]);
+                                if(find[2] >= 0){
+                                    if(elements[x][1] === false){
+                                        //hide group of html
+                                        htm = htm.substr(0, find[2]) + htm.substr(find[1]+2);
+                                        ischanged = true;
+                                    }else if(elements[x][1] === true){
+                                        //show group of html
+                                        htm = htm.substr(0, find[2]) + htm.substr(find[3]+2, find[0] - (find[3]+2)) + htm.substr(find[1]+2);
+                                        ischanged = true;
                                     }
                                 }
                             }
-                            //check for scaffold element to replace with a value
-                            if(ischanged == false){
-                                if(htm.indexOf(elements[x][0]) >= 0){
-                                    htm = htm.replace(elements[x][0], elements[x][1]);
-                                    ischanged = true;
-                                }
+                        }
+                        //check for scaffold element to replace with a value
+                        if(ischanged == false){
+                            if(htm.indexOf(elements[x][0]) >= 0){
+                                htm = htm.replace(elements[x][0], elements[x][1]);
+                                ischanged = true;
                             }
                         }
                     }
-                    return htm;
                 }
-            
-                function lineChart(type){
-                    switch(type){
-                        case "analytics":
-            
-                    }
+                return htm;
+            }
+
+            function getElementsByClassName(node,classname) {
+                if (node.getElementsByClassName) { // use native implementation if available
+                    return node.getElementsByClassName(classname);
+                } else {
+                    return (function getElementsByClass(searchClass,node) {
+                        if ( node == null )
+                        node = document;
+                        var classElements = [],
+                            els = node.getElementsByTagName("*"),
+                            elsLen = els.length,
+                            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+
+                        for (i = 0, j = 0; i < elsLen; i++) {
+                        if ( pattern.test(els[i].className) ) {
+                            classElements[j] = els[i];
+                            j++;
+                        }
+                        }
+                        return classElements;
+                    })(classname, node);
                 }
-            
-            })();
+            }
+        
+            function lineChart(type){
+                switch(type){
+                    case "analytics":
+        
+                }
+            }
         </script>
     </body>
     

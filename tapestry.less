@@ -211,7 +211,7 @@ body {font-size:14px;}
 
     /* menu system */
      ul.menu{list-style:none;}
-     ul.menu > li{float:left; position:relative; width:100%;}
+     ul.menu > li{float:left; position:relative; width:100%; cursor:pointer;}
      ul.menu > li > .row > .col > a{display:inline-block; width:100%; text-decoration:none; box-sizing:border-box;}
      ul.menu.small > li > .row > .col > a{padding:4px 8px;}
      ul.menu > li > .row > .col > a,
@@ -220,9 +220,9 @@ body {font-size:14px;}
      ul.menu > li > .row > .col.icon > a{padding-right:0px;}
      ul.menu > li > .row > .col.label > a{padding-left:0px;}
      ul.menu > li > .row.submenu{display:flex; flex-wrap:wrap;}
-     ul.menu > li > .row.submenu > ul.menu{float:left; display:none; width:~"calc(100% - 15px)";}
+     ul.menu > li > .row.submenu > ul.menu{float:left; display:none;}
      ul.menu > li > .row.submenu > ul.menu.expanded{display:block;}
-     ul.menu > li > .row.submenu > .gutter{width:15px; height:100%;}
+     ul.menu > li > .row.submenu .gutter{width:15px; height:1px; float:left;}
 
 
     /* small tag */
@@ -262,7 +262,7 @@ body {font-size:14px;}
             &.icon.large{height:25px;}
             &.icon.xlarge{height:32px;}
             &.title{line-height:1;}
-            &.label{line-height:1;margin-top:1px;}
+            &.label{line-height:1;margin:1px 0;}
             &.field-label{
                 width:80px; padding:8px 7px 7px 4px; margin-top:1px;
                 &.long{width:120px;}
@@ -318,7 +318,7 @@ body {font-size:14px;}
             &.icon.small{min-width:16px; height:16px; margin-top:5px; svg{width:16px; height:16px;}}
             &.icon.pad-right{padding-right:7px;}
             &.title{line-height:1.5; font-size:17px;}
-            &.label{line-height:1;margin-top:6px;}
+            &.label{line-height:1;margin:6px 0;}
             &.field-label{
                 width:100px; padding:8px 7px 7px 4px; margin-top:4px;
                 &.long{width:120px;}
@@ -374,7 +374,7 @@ body {font-size:14px;}
             &.icon.small{min-width:25px; height:25px; margin-top:5px; svg{width:25px; height:25px;}}
             &.icon.pad-right{padding-right:9px;}
             &.title{line-height:1.75; font-size:20px;}
-            &.label{line-height:1;margin-top:10px;}
+            &.label{line-height:1;margin:10px 0;}
             &.field-label{
                 width:130px; padding:8px 7px 7px 4px; margin-top:7px;
                 &.long{width:120px;}

@@ -1,5 +1,5 @@
 var Tapestry = {
-    on: function(target, type, listener){console.log(target);
+    on: function(target, type, listener){
         if(target.length > 1){
             
             for (var i = 0; i < target.length; i++) {
@@ -51,7 +51,6 @@ var Tapestry = {
         var elem = target.firstChild;
         var children = [];
         while (elem != null) {
-            console.log(elem);
             if(elem.tagName){
                 if (elem.tagName.toLowerCase() == tagname.toLowerCase()) {
                     children.push(elem);
@@ -61,32 +60,34 @@ var Tapestry = {
             elem = elem.nextSibling;
         }
         return children;
-    },
+    }
+};
 
-    menu:{
-        click: function(){
-            console.log(this);
-            var p = this;
-            if(p){
-                p = p.parentNode.parentNode.parentNode;
-                var submenu = p.querySelector('ul.menu');
-                console.log(submenu);
-                if(submenu){
-                    if(Tapestry.hasClass(submenu, 'expanded') == true){
-                        Tapestry.menu.collapse(submenu);
-                        return;
-                    }
+Tapestry.menu = {
+    _clickTimer:null,
+
+    click: function(){
+        var p = this;
+        if(Tapestry.menu._clickTimer != null){return false;}
+        Tapestry.menu._clickTimer = setTimeout(function(){Tapestry.menu._clickTimer = null;}, 100);
+        if(p){
+            var submenu = p.querySelector('ul.menu');
+            if(submenu){
+                if(Tapestry.hasClass(submenu, 'expanded') == true){
+                    Tapestry.menu.collapse(submenu);
+                    return false;
                 }
             }
-            Tapestry.menu.expand(submenu);
-        },
-
-        expand: function(submenu){
-            Tapestry.addClass(submenu, 'expanded');
-        },
-
-        collapse: function(submenu){
-            Tapestry.removeClass(submenu, 'expanded');
         }
+        Tapestry.menu.expand(submenu);
+        return false;
+    },
+
+    expand: function(submenu){
+        Tapestry.addClass(submenu, 'expanded');
+    },
+
+    collapse: function(submenu){
+        Tapestry.removeClass(submenu, 'expanded');
     }
-}
+};

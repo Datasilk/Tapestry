@@ -1,6 +1,6 @@
 ﻿/* fonts */
 @import (css) url(https://fonts.googleapis.com/css?family=Jaldi:400,700);
-@import "../lib/theme.less";
+@import "../less/theme.less";
 
 body{font-family: Jaldi;}
 
@@ -336,6 +336,16 @@ body{font-family: Jaldi;}
     @row-alt-icon-hover:#FBFF83; 
     @row-alt-icon-active:#FFEF69;
     .tapestry-theme();
+
+    //custom colors
+    .submenu{
+        background-color:#5B9987;
+        .row.hover:hover{background-color:#338B72;}
+        .submenu{
+            background-color:#49917C;
+            .row.hover:hover{background-color:#29876C;}
+        }
+    }
 }
 
 .sidebar .row.header{

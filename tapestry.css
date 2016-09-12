@@ -640,6 +640,7 @@ body {
   float: left;
   position: relative;
   width: 100%;
+  cursor: pointer;
 }
 .box ul.menu > li > .row > .col > a {
   display: inline-block;
@@ -670,14 +671,14 @@ body {
 .box ul.menu > li > .row.submenu > ul.menu {
   float: left;
   display: none;
-  width: calc(100% - 15px);
 }
 .box ul.menu > li > .row.submenu > ul.menu.expanded {
   display: block;
 }
-.box ul.menu > li > .row.submenu > .gutter {
+.box ul.menu > li > .row.submenu .gutter {
   width: 15px;
-  height: 100%;
+  height: 1px;
+  float: left;
 }
 .box .tag {
   position: relative;
@@ -749,7 +750,7 @@ body {
 .box .size-sm .col.label,
 .box .col.label {
   line-height: 1;
-  margin-top: 1px;
+  margin: 1px 0;
 }
 .box .size-sm .col.field-label,
 .box .col.field-label {
@@ -908,7 +909,7 @@ body {
 }
 .box .size-med .col.label {
   line-height: 1;
-  margin-top: 6px;
+  margin: 6px 0;
 }
 .box .size-med .col.field-label {
   width: 100px;
@@ -1038,7 +1039,7 @@ body {
 }
 .box .size-lg .col.label {
   line-height: 1;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 .box .size-lg .col.field-label {
   width: 130px;

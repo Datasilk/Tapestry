@@ -469,11 +469,6 @@
 .tapestry-theme(){ 
     // Apply Coloring to Elements //////////////////////////////////////////////////////////////////////////////////////
 
-
-    // LESS Utility functions //////////////////////////////////////////////////////////////////////////
-
-    
-
     //User Interface CSS Rules //////////////////////////////////////////////////////////////
     background:@box-bg;
     & when not (@box-border = transparent){border-color:@box-border;}
@@ -489,7 +484,7 @@
         .svglink(@box-a-faded-link, @box-a-faded-hover, @box-a-faded-active, @box-a-faded-link);
     }
     .icon a, .nolinks a{
-        .link(@box-icon-link, @box-icon-hover, @box-icon-active, @box-icon-link, true);
+        .link(@box-icon-link, @box-icon-hover, @box-icon-active, @box-icon-link);
         .svglink(@box-icon-link, @box-icon-hover, @box-icon-active, @box-icon-link);
     }
     
@@ -525,6 +520,10 @@
             a{
                 .link(@a-link, @a-hover, @a-active, @a-link);
                 .svglink(@icon-link, @icon-hover, @icon-active, @icon-link);
+            }
+            .icon a, .nolinks a{
+                .link(@box-icon-link, @box-icon-hover, @box-icon-active, @box-icon-link);
+                .svglink(@box-icon-link, @box-icon-hover, @box-icon-active, @box-icon-link);
             }
         }
         & when not(@hover = transparent){
