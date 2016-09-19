@@ -37,7 +37,7 @@
             .dash-body{width:88%; max-width:calc(100% - 200px); padding:0 10px 0 20px;}
         </style>
     </head>
-    <body class="box hidden flex-container">
+    <body class="box hidden flex">
         <div id="svglist">
             <!-- copied output svg from project https://github.com/Websilk/Design/tree/master/SVG -->
             <svg xmlns="http://www.w3.org/2000/svg">
@@ -2506,7 +2506,7 @@
             </svg>
         </div>
         
-        <div class="col sidebar flex size-med">
+        <div class="col sidebar flexed size-med">
             <div class="row header">
                 <div class="row title">
                     <div class="col eleven">
@@ -2590,12 +2590,13 @@
                         {label:'Style B', icon:'settings', href:'javascript:loadPage("dashboard-2", true)'},
                         {label:'Style C', icon:'settings', href:'javascript:loadPage("dashboard-3", true)'}
                     ]},
-                    {label:'Forms', icon:'settings', href:'", true)', isroot:true, submenu:[
+                    {label:'Forms', icon:'settings', href:'', isroot:true, submenu:[
                         {label:'General', icon:'settings', href:'javascript:loadPage("forms-general", true)'},
                         {label:'Advanced', icon:'settings', href:'javascript:loadPage("forms-advanced", true)'},
                         {label:'Validation', icon:'settings', href:'javascript:loadPage("forms-validation", true)'},
                         {label:'Wizard', icon:'settings', href:'javascript:loadPage("forms-wizard", true)'},
-                        {label:'Upload', icon:'settings', href:'javascript:loadPage("forms-upload", true)'}
+                        {label:'Upload', icon:'settings', href:'javascript:loadPage("forms-upload", true)'},
+                        {label:'File System', icon:'settings', href:'javascript:loadPage("file-system", true)'}
                     ]},
                     {label:'Elements', icon:'settings', href:'', isroot:true, submenu:[
                         {label:'General', icon:'settings', href:'javascript:loadPage("elem-general", true)'},
