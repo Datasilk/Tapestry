@@ -294,31 +294,6 @@ body {
   box-sizing: border-box;
   line-height: 0;
 }
-.box .row label,
-.box .row input,
-.box .row a,
-.box .row span,
-.box .row p,
-.box .row h1,
-.box .row h2,
-.box .row h3,
-.box .row h4,
-.box .row h5,
-.box .row h6,
-.box .row blockquote,
-.box .row strong {
-  line-height: 1;
-}
-.box .row ul,
-.box .row li,
-.box .row table,
-.box .row tr,
-.box .row td,
-.box .row thead,
-.box .row tbody,
-.box .row tfoot {
-  line-height: 0;
-}
 .box .row .hover-only {
   opacity: 0;
 }
@@ -440,6 +415,52 @@ body {
   /* label above input field*/
   /* input field */
   /* tool tip next to input field */
+}
+.box .row label,
+.box .col label,
+.box .row input,
+.box .col input,
+.box .row a,
+.box .col a,
+.box .row span,
+.box .col span,
+.box .row p,
+.box .col p,
+.box .row h1,
+.box .col h1,
+.box .row h2,
+.box .col h2,
+.box .row h3,
+.box .col h3,
+.box .row h4,
+.box .col h4,
+.box .row h5,
+.box .col h5,
+.box .row h6,
+.box .col h6,
+.box .row blockquote,
+.box .col blockquote,
+.box .row strong,
+.box .col strong {
+  line-height: 1;
+}
+.box .row ul,
+.box .col ul,
+.box .row li,
+.box .col li,
+.box .row table,
+.box .col table,
+.box .row tr,
+.box .col tr,
+.box .row td,
+.box .col td,
+.box .row thead,
+.box .col thead,
+.box .row tbody,
+.box .col tbody,
+.box .row tfoot,
+.box .col tfoot {
+  line-height: 0;
 }
 .box .row.title,
 .box .col.title {
