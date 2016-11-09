@@ -110,13 +110,13 @@
 .button(@name, @bg, @bg-hover, @bg-active, @bg-selected, @border, @border-hover, @border-active, @border-selected, @outline, @outline-hover, @outline-active, @outline-selected, @font, @font-hover, @font-active, @font-selected){
     
     .check-button-name() when (@name = none){
-        .button{
+        .button, a.button{
             .get-button();
         }
     }
 
     .check-button-name() when not (@name = none){
-        .button.@{name}{
+        .button.@{name}, a.button.@{name}{
             .get-button();
         }
     }
@@ -169,5 +169,28 @@
 
     .get-button(){
         .svglink(@default, @hover, @active, @default, @important);
+    }
+}
+
+// message : colors for all message types
+.message(@name, @bg, @border, @font){
+    .msg() when (@name = none){
+        .message{
+            .get-msg();
+        }
+    }
+
+    .msg() when not (@name = none){
+        .message.@{name}{
+            .get-msg();
+        }
+    }
+
+    .msg();
+
+    .get-msg(){
+        background:@bg;
+        border-color:@border;
+        color:@font;
     }
 }
