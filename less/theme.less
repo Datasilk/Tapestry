@@ -52,31 +52,27 @@
  
 // row : grid styling for a row & alternate row   
 .get-row(@bg, @hover, @selected, @font, @font-hover, @font-selected, @a-link, @a-hover, @a-active, @a-visited, @a-selected, @icon-link, @icon-hover, @icon-active, @icon-selected, @is-hover-alt:false){
-    &{
-        //row defaults
-        background:@bg; 
-        color:@font;
-        a{
-            .link(@a-link, @a-hover, @a-active, @a-visited);
-            .svglink(@icon-link, @icon-hover, @icon-active, @icon-link);
-        }
-        .icon a, .nolinks a{
-            .link(@icon-link, @icon-hover, @icon-active, @icon-link);
-            .svglink(@icon-link, @icon-hover, @icon-active, @icon-link);
-        }
-    }
+    //row defaults)
+    background:@bg; 
+    color:@font;
+    .links(@a-link, @a-hover, @a-active, @a-link);
+    .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
     & when not (@hover = transparent){
         //row hover (optional)
         & when (@is-hover-alt = false){
             &.hover:hover{
                 background:@hover;
                 color:@font-hover;
+                .links(@a-hover, @a-hover, @a-active, @a-hover);
+                .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
             }
         }
         & when (@is-hover-alt = true){
             &.hover.alt:hover{
                 background:@hover;
                 color:@font-hover;
+                .links(@a-hover, @a-hover, @a-active, @a-hover);
+                .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
             }
         }
     }
@@ -86,10 +82,8 @@
         &.selected{
             background:@selected;
             color:@font-selected;
-            a{
-                .link(@a-selected, @a-hover, @a-active, @a-selected);
-                .svglink(@icon-selected, @icon-hover, @icon-active, @icon-selected);
-            }
+            .links(@a-selected, @a-hover, @a-active, @a-selected);
+            .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
         }
     }
 }
