@@ -21,6 +21,7 @@ body {font-size:14px;}
 .text-center{text-align:center;}
 .overflow{overflow:hidden;}
 .block{display:block;}
+.inline-block{display:inline-block;}
 .wait, .wait div {cursor: wait !important;}
 .bold{font-weight:bold !important;}
 .thin{font-weight:300 !important;}
@@ -38,8 +39,18 @@ body {font-size:14px;}
 .pad-sm{padding:7px !important;}
 .pad-med, .pad{padding:15px !important;}
 .pad-lg{padding:30px !important;}
-.pad-width{padding:0 15px !important;}
-.pad-height{padding:15px 0 !important;}
+.pad-width-xs{padding-left:4px !important;padding-right:4px !important;}
+.pad-width-sm{padding-left:7px !important;padding-right:7px !important;}
+.pad-width-med, 
+.pad-width{padding-left:15px !important;padding-right:15px !important;}
+.pad-width-lg{padding-left:30px !important;padding-right:30px !important;}
+.pad-width-xl{padding-left:50px !important;padding-right:50px !important;}
+.pad-height-xs{padding-top:4px !important;padding-bottom:4px !important;}
+.pad-height-sm{padding-top:7px !important;padding-bottom:7px !important;}
+.pad-height-med, 
+.pad-height{padding-top:15px !important;padding-bottom:15px !important;}
+.pad-height-lg{padding-top:30px !important;padding-bottom:30px !important;}
+.pad-height-xl{padding-top:50px !important;padding-bottom:50px !important;}
 .pad-left{padding-left:15px !important;}
 .pad-left-sm{padding-left:5px !important;}
 .pad-right{padding-right:15px !important;}
@@ -72,6 +83,8 @@ body {font-size:14px;}
 .margin-bottom-xl{margin-bottom:100px !important;}
 
 .height-lg{height:300px !important;}
+.height-text{height:16px;}
+.width-100{width:100%;}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Grid System ////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -110,7 +123,7 @@ body {font-size:14px;}
         /* columns (12 column grid system) */
         float:left;
         box-sizing:border-box;
-        display:inline;
+        display:inline-block;
         *margin-right: -1px; /* Add the asterisk */
         &.one{width:8.333339%}
         &.two{width:16.666669%}
@@ -229,16 +242,17 @@ body {font-size:14px;}
     /* menu system */
      ul.menu{list-style:none;}
      ul.menu > li{float:left; position:relative; width:100%; cursor:pointer;}
-     ul.menu > li > .row > .col > a{display:inline-block; width:100%; text-decoration:none; box-sizing:border-box;}
-     ul.menu.small > li > .row > .col > a{padding:4px 8px;}
-     ul.menu > li > .row > .col > a,
-     ul.menu.medium > li > .row > .col > a{padding:7px 10px;}
-     ul.menu.large > li > .row > .col > a{padding:10px 15px;}
-     ul.menu > li > .row > .col.icon > a{padding-right:0px;}
-     ul.menu > li > .row > .col.label > a{padding-left:0px;}
+     ul.menu > li > .row .col > *{display:inline-block; width:100%; text-decoration:none; box-sizing:border-box;}
+     ul.menu.small > li > .row .col > *{padding:4px 8px;}
+     ul.menu > li > .row > a{width:100%; display:inline-block;}
+     ul.menu > li > .row .col > *,
+     ul.menu.medium > li > .row .col > *{padding:7px 10px; cursor:pointer;}
+     ul.menu.large > li > .row .col > *{padding:10px 15px;}
+     ul.menu > li > .row .col.icon > *{padding-right:0px;}
+     ul.menu > li > .row .col.label > *{padding-left:0px;}
      ul.menu > li > .row.submenu{display:flex; flex-wrap:wrap;}
      ul.menu > li > .row.submenu > ul.menu{float:left; display:none;}
-     ul.menu > li > .row.submenu > ul.menu.expanded{display:block;}
+     ul.menu > li > .row.submenu > ul.menu.expanded{display:block;} 
      ul.menu > li > .row.submenu .gutter{width:15px; height:1px; float:left;}
 
      /* messages */
@@ -336,7 +350,7 @@ body {font-size:14px;}
             &.icon.large{height:32px;}
             &.icon.xlarge{height:48px;}
             &.icon.small{min-width:16px; height:16px; margin-top:5px; svg{width:16px; height:16px;}}
-            &.icon.pad-right{padding-right:7px;}
+            &.icon.pad-right{padding-right:7px !important;}
             &.title{line-height:1.5; font-size:17px;}
             &.label{line-height:1;margin:6px 0;}
             &.field-label{
@@ -392,7 +406,7 @@ body {font-size:14px;}
             &.icon.large{height:48px;}
             &.icon.xlarge{height:64px;}
             &.icon.small{min-width:25px; height:25px; margin-top:5px; svg{width:25px; height:25px;}}
-            &.icon.pad-right{padding-right:9px;}
+            &.icon.pad-right{padding-right:9px !important;}
             &.title{line-height:1.75; font-size:20px;}
             &.label{line-height:1;margin:10px 0;}
             &.field-label{
