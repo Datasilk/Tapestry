@@ -71,12 +71,16 @@
             &.hover:hover{
                 background:@hover;
                 color:@font-hover;
+                .links(@a-hover, @a-hover, @a-active, @a-hover);
+                .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
             }
         }
         & when (@is-hover-alt = true){
             &.hover.alt:hover{
                 background:@hover;
                 color:@font-hover;
+                .links(@a-hover, @a-hover, @a-active, @a-hover);
+                .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
             }
         }
     }
@@ -86,6 +90,8 @@
         &.selected{
             background:@selected;
             color:@font-selected;
+            .links(@a-selected, @a-hover, @a-active, @a-selected);
+            .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
             a{
                 .link(@a-selected, @a-hover, @a-active, @a-selected);
                 .svglink(@icon-selected, @icon-hover, @icon-active, @icon-selected);
