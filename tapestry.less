@@ -15,13 +15,13 @@ body {font-size:14px;}
 .absolute.botttom-left, .absolute.bottom{bottom:0px; left:0px;}
 .relative{position:relative;}
 .clear:after{visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
-.hide{display:none;}
+.hide{display:none !important;}
 .text-left{text-align:right;}
 .text-right{text-align:right;}
 .text-center{text-align:center;}
 .overflow{overflow:hidden;}
 .block{display:block;}
-.inline-block{display:inline-block;}
+.faded{opacity:0.5;}
 .wait, .wait div {cursor: wait !important;}
 .bold{font-weight:bold !important;}
 .thin{font-weight:300 !important;}
@@ -32,6 +32,10 @@ body {font-size:14px;}
 
 /* global variables */
 @grid-invert:~'total'; //name of the inverted grid system
+@icon-sm:16px;
+@icon-med:25px;
+@icon-lg:36px;
+@icon-xl:48px;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Generic padding & margins //////////////////////////////////////////////////////////////////////////////// */
@@ -41,16 +45,12 @@ body {font-size:14px;}
 .pad-lg{padding:30px !important;}
 .pad-width-xs{padding-left:4px !important;padding-right:4px !important;}
 .pad-width-sm{padding-left:7px !important;padding-right:7px !important;}
-.pad-width-med, 
-.pad-width{padding-left:15px !important;padding-right:15px !important;}
-.pad-width-lg{padding-left:30px !important;padding-right:30px !important;}
-.pad-width-xl{padding-left:50px !important;padding-right:50px !important;}
+.pad-width-med, .pad-width{padding-left:15px !important;padding-right:15px !important;}
+.pad-width-lg{padding-left:30px !important;padding-right:30px !important;} 
 .pad-height-xs{padding-top:4px !important;padding-bottom:4px !important;}
 .pad-height-sm{padding-top:7px !important;padding-bottom:7px !important;}
-.pad-height-med, 
-.pad-height{padding-top:15px !important;padding-bottom:15px !important;}
-.pad-height-lg{padding-top:30px !important;padding-bottom:30px !important;}
-.pad-height-xl{padding-top:50px !important;padding-bottom:50px !important;}
+.pad-height-med, .pad-height{padding-top:15px !important;padding-bottom:15px !important;}
+.pad-height-lg{padding-top:30px !important;padding-bottom:30px !important;} 
 .pad-left{padding-left:15px !important;}
 .pad-left-sm{padding-left:5px !important;}
 .pad-right{padding-right:15px !important;}
@@ -83,8 +83,6 @@ body {font-size:14px;}
 .margin-bottom-xl{margin-bottom:100px !important;}
 
 .height-lg{height:300px !important;}
-.height-text{height:16px;}
-.width-100{width:100%;}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Grid System ////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -101,10 +99,12 @@ body {font-size:14px;}
     &.hidden{display:none;}
     .bg{width:100%; height:100%;}
     .form{max-width:700px;}
+    .summary{font-size:16px;}
+    p{padding:10px 0 25px;}
 
     .row{
         /* rows */
-        width:100%; 
+        width:100%;
         box-sizing:border-box;
         line-height:0;
         .hover-only{opacity:0;}
@@ -157,8 +157,8 @@ body {font-size:14px;}
         vertical-align:top;
         label, input, a, span, p, h1, h2, h3, h4, h5, h6, blockquote, strong{ line-height:1; }
         ul, li, table, tr, td ,thead, tbody, tfoot{line-height:0;}
-        &.title{line-height:1; font-size:16px; overflow:hidden; white-space:nowrap;
-        }
+        &.title{line-height:1; font-size:18px; overflow:hidden; white-space:nowrap;}
+        &.sub-title{padding:5px 0 10px;}
         &.label{line-height:1; white-space:nowrap;  cursor:default;
             a{cursor:pointer;}
         } 
@@ -193,6 +193,7 @@ body {font-size:14px;}
         &.shadow{
             box-shadow:1px 1px 2px 2px rgba(0,0,0,0.1);
         }
+        margin:20px;
     }
 
     /* fonts */
@@ -222,16 +223,24 @@ body {font-size:14px;}
 
     /* buttons */
     a.button{text-decoration:none !important;}
-    .button{display:inline-block; padding:8px 14px; margin:-8px 0; border-radius:4px; white-space:nowrap;}
+    .button{display:inline-block; padding:8px 14px; border-radius:4px; white-space:nowrap;}
     .button:hover{cursor:pointer;}
     .button{
         &.outline{padding:4px 10px; font-size:12px; border:2px solid; cursor:pointer; background-color:transparent !important; border-radius:4px; overflow:hidden;}
         &.circle{
             border-radius:100%; font-size:0px;
-            padding:7px; margin: -7px 0;
+            padding:8px 7px 7px 8px; margin: -7px 0;
+            &.text{
+                > div, .medium{width:@icon-med; height:@icon-med; text-align:center; line-height:0.6; letter-spacing:2px; font-size:30px; text-align:center;}
+                .large{width:@icon-lg; height:@icon-lg; text-align:center; line-height:0.6; letter-spacing:3px; font-size:40px; text-align:center;}
+            }
+            &.dots{
+                > div, .medium{width:@icon-med; height:@icon-med; text-align:center; line-height:0.4; letter-spacing:2px; font-size:30px; text-align:center;}
+                .large{width:@icon-lg; height:@icon-lg; text-align:center; line-height:0.4; letter-spacing:3px; font-size:40px; text-align:center;}
+            }
         }
         &.circle.large{padding:14px; margin:-14px 0;}
-        &.icon{padding:7px; margin: -7px 0; background-color:transparent !important;}
+        &.icon{padding:7px; background-color:transparent !important;}
     }
     .row.header {
         .button{
@@ -241,22 +250,26 @@ body {font-size:14px;}
 
     /* menu system */
      ul.menu{list-style:none;}
-     ul.menu > li{float:left; position:relative; width:100%; cursor:pointer;}
-     ul.menu > li > .row .col > *{display:inline-block; width:100%; text-decoration:none; box-sizing:border-box;}
-     ul.menu.small > li > .row .col > *{padding:4px 8px;}
-     ul.menu > li > .row > a{width:100%; display:inline-block;}
-     ul.menu > li > .row .col > *,
-     ul.menu.medium > li > .row .col > *{padding:7px 10px; cursor:pointer;}
-     ul.menu.large > li > .row .col > *{padding:10px 15px;}
-     ul.menu > li > .row .col.icon > *{padding-right:0px;}
-     ul.menu > li > .row .col.label > *{padding-left:0px;}
+     ul.menu > li{position:relative; width:100%;}
+     ul.menu > li a *{cursor:pointer;}
+     ul.menu > li > .row > a{display:inline-block; width:100%; text-decoration:none; box-sizing:border-box;}
+     ul.menu.small > li > .row > a{padding:4px 8px;}
+     ul.menu > li > .row > a,
+     ul.menu.medium > li > .row > a{padding:7px 10px;}
+     ul.menu.large > li > .row > a{padding:10px 15px;}
      ul.menu > li > .row.submenu{display:flex; flex-wrap:wrap;}
-     ul.menu > li > .row.submenu > ul.menu{float:left; display:none;}
-     ul.menu > li > .row.submenu > ul.menu.expanded{display:block;} 
+     ul.menu > li > .row.submenu > ul.menu{width:100%; display:none;}
+     ul.menu > li > .row.submenu > ul.menu.expanded{display:block;}
      ul.menu > li > .row.submenu .gutter{width:15px; height:1px; float:left;}
 
+     //slideshow
+     .slideshow{overflow:hidden; width:100%;}
+     .slides{display:flex; align-items:stretch; flex-direction:row; position:relative; height:100%; left:0; white-space:nowrap; transition: left 250ms ease-in-out; -webkit-transition: left 250ms ease-in-out;
+        > div{display:flex; width:100%; height:auto !important; box-sizing:border-box; white-space:normal;}
+    }
+
      /* messages */
-     .message{padding:7px 20px; margin:10px; border-radius:7px; overflow:hidden; box-sizing:border-box;}
+     .message{padding:7px 20px; margin:10px; }
 
 
     /* small tag */
@@ -281,12 +294,13 @@ body {font-size:14px;}
     
 /* 
     sm  = 16x16 
-    med  = 25x25
-    lg = 32x32
+    med = 25x25
+    lg  = 32x32
+    xl  = 48x48
 */
 
     /* small (16x16) ///////////////////////////////////////////// */
-    .size-sm, &{
+    .size-sm{
         font-size:14px;
         svg{width:16px; height:16px;}
         .large{svg{width:25px; height:25px;}}
@@ -295,7 +309,7 @@ body {font-size:14px;}
             &.icon{height:16px;}
             &.icon.large{height:25px;}
             &.icon.xlarge{height:32px;}
-            &.title{line-height:1;}
+            &.title{line-height:1; font-size:17px;}
             &.label{line-height:1;margin:1px 0;}
             &.field-label{
                 width:80px; padding:8px 7px 7px 4px; margin-top:1px;
@@ -330,7 +344,6 @@ body {font-size:14px;}
         }
         .header{
             .buttons{
-                margin-top:-3px;
                 .button{
                     padding:4px 9px;
                 }
@@ -340,7 +353,7 @@ body {font-size:14px;}
     }
 
     /* medium (25x25) ///////////////////////////////////////////// */
-    .size-med{
+    .size-med, &{
         font-size:15px;
         svg{width:25px; height:25px;}
         .large{svg{width:32px; height:32px;}}
@@ -350,8 +363,8 @@ body {font-size:14px;}
             &.icon.large{height:32px;}
             &.icon.xlarge{height:48px;}
             &.icon.small{min-width:16px; height:16px; margin-top:5px; svg{width:16px; height:16px;}}
-            &.icon.pad-right{padding-right:7px !important;}
-            &.title{line-height:1.5; font-size:17px;}
+            &.icon.pad-right{padding-right:7px;}
+            &.title{line-height:1.5; font-size:18px;}
             &.label{line-height:1;margin:6px 0;}
             &.field-label{
                 width:100px; padding:8px 7px 7px 4px; margin-top:4px;
@@ -386,7 +399,6 @@ body {font-size:14px;}
         }
         .header{
             .buttons{
-                margin-top:-2px;
                 .button{
                     padding:7px 14px;
                 }
@@ -406,8 +418,8 @@ body {font-size:14px;}
             &.icon.large{height:48px;}
             &.icon.xlarge{height:64px;}
             &.icon.small{min-width:25px; height:25px; margin-top:5px; svg{width:25px; height:25px;}}
-            &.icon.pad-right{padding-right:9px !important;}
-            &.title{line-height:1.75; font-size:20px;}
+            &.icon.pad-right{padding-right:9px;}
+            &.title{line-height:1.75; font-size:21px;}
             &.label{line-height:1;margin:10px 0;}
             &.field-label{
                 width:130px; padding:8px 7px 7px 4px; margin-top:7px;
@@ -419,11 +431,10 @@ body {font-size:14px;}
             &.field-text{padding:8px 7px 7px 4px; margin-top:1px;}
             &.field-icon{margin-top:8px;}
             &.buttons{
-                margin:-3px 0;
-                .button{margin-left:10px; padding:12px 16px; font-size:16px;}
+                .button{margin-left:10px; padding:12px 16px; font-size:19px;}
                 &.right .button{margin-left:0px; margin-right:10px;}
             }
-            .button.circle, .button.icon{margin:-5px 0 -9px 0;}
+            .button.circle, .button.icon{margin:-3px 0 -9px 0;}
             
             .button.circle.large{
                 padding:7px; margin:-14px 0 -11px 0;
@@ -445,7 +456,6 @@ body {font-size:14px;}
         }
         .header{
             .buttons{
-                margin-top:-2px;
                 .button{
                     padding:9px 16px;
                 }
@@ -453,6 +463,15 @@ body {font-size:14px;}
         }
         .color-tag .bg{height:46px;}
     }
+
+    //icons ////////////////////////////////////////////////////////
+    svg.small, svg.sm{width:16px; height:16px;}
+    svg.medium, svg.med{width:25px; height:25px;}
+    svg.large, svg.lg{width:32px; height:32px;}
+    svg.xlarge, svg.xl{width:48px; height:48px;}
+    svg.xxlarge, svg.xxl{width:64px; height:64px;}
+    svg.xxxlarge, svg.xxxlarge{width:128px; height:128px;}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Responsive Rules ///////////////////////////////////////////////////////////////////////////////////////// */

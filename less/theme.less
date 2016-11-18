@@ -17,7 +17,7 @@
 .box(@box-bg, @box-border, @box-font){
     background:@box-bg;
     & when not (@box-border = transparent){border-color:@box-border;}
-    color:@box-font
+    color:@box-font;
 }
 
 // links : all types of anchor links, including svg icon links & faded links
@@ -35,8 +35,8 @@
 // icons : anchor link icons (that use the .icon or .nolinks classes)
 .icons(@a-link, @a-hover, @a-active, @a-visited){
     .icon a, .nolinks a{
-        .link(@a-link, @a-hover, @a-active, @a-link);
-        .svglink(@a-link, @a-hover, @a-active, @a-link);
+        .link(@a-link, @a-hover, @a-active, @a-link, true);
+        .svglink(@a-link, @a-hover, @a-active, @a-link, true);
     }
 }
 
@@ -52,27 +52,31 @@
  
 // row : grid styling for a row & alternate row   
 .get-row(@bg, @hover, @selected, @font, @font-hover, @font-selected, @a-link, @a-hover, @a-active, @a-visited, @a-selected, @icon-link, @icon-hover, @icon-active, @icon-selected, @is-hover-alt:false){
-    //row defaults)
-    background:@bg; 
-    color:@font;
-    .links(@a-link, @a-hover, @a-active, @a-link);
-    .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
+    &{
+        //row defaults
+        background:@bg; 
+        color:@font;
+        a{
+            .link(@a-link, @a-hover, @a-active, @a-visited);
+            .svglink(@icon-link, @icon-hover, @icon-active, @icon-link);
+        }
+        .icon a, .nolinks a{
+            .link(@icon-link, @icon-hover, @icon-active, @icon-link);
+            .svglink(@icon-link, @icon-hover, @icon-active, @icon-link);
+        }
+    }
     & when not (@hover = transparent){
         //row hover (optional)
         & when (@is-hover-alt = false){
             &.hover:hover{
                 background:@hover;
                 color:@font-hover;
-                .links(@a-hover, @a-hover, @a-active, @a-hover);
-                .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
             }
         }
         & when (@is-hover-alt = true){
             &.hover.alt:hover{
                 background:@hover;
                 color:@font-hover;
-                .links(@a-hover, @a-hover, @a-active, @a-hover);
-                .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
             }
         }
     }
@@ -82,8 +86,10 @@
         &.selected{
             background:@selected;
             color:@font-selected;
-            .links(@a-selected, @a-hover, @a-active, @a-selected);
-            .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+            a{
+                .link(@a-selected, @a-hover, @a-active, @a-selected);
+                .svglink(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+            }
         }
     }
 }
@@ -121,27 +127,27 @@
         background:@bg;
         border:@border;
         outline:@outline;
-        color:@font;
+        color:@font !important;
         &:hover{
             background:@bg-hover;
             border:@border-hover;
             outline:@outline-hover;
-            color:@font-hover;
+            color:@font-hover !important;
         }
         &:active{
             background:@bg-active;
             border:@border-active;
             outline:@outline-active;
-            color:@font-active;
+            color:@font-active !important;
         }
         &.selected{
             background:@bg-selected;
             border:@border-selected;
             outline:@outline-selected;
-            color:@font-selected;
+            color:@font-selected !important;
         }
-        &{.link(@font, @font-hover, @font-active, @font);}
-        &{.svglink(@font, @font-hover, @font-active, @font);}
+        &{.link(@font, @font-hover, @font-active, @font, true);}
+        &{.svglink(@font, @font-hover, @font-active, @font, true);}
     }
 }
 
