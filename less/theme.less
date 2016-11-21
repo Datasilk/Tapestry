@@ -56,14 +56,8 @@
         //row defaults
         background:@bg; 
         color:@font;
-        a{
-            .link(@a-link, @a-hover, @a-active, @a-visited);
-            .svglink(@icon-link, @icon-hover, @icon-active, @icon-link);
-        }
-        .icon a, .nolinks a{
-            .link(@icon-link, @icon-hover, @icon-active, @icon-link);
-            .svglink(@icon-link, @icon-hover, @icon-active, @icon-link);
-        }
+        .links(@a-link, @a-hover, @a-active, @a-visited);
+        .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
     }
     & when not (@hover = transparent){
         //row hover (optional)
@@ -74,13 +68,25 @@
                 .links(@a-hover, @a-hover, @a-active, @a-hover);
                 .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
             }
+            &.hover.selected:hover{
+                background:@selected; 
+                color:@font-selected;
+                .links(@a-selected, @a-hover, @a-active, @a-selected);
+                .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+            }
         }
         & when (@is-hover-alt = true){
-            &.hover.alt:hover{
+            &.hover.alt:not(.selected):hover{
                 background:@hover;
                 color:@font-hover;
                 .links(@a-hover, @a-hover, @a-active, @a-hover);
                 .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
+            }
+            &.hover.alt.selected:hover{
+                background:@selected; 
+                color:@font-selected;
+                .links(@a-selected, @a-hover, @a-active, @a-selected);
+                .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
             }
         }
     }
@@ -115,13 +121,13 @@
 // button : a simple button, distinguished by a unique @name (default @name is '')
 .button(@name, @bg, @bg-hover, @bg-active, @bg-selected, @border, @border-hover, @border-active, @border-selected, @outline, @outline-hover, @outline-active, @outline-selected, @font, @font-hover, @font-active, @font-selected){
     
-    .check-button-name() when (@name = none){
+    .check-button-name() when (@name = default){
         .button, a.button{
             .get-button();
         }
     }
 
-    .check-button-name() when not (@name = none){
+    .check-button-name() when not (@name = default){
         .button.@{name}, a.button.@{name}{
             .get-button();
         }
@@ -180,13 +186,13 @@
 
 // message : colors for all message types
 .message(@name, @bg, @border, @font){
-    .msg() when (@name = none){
+    .msg() when (@name = default){
         .message{
             .get-msg();
         }
     }
 
-    .msg() when not (@name = none){
+    .msg() when not (@name = default){
         .message.@{name}{
             .get-msg();
         }
