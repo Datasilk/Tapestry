@@ -20,9 +20,12 @@ body {font-size:14px;}
 .text-right{text-align:right;}
 .text-center{text-align:center;}
 .overflow{overflow:hidden;}
+.stretch{position:absolute; top:0; right:0; bottom:0; left:0;}
 .block{display:block;}
 .inline-block{display:inline-block;}
 .faded{opacity:0.5;}
+.faded-more{opacity:0.3;}
+.faded-mostly{opacity:0.1;}
 .wait, .wait div {cursor: wait !important;}
 .bold{font-weight:bold !important;}
 .thin{font-weight:300 !important;}
@@ -30,6 +33,7 @@ body {font-size:14px;}
 .underline{text-decoration:underline !important;}
 .flex{display:flex; flex-wrap:wrap;}
 .flex > .flexed{display:flex;}
+.flex.center{justify-content:center; flex-direction:column; width:100%; height:100%;}
 
 /* global variables */
 @grid-invert:~'total'; //name of the inverted grid system
@@ -571,6 +575,6 @@ body {font-size:14px;}
         &.@{size}-eleven-@{grid-invert}{width:9.0909090%}
         &.@{size}-twelve-@{grid-invert}{width:8.3333334%}
         
-        .flex{display:block;}
+        //.flex{display:block;}
     }
 }
