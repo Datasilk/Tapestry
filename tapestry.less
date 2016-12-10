@@ -217,14 +217,13 @@ body {font-size:14px;}
 
     /* inputs fields */
     input, textarea, select{border:none 0 !important; font-size:12px; padding:5px 4px; box-sizing:border-box; width:100%;}
-    input[type="checkbox"]{margin:2px 9px 0 0}
-    input[type="checkbox"] + label{padding-right:5px;}
+    input[type="checkbox"]{position:relative; top:1px; margin:0 9px 0 0; width:auto;}
     input.long, select.long{width:~"calc(100% - 11px)";}
     input.short, select.short{width:100px;}
     input.tiny, select.tiny{width:50px;}
     input.digit{width:25px;}
     select{padding:5px 4px; box-sizing:border-box;}
-    label{position:relative; top:-2px;}
+    label{padding-right:5px;}
     textarea{height:100px;}
     textarea.small{height:40px;}
     textarea.medium{height:150px;}
@@ -277,6 +276,10 @@ body {font-size:14px;}
      .slides{display:flex; align-items:stretch; flex-direction:row; position:relative; height:100%; left:0; white-space:nowrap; transition: left 250ms ease-in-out; -webkit-transition: left 250ms ease-in-out;
         > div{display:flex; width:100%; height:auto !important; box-sizing:border-box; white-space:normal;}
     }
+
+     //expander
+     .expander{margin-left:-100%; -webkit-transition:margin-left 250ms; transition:margin-left 250ms;}
+     .expander.view{margin-left:0%;}
 
      /* messages */
      .message{padding:7px 20px; margin:10px; border-radius:7px; overflow:hidden; box-sizing:border-box;}
@@ -340,8 +343,7 @@ body {font-size:14px;}
             }
 
             input, textarea, select{font-size:12px; padding:5px 4px;}
-            input[type="checkbox"]{margin:2px 9px 0 0}
-            input[type="checkbox"] + label{padding-right:5px;}
+            input[type="checkbox"]{margin:2px 5px 0 0}
             input.short, select.short{width:100px;}
             input.tiny, select.tiny{width:50px;}
             input.digit{width:25px;}
@@ -395,8 +397,7 @@ body {font-size:14px;}
             }
 
             input, textarea, select{font-size:14px; padding:8px 8px;}
-            input[type="checkbox"]{margin:2px 12px 0 0}
-            input[type="checkbox"] + label{padding-right:10px;}
+            input[type="checkbox"]{margin:2px 6px 0 0}
             input.short, select.short{width:120px;}
             input.tiny, select.tiny{width:65px;}
             input.digit{width:30px;}
@@ -452,8 +453,7 @@ body {font-size:14px;}
             }
 
             input, textarea, select{font-size:17px; padding:10px 12px;}
-            input[type="checkbox"]{margin:3px 15px 0 0}
-            input[type="checkbox"] + label{padding-right:15px;}
+            input[type="checkbox"]{margin:3px 7px 0 0}
             input.short, select.short{width:150px;}
             input.tiny, select.tiny{width:75px;}
             input.digit{width:45px;}
