@@ -184,6 +184,11 @@
     }
 }
 
+// line : a horizontal line separator
+.line(@color){
+    .line{border-top-color:@color;}
+}
+
 // message : colors for all message types
 .message(@name, @bg, @border, @font){
     .msg() when (@name = default){

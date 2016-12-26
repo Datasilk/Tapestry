@@ -111,6 +111,7 @@ body {font-size:14px;}
     .form{max-width:700px;}
     .summary{font-size:16px;}
     p{padding:10px 0 25px;}
+    .line{float:left; width:100%; border-top-width:1px; border-top-style:solid; border-top-color:transparent;}
 
     .row{
         /* rows */
@@ -124,7 +125,6 @@ body {font-size:14px;}
         &.hover-alt:hover .hover-only{opacity:1;}
         &.hover-alt:hover .hover-faded{opacity:1;}
         &.empty{height:10px; font-size:0; clear:both;}
-        &.menu{cursor:pointer;}
         &.header{padding:7px 14px 7px 14px;}
         .hidden{height:0px; font:0px; position:relative;}
     }
@@ -135,6 +135,7 @@ body {font-size:14px;}
         box-sizing:border-box;
         display:inline-block;
         *margin-right: -1px; /* Add the asterisk */
+        line-height:1;
         &.one{width:8.333339%}
         &.two{width:16.666669%}
         &.three{width:25%}
@@ -167,19 +168,15 @@ body {font-size:14px;}
         vertical-align:top;
         label, input, a, span, p, h1, h2, h3, h4, h5, h6, blockquote, strong{ line-height:1; }
         ul, li, table, tr, td ,thead, tbody, tfoot{line-height:0;}
-        &.title{line-height:1; font-size:18px; overflow:hidden; white-space:nowrap;}
+        &.title{font-size:18px; overflow:hidden; white-space:nowrap;}
         &.sub-title{padding:5px 0 10px;}
-        &.label{line-height:1; white-space:nowrap;  cursor:default;
+        &.label{white-space:nowrap;  cursor:default;
             a{cursor:pointer;}
         } 
-        &.text{line-height:1;}
-        &.field-label{line-height:1; text-align:right;}
-        &.field-input{line-height:1;}
-        &.field-text{line-height:1;}
-        &.menu .label{line-height:1; cursor:pointer;}
+        &.field-label{text-align:right;}
         
-        &.field{line-height:1; text-align:right; padding:20px 5px 0 7px; white-space:nowrap;} /* label above input field*/
-        &.input{line-height:1; padding:5px 5px 5px 7px; min-height:30px;} /* input field */
+        &.field{text-align:right; padding:20px 5px 0 7px; white-space:nowrap;} /* label above input field*/
+        &.input{padding:5px 5px 5px 7px; min-height:30px;} /* input field */
         &.buttons .button{margin-top:0; margin-left:10px; margin-bottom:10px;}
         &.header .buttons .button{margin-bottom:0;}
         &.buttons.text-right .button{margin-top:0; margin-right:10px; margin-left:0;}
@@ -322,8 +319,8 @@ body {font-size:14px;}
             &.icon{height:16px;}
             &.icon.large{height:25px;}
             &.icon.xlarge{height:32px;}
-            &.title{line-height:1; font-size:17px;}
-            &.label{line-height:1;margin:1px 0;}
+            &.title{font-size:17px;}
+            &.label{margin:1px 0;}
             &.field-label{
                 width:80px; padding:8px 7px 7px 4px; margin-top:1px;
                 &.long{width:120px;}
@@ -377,7 +374,7 @@ body {font-size:14px;}
             &.icon.small{min-width:16px; height:16px; margin-top:5px; svg{width:16px; height:16px;}}
             &.icon.pad-right{padding-right:7px;}
             &.title{line-height:1.5; font-size:18px;}
-            &.label{line-height:1;margin:6px 0;}
+            &.label{margin:6px 0;}
             &.field-label{
                 width:100px; padding:8px 7px 7px 4px; margin-top:4px;
                 &.long{width:120px;}
@@ -431,7 +428,7 @@ body {font-size:14px;}
             &.icon.small{min-width:25px; height:25px; margin-top:5px; svg{width:25px; height:25px;}}
             &.icon.pad-right{padding-right:9px;}
             &.title{line-height:1.75; font-size:21px;}
-            &.label{line-height:1;margin:10px 0;}
+            &.label{margin:10px 0;}
             &.field-label{
                 width:130px; padding:8px 7px 7px 4px; margin-top:7px;
                 &.long{width:120px;}
@@ -495,6 +492,15 @@ body {font-size:14px;}
     /* Desktop Screen Size */
     @media (max-width:1440px){
         .screen-sizes(desktop);
+        ul.columns-list{
+            li{min-width:25% !important;}
+        }
+    }
+    
+
+    /* Desktop Screen Size */
+    @media (max-width:1280px){
+        .screen-sizes(desktop-sm);
         ul.columns-list{
             li{min-width:25% !important;}
         }
