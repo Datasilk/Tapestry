@@ -127,11 +127,18 @@ body {font-size:14px;}
         &.empty{height:10px; font-size:0; clear:both;}
         &.header{padding:7px 14px 7px 14px;}
         .hidden{height:0px; font:0px; position:relative;}
+        & > .arrow-right{position:absolute; right:0;}
+        & > .arrow-left{position:absolute; left:-100%;}
+        & > .arrow-right:after, & > .arrow-left:after{left:100%; top:50%; border:solid transparent; content:" "; height:0; width:0; position:absolute; pointer-events:none; border-width:21px;}
+        & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:12px; margin-top:10px;}
+        .onselect{display:none;}
+        &.selected .onselect{display:block;}
     }
 
     .col{
         /* columns (12 column grid system) */
         float:left;
+        width:auto;
         box-sizing:border-box;
         display:inline-block;
         *margin-right: -1px; /* Add the asterisk */
@@ -168,7 +175,7 @@ body {font-size:14px;}
         vertical-align:top;
         label, input, a, span, p, h1, h2, h3, h4, h5, h6, blockquote, strong{ line-height:1; }
         ul, li, table, tr, td ,thead, tbody, tfoot{line-height:0;}
-        &.title{font-size:18px; overflow:hidden; white-space:nowrap;}
+        &.title{font-size:18px; white-space:nowrap;}
         &.sub-title{padding:5px 0 10px;}
         &.label{white-space:nowrap;  cursor:default;
             a{cursor:pointer;}
@@ -229,10 +236,9 @@ body {font-size:14px;}
 
     /* buttons */
     a.button{text-decoration:none !important;}
-    .button{display:inline-block; padding:8px 14px; border-radius:4px; white-space:nowrap;}
-    .button:hover{cursor:pointer;}
+    .button{display:inline-block; padding:8px 14px; border-radius:4px; white-space:nowrap; cursor:default;}
     .button{
-        &.outline{padding:4px 10px; font-size:12px; border:2px solid; cursor:pointer; background-color:transparent !important; border-radius:4px; overflow:hidden;}
+        &.outline{padding:4px 10px; font-size:12px; border:2px solid; background-color:transparent !important; border-radius:4px; overflow:hidden;}
         &.circle{
             border-radius:100%; font-size:0px;
             padding:8px 7px 7px 8px; margin: -7px 0;
@@ -253,11 +259,13 @@ body {font-size:14px;}
             &.circle{position:relative; z-index:5;}
         }
     }
+    a.text{text-decoration:none;}
+    a.text:hover{text-decoration:underline;}
 
     /* menu system */
      ul.menu{list-style:none;}
      ul.menu > li{position:relative; width:100%;}
-     ul.menu > li a *{cursor:pointer;}
+     ul.menu > li a{cursor:default;}
      ul.menu > li > .row > a{display:inline-block; width:100%; text-decoration:none; box-sizing:border-box;}
      ul.menu.small > li > .row > a{padding:4px 8px;}
      ul.menu > li > .row > a,
@@ -267,11 +275,19 @@ body {font-size:14px;}
      ul.menu > li > .row.submenu > ul.menu{width:100%; display:none;}
      ul.menu > li > .row.submenu > ul.menu.expanded{display:block;}
      ul.menu > li > .row.submenu .gutter{width:15px; height:1px; float:left;}
-
+     
      //slideshow
      .slideshow{overflow:hidden; width:100%;}
-     .slides{display:flex; align-items:stretch; flex-direction:row; position:relative; height:100%; left:0; white-space:nowrap; transition: left 250ms ease-in-out; -webkit-transition: left 250ms ease-in-out;
-        > div{display:flex; width:100%; height:auto !important; box-sizing:border-box; white-space:normal;}
+     .slides{
+         display:flex; align-items:stretch; flex-direction:row; position:relative; height:100%; left:0; white-space:nowrap; transition: left 250ms ease-in-out; -webkit-transition: left 250ms ease-in-out;
+        
+         > div{
+            display:flex; min-width:0; width:100%; height:auto !important; box-sizing:border-box; white-space:normal;
+            *{flex-shrink:0; flex-basis:auto;}
+            > * {min-width:0; white-space:normal;}
+            .label{white-space:normal !important;}
+            a.text{width:0; display:inline-block;}
+        }
     }
 
      //expander
@@ -294,7 +310,7 @@ body {font-size:14px;}
 
     /* create horizontal list of columns (like Windows Explorer file list) */
     ul.columns-list{
-        display:flex; flex-direction:column; flex-wrap:wrap; align-content:flex-start; width:100%; height:100%; overflow-y:hidden; overflow-x:auto;
+        display:flex; flex-direction:column; flex-wrap:wrap; align-content:flex-start; width:100%; overflow-y:hidden; overflow-x:auto;
         li{list-style-type:none; width:33.33%; max-width:250px;}
     }
 
@@ -315,6 +331,10 @@ body {font-size:14px;}
         svg{width:16px; height:16px;}
         .large{svg{width:25px; height:25px;}}
         .xlarge{svg{width:32px; height:32px;}}
+        .row{
+            & > .arrow-right:after, & > .arrow-left:after{border-width:18px;}
+            & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:11px; margin-top:7px;}
+        }
         .col{
             &.icon{height:16px;}
             &.icon.large{height:25px;}
@@ -367,6 +387,10 @@ body {font-size:14px;}
         svg{width:25px; height:25px;}
         .large{svg{width:32px; height:32px;}}
         .xlarge{svg{width:48px; height:48px;}}
+        .row{
+            & > .arrow-right:after, & > .arrow-left:after{border-width:21px;}
+            & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:13px; margin-top:8px;}
+        }
         .col{
             &.icon{height:25px;}
             &.icon.large{height:32px;}
@@ -421,6 +445,10 @@ body {font-size:14px;}
         svg{width:32px; height:32px;}
         .large{svg{width:48px; height:48px;}}
         .xlarge{svg{width:64px; height:64px;}}
+        .row{
+            & > .arrow-right:after, & > .arrow-left:after{border-width:26px;}
+            & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:17px; margin-top:9px;}
+        }
         .col{
             &.icon{height:32px;}
             &.icon.large{height:48px;}
@@ -495,14 +523,17 @@ body {font-size:14px;}
         ul.columns-list{
             li{min-width:25% !important;}
         }
+        ul.columns-list.small{
+            li{min-width:33% !important;}
+        }
     }
     
 
     /* Desktop Screen Size */
     @media (max-width:1280px){
         .screen-sizes(desktop-sm);
-        ul.columns-list{
-            li{min-width:25% !important;}
+        ul.columns-list.small{
+            li{min-width:50% !important;}
         }
     }
 
@@ -520,6 +551,9 @@ body {font-size:14px;}
         ul.columns-list{
             li{min-width:50% !important;}
         }
+        ul.columns-list.small{
+            li{min-width:100% !important;}
+        }
 
         .row.header > .col{
             &.one, &.two, &.three, &.four, &.five, &.six, &.seven, &.eight, &.nine, &.ten, &.eleven{
@@ -528,12 +562,15 @@ body {font-size:14px;}
         }
     }
 
-    /* Small Tablet Screen Size */
-    @media (max-width:520px){
-        .screen-sizes(tablet-sm);
+    @media (max-width:620px){
         ul.columns-list{
             li{min-width:100% !important;}
         }
+    }
+
+    /* Small Tablet Screen Size */
+    @media (max-width:520px){
+        .screen-sizes(tablet-sm);
     }
 
     /* Mobile Screen Size */

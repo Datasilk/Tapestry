@@ -58,7 +58,13 @@
         color:@font;
         .links(@a-link, @a-hover, @a-active, @a-visited);
         .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
+        a.text{.link(@font, @font, @font, @font);}
     }
+    
+    //row arrow
+    & > .arrow-right:after{ border-left-color:@bg;}
+    & > .arrow-left:after{ border-right-color:@bg;}
+
     & when not (@hover = transparent){
         //row hover (optional)
         & when (@is-hover-alt = false){
@@ -67,12 +73,8 @@
                 color:@font-hover;
                 .links(@a-hover, @a-hover, @a-active, @a-hover);
                 .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
-            }
-            &.hover.selected:hover{
-                background:@selected; 
-                color:@font-selected;
-                .links(@a-selected, @a-hover, @a-active, @a-selected);
-                .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+                & > .arrow-right:after{ border-left-color:@hover;}
+                & > .arrow-left:after{ border-right-color:@hover;}
             }
         }
         & when (@is-hover-alt = true){
@@ -81,19 +83,15 @@
                 color:@font-hover;
                 .links(@a-hover, @a-hover, @a-active, @a-hover);
                 .icons(@icon-hover, @icon-hover, @icon-active, @icon-hover);
-            }
-            &.hover.alt.selected:hover{
-                background:@selected; 
-                color:@font-selected;
-                .links(@a-selected, @a-hover, @a-active, @a-selected);
-                .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+                & > .arrow-right:after{ border-left-color:@hover;}
+                & > .arrow-left:after{ border-right-color:@hover;}
             }
         }
     }
         
     & when not (@selected = transparent){
         //row selected (optional)
-        &.selected{
+        &.selected, &.selected:hover{
             background:@selected;
             color:@font-selected;
             .links(@a-selected, @a-hover, @a-active, @a-selected);
@@ -102,6 +100,23 @@
                 .link(@a-selected, @a-hover, @a-active, @a-selected);
                 .svglink(@icon-selected, @icon-hover, @icon-active, @icon-selected);
             }
+            & > .arrow-right:after{ border-left-color:@selected;}
+            & > .arrow-left:after{ border-right-color:@selected;}
+        }
+
+        & when (@is-hover-alt = true){
+            &.selected.alt, &.selected.alt:hover{
+            background:@selected;
+            color:@font-selected;
+            .links(@a-selected, @a-hover, @a-active, @a-selected);
+            .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+            a{
+                .link(@a-selected, @a-hover, @a-active, @a-selected);
+                .svglink(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+            }
+            & > .arrow-right:after{ border-left-color:@selected;}
+            & > .arrow-left:after{ border-right-color:@selected;}
+        }
         }
     }
 }
@@ -139,27 +154,27 @@
         background:@bg;
         border:@border;
         outline:@outline;
-        color:@font !important;
+        color:@font;
         &:hover{
             background:@bg-hover;
             border:@border-hover;
             outline:@outline-hover;
-            color:@font-hover !important;
+            color:@font-hover;
         }
         &:active{
             background:@bg-active;
             border:@border-active;
             outline:@outline-active;
-            color:@font-active !important;
+            color:@font-active;
         }
         &.selected{
             background:@bg-selected;
             border:@border-selected;
             outline:@outline-selected;
-            color:@font-selected !important;
+            color:@font-selected;
         }
-        &{.link(@font, @font-hover, @font-active, @font, true);}
-        &{.svglink(@font, @font-hover, @font-active, @font, true);}
+        &{.link(@font, @font-hover, @font-active, @font);}
+        &{.svglink(@font, @font-hover, @font-active, @font);}
     }
 }
 
