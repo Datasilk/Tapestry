@@ -58,10 +58,14 @@ body {font-size:14px;}
 .pad-height-med, .pad-height{padding-top:15px !important;padding-bottom:15px !important;}
 .pad-height-lg{padding-top:30px !important;padding-bottom:30px !important;}
 .pad-height-xl{padding-top:50px !important;padding-bottom:50px !important;}
-.pad-left{padding-left:15px !important;}
 .pad-left-sm{padding-left:5px !important;}
-.pad-right{padding-right:15px !important;}
+.pad-left{padding-left:15px !important;}
+.pad-left-lg{padding-left:30px !important;}
+.pad-left-xl{padding-left:50px !important;}
 .pad-right-sm{padding-right:5px !important;}
+.pad-right{padding-right:15px !important;}
+.pad-right-lg{padding-right:30px !important;}
+.pad-right-xl{padding-right:50px !important;}
 .pad-top-xs{padding-top:4px !important;}
 .pad-top-sm{padding-top:7px !important;}
 .pad-top-med, .pad-top{padding-top:15px !important;}
@@ -220,7 +224,8 @@ body {font-size:14px;}
     h6{font-size:1.2em;}
 
     /* inputs fields */
-    input, textarea, select{border:none 0 !important; font-size:12px; padding:5px 4px; box-sizing:border-box; width:100%;}
+    input[type]:not([type=button]):not([type=submit]):not([type=radio]){border-width:1px; border-style:solid;}
+    input, textarea, select{font-size:12px; padding:5px 4px; box-sizing:border-box; width:100%;}
     input[type="checkbox"]{position:relative; top:1px; margin:0 9px 0 0; width:auto;}
     input.long, select.long{width:~"calc(100% - 11px)";}
     input.short, select.short{width:100px;}
@@ -265,7 +270,7 @@ body {font-size:14px;}
     /* menu system */
      ul.menu{list-style:none;}
      ul.menu > li{position:relative; width:100%;}
-     ul.menu > li a{cursor:default;}
+     ul.menu > li a{cursor:default; text-decoration:none;}
      ul.menu > li > .row > a{display:inline-block; width:100%; text-decoration:none; box-sizing:border-box;}
      ul.menu.small > li > .row > a{padding:4px 8px;}
      ul.menu > li > .row > a,
@@ -275,6 +280,7 @@ body {font-size:14px;}
      ul.menu > li > .row.submenu > ul.menu{width:100%; display:none;}
      ul.menu > li > .row.submenu > ul.menu.expanded{display:block;}
      ul.menu > li > .row.submenu .gutter{width:15px; height:1px; float:left;}
+     ul.menu.row > li{display:inline-block; width:auto; padding-right:20px;}
      
      //slideshow
      .slideshow{overflow:hidden; width:100%;}
