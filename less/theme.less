@@ -127,6 +127,62 @@
     .row.alt{.get-row(@bg, @hover, @selected, @font, @font-hover, @font-selected, @a-link, @a-hover, @a-active, @a-visited, @a-selected, @icon-link, @icon-hover, @icon-active, @icon-selected, true);}
 }
 
+.table(@header-bg, @header-font, @header-a-link, @header-a-hover, @header-a-active, @header-a-visited, @row-bg, @row-hover, @row-selected, @row-font, @row-font-hover, @row-font-selected, @row-a-link, @row-a-hover, @row-a-active, @row-a-visited, @row-icon-link, @row-icon-hover, @row-icon-active, @row-icon-selected, @row-alt-bg, @row-alt-hover, @row-alt-selected, @row-alt-font, @row-alt-font-hover, @row-alt-font-selected, @row-alt-a-link, @row-alt-a-hover, @row-alt-a-active, @row-alt-a-visited, @row-alt-icon-link, @row-alt-icon-hover, @row-alt-icon-active, @row-alt-icon-selected){
+    table.spreadsheet{
+        .table-head(@header-bg, @header-font, @header-a-link, @header-a-hover, @header-a-active, @header-a-visited);
+        .table-row(@row-bg, @row-hover, @row-selected, @row-font, @row-font-hover, @row-font-selected, @row-a-link, @row-a-hover, @row-a-active, @row-a-visited, @row-icon-link, @row-icon-hover, @row-icon-active, @row-icon-selected);
+        .table-row-alt(@row-alt-bg, @row-alt-hover, @row-alt-selected, @row-alt-font, @row-alt-font-hover, @row-alt-font-selected, @row-alt-a-link, @row-alt-a-hover, @row-alt-a-active, @row-alt-a-visited, @row-alt-icon-link, @row-alt-icon-hover, @row-alt-icon-active, @row-alt-icon-selected);
+    }
+}
+
+.table-head(@bg, @font, @a-link, @a-hover, @a-active, @a-visited){
+    thead tr{
+        background:@bg; color:@font;
+        .links(@a-link, @a-hover, @a-active, @a-visited);
+    }
+}
+
+.table-row(@bg, @bg-hover, @bg-selected, @font, @font-hover, @font-selected, @a-link, @a-hover, @a-active, @a-visited, @icon-link, @icon-hover, @icon-active, @icon-selected){
+    tbody tr{
+        background:@bg; color:@font;
+        .links(@a-link, @a-hover, @a-active, @a-visited);
+        .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
+        a.text{.link(@font, @font, @font, @font);}
+    }
+    tbody tr:hover{
+        background:@bg-hover; color:@font-hover;
+        .links(@a-link, @a-hover, @a-active, @a-visited);
+        .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
+        a.text{.link(@font-hover, @font-hover, @font-hover, @font-hover);}
+    }
+    tbody tr.selected{
+        background:@bg-selected; color:@font-selected;
+        .links(@a-link, @a-hover, @a-active, @a-visited);
+        .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+        a.text{.link(@font-selected, @font-selected, @font-selected, @font-selected);}
+    }
+}
+.table-row-alt(@bg, @bg-hover, @bg-selected, @font, @font-hover, @font-selected, @a-link, @a-hover, @a-active, @a-visited, @icon-link, @icon-hover, @icon-active, @icon-selected){
+    tbody tr:nth-child(odd){
+        background:@bg; color:@font;
+        .links(@a-link, @a-hover, @a-active, @a-visited);
+        .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
+        a.text{.link(@font, @font, @font, @font);}
+    }
+    tbody tr:nth-child(odd):hover{
+        background:@bg-hover; color:@font-hover;
+        .links(@a-link, @a-hover, @a-active, @a-visited);
+        .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
+        a.text{.link(@font-hover, @font-hover, @font-hover, @font-hover);}
+    }
+    tbody tr:nth-child(odd).selected{
+        background:@bg-selected; color:@font-selected;
+        .links(@a-link, @a-hover, @a-active, @a-visited);
+        .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
+        a.text{.link(@font-selected, @font-selected, @font-selected, @font-selected);}
+    }
+}
+
 // col : grid styling for a column (within a row)
 .col(@input-bg, @input-color, @input-border, @input-placeholder, @input-bg-hover, @input-color-hover, @input-border-hover, @input-bg-focus, @input-color-focus, @input-border-focus, @input-label){
     input[type]:not([type=button]):not([type=submit]):not([type=radio]){background:@input-bg; color:@input-color; border-color:@input-border;}
