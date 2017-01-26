@@ -185,7 +185,7 @@
 
 // col : grid styling for a column (within a row)
 .col(@input-bg, @input-color, @input-border, @input-placeholder, @input-bg-hover, @input-color-hover, @input-border-hover, @input-bg-focus, @input-color-focus, @input-border-focus, @input-label){
-    input[type]:not([type=button]):not([type=submit]):not([type=radio]){background:@input-bg; color:@input-color; border-color:@input-border;}
+    input[type]:not([type=button]):not([type=submit]):not([type=radio]), textarea{background:@input-bg; color:@input-color; border-color:@input-border;}
     .input-placeholder() when not (@input-placeholder = transparent){
         input[type]:not([type=button]):not([type=submit]):not([type=radio])::-webkit-input-placeholder { /* Chrome/Opera/Safari */
           color: @input-placeholder;
@@ -201,10 +201,10 @@
         }
     }
     .input-hover() when not (@input-bg-hover = transparent){
-        input[type]:not([type=button]):not([type=submit]):not([type=radio]):hover{background:@input-bg-hover; color:@input-color-hover; border-color:@input-border-hover;}
+        input[type]:not([type=button]):not([type=submit]):not([type=radio]):hover, textarea:hover{background:@input-bg-hover; color:@input-color-hover; border-color:@input-border-hover;}
     }
     .input-focus() when not (@input-bg-focus = transparent){
-        input[type]:not([type=button]):not([type=submit]):not([type=radio]):focus{background:@input-bg-focus; color:@input-color-focus; border-color:@input-border-focus;}
+        input[type]:not([type=button]):not([type=submit]):not([type=radio]):focus, textarea:focus{background:@input-bg-focus; color:@input-color-focus; border-color:@input-border-focus;}
     }
 
     .input-placeholder();
