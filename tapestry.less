@@ -198,7 +198,7 @@ body {font-size:14px;}
             cursor:pointer;
             a{text-decoration:none;}
         }
-        &.icon *{line-height:0 !important; display:inline-block}
+        &.icon *, a.icon{font-size:0; display:inline-block}
         &.nowrap{
             white-space:nowrap; 
             > .col{float:none !important; display:inline-block;}
@@ -343,6 +343,7 @@ body {font-size:14px;}
     .size-sm{
         font-size:14px;
         svg{width:16px; height:16px;}
+        .small{svg{width:10px; height:10px;}}
         .large{svg{width:25px; height:25px;}}
         .xlarge{svg{width:32px; height:32px;}}
         .row{
@@ -399,6 +400,7 @@ body {font-size:14px;}
     .size-med, &{
         font-size:15px;
         svg{width:25px; height:25px;}
+        .small{svg{width:16px; height:16px;}}
         .large{svg{width:32px; height:32px;}}
         .xlarge{svg{width:48px; height:48px;}}
         .row{
@@ -457,6 +459,7 @@ body {font-size:14px;}
     .size-lg{
         font-size:17px;
         svg{width:32px; height:32px;}
+        .small{svg{width:25px; height:25px;}}
         .large{svg{width:48px; height:48px;}}
         .xlarge{svg{width:64px; height:64px;}}
         .row{
