@@ -199,7 +199,10 @@ body {font-size:14px;}
             cursor:pointer;
             a{text-decoration:none;}
         }
-        &.icon *, a.icon{font-size:0; display:inline-block}
+        .nolinks{cursor:default;}
+        .nolinks a:link, .nolinks a:visited{ text-decoration:none; }
+        .nolinks a:hover{ text-decoration:underline;}
+        &.icon *, a.icon{font-size:0; display:inline-block; cursor:default;}
         &.nowrap{
             white-space:nowrap; 
             > .col{float:none !important; display:inline-block;}
@@ -250,7 +253,7 @@ body {font-size:14px;}
         &.outline{padding:4px 10px; font-size:12px; border:2px solid; background-color:transparent !important; border-radius:4px; overflow:hidden;}
         &.circle{
             border-radius:100%; font-size:0px;
-            padding:8px 7px 7px 8px; margin: -7px 0;
+            padding:8px 7px 7px 8px; margin: -4px 0;
             &.text{
                 > div, .medium{width:@icon-med; height:@icon-med; text-align:center; line-height:0.6; letter-spacing:2px; font-size:30px; text-align:center;}
                 .large{width:@icon-lg; height:@icon-lg; text-align:center; line-height:0.6; letter-spacing:3px; font-size:40px; text-align:center;}
@@ -351,42 +354,40 @@ body {font-size:14px;}
             & > .arrow-right:after, & > .arrow-left:after{border-width:18px;}
             & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:11px; margin-top:7px;}
         }
-        .col{
-            &.icon{height:16px;}
-            &.icon.large{height:25px;}
-            &.icon.xlarge{height:32px;}
-            &.title{font-size:17px;}
-            &.label{margin:1px 0;}
-            &.field-label{
-                width:80px; padding:8px 7px 7px 4px; margin-top:1px;
-                &.long{width:120px;}
-            }
-            &.field-input{padding:4px 7px 4px 0px;
-                &.expand{width:~"calc(100% - 80px)";}
-            }
-            &.field-text{padding:8px 7px 7px 4px; margin-top:1px;}
-            &.field-icon{margin-top:8px;}
-            &.buttons{
-                .button{margin-left:10px;}
-                &.right .button{margin-left:0; margin-right:10px;}
-            }
-            .button.circle.large{
-                padding:7px; margin: -12px 0;
-                svg{width:25px; height:25px;}
-            }
-
-            input:not([type=button]):not([type=submit]), textarea, select{font-size:12px; padding:5px 4px;}
-            input[type="checkbox"]{margin:2px 5px 0 0}
-            input.short, select.short{width:100px;}
-            input.tiny, select.tiny{width:50px;}
-            input.digit{width:25px;}
-            select{padding:5px 4px;}
-            label{top:-2px;}
-            textarea{height:100px;}
-            textarea.small{height:40px;}
-            textarea.medium{height:150px;}
-            textarea.tall{height:300px;}
+        .icon{min-height:16px;}
+        .icon.large{min-height:25px;}
+        .icon.xlarge{min-height:32px;}
+        .title{font-size:17px;}
+        .label{margin:1px 0;}
+        .field-label{
+            width:80px; padding:8px 7px 7px 4px; margin-top:1px;
+            &.long{width:120px;}
         }
+        .field-input{padding:4px 7px 4px 0px;
+            &.expand{width:~"calc(100% - 80px)";}
+        }
+        .field-text{padding:8px 7px 7px 4px; margin-top:1px;}
+        .field-icon{margin-top:8px;}
+        .buttons{
+            .button{margin-left:10px;}
+            &.right .button{margin-left:0; margin-right:10px;}
+        }
+        .button.circle.large{
+            padding:7px; margin: -12px 0;
+            svg{width:25px; height:25px;}
+        }
+
+        input:not([type=button]):not([type=submit]), textarea, select{font-size:12px; padding:5px 4px;}
+        input[type="checkbox"]{margin:2px 5px 0 0}
+        input.short, select.short{width:100px;}
+        input.tiny, select.tiny{width:50px;}
+        input.digit{width:25px;}
+        select{padding:5px 4px;}
+        label{top:-2px;}
+        textarea{height:100px;}
+        textarea.small{height:40px;}
+        textarea.medium{height:150px;}
+        textarea.tall{height:300px;}
         .header{
             .buttons{
                 .button{
@@ -408,44 +409,42 @@ body {font-size:14px;}
             & > .arrow-right:after, & > .arrow-left:after{border-width:21px;}
             & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:13px; margin-top:8px;}
         }
-        .col{
-            &.icon{height:25px;}
-            &.icon.large{height:32px;}
-            &.icon.xlarge{height:48px;}
-            &.icon.small{min-width:16px; height:16px; margin-top:5px; svg{width:16px; height:16px;}}
-            &.icon.pad-right{padding-right:7px;}
-            &.title{line-height:1.5; font-size:18px;}
-            &.label{margin:6px 0;}
-            &.field-label{
-                width:100px; padding:8px 7px 7px 4px; margin-top:4px;
-                &.long{width:120px;}
-            }
-            &.field-input{padding:3px 7px 3px 0px; 
-                &.expand{width:~"calc(100% - 100px)";}
-            }
-            &.field-text{padding:8px 7px 7px 4px; margin-top:4px;}
-            &.field-icon{margin-top:3px;}
-            &.buttons{
-                .button{margin-left:10px;}
-                &.right .button{margin-left:0px; margin-right:10px;}
-            }
-            .button.circle.large{
-                padding:7px; margin: -14px 0;
-                svg{width:36px; height:36px;}
-            }
-
-            input:not([type=button]):not([type=submit]), textarea, select{font-size:14px; padding:7px 8px 6px 8px;}
-            input[type="checkbox"]{margin:2px 6px 0 0}
-            input.short, select.short{width:120px;}
-            input.tiny, select.tiny{width:65px;}
-            input.digit{width:30px;}
-            select{padding:8px 6px;}
-            label{top:-2px;}
-            textarea{height:130px;}
-            textarea.small{height:50px;}
-            textarea.medium{height:200px;}
-            textarea.tall{height:400px;}
+        .icon{min-height:25px;}
+        .icon.large{min-height:32px;}
+        .icon.xlarge{min-height:48px;}
+        .icon.small{min-width:16px; min-height:16px; margin-top:5px; svg{width:16px; height:16px;}}
+        .icon.pad-right{padding-right:7px;}
+        .title{line-height:1.5; font-size:18px;}
+        .label{margin:6px 0;}
+        .field-label{
+            width:100px; padding:8px 7px 7px 4px; margin-top:4px;
+            &.long{width:120px;}
         }
+        .field-input{padding:3px 7px 3px 0px; 
+            &.expand{width:~"calc(100% - 100px)";}
+        }
+        .field-text{padding:8px 7px 7px 4px; margin-top:4px;}
+        .field-icon{margin-top:3px;}
+        .buttons{
+            .button{margin-left:10px;}
+            &.right .button{margin-left:0px; margin-right:10px;}
+        }
+        .button.circle.large{
+            padding:7px; margin: -14px 0;
+            svg{width:36px; height:36px;}
+        }
+
+        input:not([type=button]):not([type=submit]), textarea, select{font-size:14px; padding:7px 8px 6px 8px;}
+        input[type="checkbox"]{margin:2px 6px 0 0}
+        input.short, select.short{width:120px;}
+        input.tiny, select.tiny{width:65px;}
+        input.digit{width:30px;}
+        select{padding:6px;}
+        label{top:-2px;}
+        textarea{height:130px;}
+        textarea.small{height:50px;}
+        textarea.medium{height:200px;}
+        textarea.tall{height:400px;}
         .header{
             .buttons{
                 .button{
@@ -467,46 +466,44 @@ body {font-size:14px;}
             & > .arrow-right:after, & > .arrow-left:after{border-width:26px;}
             & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:17px; margin-top:9px;}
         }
-        .col{
-            &.icon{height:32px;}
-            &.icon.large{height:48px;}
-            &.icon.xlarge{height:64px;}
-            &.icon.small{min-width:25px; height:25px; margin-top:5px; svg{width:25px; height:25px;}}
-            &.icon.pad-right{padding-right:9px;}
-            &.title{line-height:1.75; font-size:21px;}
-            &.label{margin:10px 0;}
-            &.field-label{
-                width:130px; padding:8px 7px 7px 4px; margin-top:7px;
-                &.long{width:120px;}
-            }
-            &.field-input{padding:3px 7px 3px 0px; 
-                &.expand{width:~"calc(100% - 130px)";}
-            }
-            &.field-text{padding:8px 7px 7px 4px; margin-top:7px;}
-            &.field-icon{margin-top:8px;}
-            &.buttons{
-                .button{margin-left:10px; padding:12px 16px; font-size:19px;}
-                &.right .button{margin-left:0px; margin-right:10px;}
-            }
-            .button.circle, .button.icon{margin:-3px 0 -9px 0;}
-            
-            .button.circle.large{
-                padding:7px; margin:-14px 0 -11px 0;
-                svg{width:48px; height:48px;}
-            }
-
-            input:not([type=button]):not([type=submit]), textarea, select{font-size:17px; padding:10px 12px;}
-            input[type="checkbox"]{margin:3px 7px 0 0}
-            input.short, select.short{width:150px;}
-            input.tiny, select.tiny{width:75px;}
-            input.digit{width:45px;}
-            select{padding:12px 9px;}
-            label{top:-4px;}
-            textarea{height:175px;}
-            textarea.small{height:75px;}
-            textarea.medium{height:250px;}
-            textarea.tall{height:475px;}
+        .icon{min-height:32px;}
+        .icon.large{min-height:48px;}
+        .icon.xlarge{min-height:64px;}
+        .icon.small{min-width:25px; min-height:25px; margin-top:5px; svg{width:25px; height:25px;}}
+        .icon.pad-right{padding-right:9px;}
+        .title{line-height:1.75; font-size:21px;}
+        .label{margin:10px 0;}
+        .field-label{
+            width:130px; padding:8px 7px 7px 4px; margin-top:7px;
+            &.long{width:120px;}
         }
+        .field-input{padding:3px 7px 3px 0px; 
+            &.expand{width:~"calc(100% - 130px)";}
+        }
+        .field-text{padding:8px 7px 7px 4px; margin-top:7px;}
+        .field-icon{margin-top:8px;}
+        .buttons{
+            .button{margin-left:10px; padding:12px 16px; font-size:19px;}
+            &.right .button{margin-left:0px; margin-right:10px;}
+        }
+        .button.circle, .button.icon{margin:-3px 0 -9px 0;}
+            
+        .button.circle.large{
+            padding:7px; margin:-14px 0 -11px 0;
+            svg{width:48px; height:48px;}
+        }
+
+        input:not([type=button]):not([type=submit]), textarea, select{font-size:17px; padding:10px 12px;}
+        input[type="checkbox"]{margin:3px 7px 0 0}
+        input.short, select.short{width:150px;}
+        input.tiny, select.tiny{width:75px;}
+        input.digit{width:45px;}
+        select{padding:12px 9px;}
+        label{top:-4px;}
+        textarea{height:175px;}
+        textarea.small{height:75px;}
+        textarea.medium{height:250px;}
+        textarea.tall{height:475px;}
         .header{
             .buttons{
                 .button{
