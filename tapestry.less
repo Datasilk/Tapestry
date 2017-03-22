@@ -22,7 +22,7 @@ body {font-size:14px;}
 .fixed{position:fixed;}
 .clear:after{visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
 .hide{display:none !important;}
-.text-left{text-align:left;}
+.text-left{text-align:right;}
 .text-right{text-align:right;}
 .text-center{text-align:center;}
 .overflow{overflow:hidden;}
@@ -41,7 +41,6 @@ body {font-size:14px;}
 .flex{display:flex; flex-wrap:wrap;}
 .flex > .flexed{display:flex;}
 .flex.center{justify-content:center; flex-direction:column; width:100%; height:100%;}
-.container{width:100%; max-width:1280px; margin:0 auto; box-sizing:border-box;}
 
 /* global variables */
 @grid-invert:~'total'; //name of the inverted grid system
@@ -142,10 +141,8 @@ body {font-size:14px;}
         .hover-only{opacity:0;}
         .hover-faded{opacity:0.33;}
         &.hover:hover .hover-only{opacity:1;}
-        &.hover:hover .hover-only.hide{display:block !important;}
         &.hover:hover .hover-faded{opacity:1;}
         &.hover-alt:hover .hover-only{opacity:1;}
-        &.hover-alt:hover .hover-only.hide{display:block !important;}
         &.hover-alt:hover .hover-faded{opacity:1;}
         &.empty{height:10px; font-size:0; clear:both;}
         &.header{padding:7px 14px 7px 14px;}
@@ -233,7 +230,7 @@ body {font-size:14px;}
         }
 
         &.text-center > .col{
-            float:none; text-align:left;
+            float:none;
         }
     }
     
@@ -257,13 +254,14 @@ body {font-size:14px;}
 
     /* inputs fields */
     input[type]:not([type=button]):not([type=submit]):not([type=radio]){border-width:1px; border-style:solid;}
-    input[type]:not([type=button]):not([type=submit]):focus, textarea:focus, select:focus{outline:2px solid; box-shadow:none;} //remove Chrome's default outline on input focus
-    input[type=checkbox]:focus, input[type=radio]:focus{outline-offset: 3px;}
+    input[type]:not([type=button]):not([type=submit]):focus, textarea:focus, select:focus, form a:focus{outline:2px solid; box-shadow:none;} //remove Chrome's default outline on input focus
+    form a:focus, input[type=checkbox]:focus, input[type=radio]:focus{outline-offset: 3px;}
     input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), textarea, select{font-size:15px; padding:2px 4px; box-sizing:border-box; width:100%;}
     input[type="checkbox"]{position:relative; top:1px; margin:0 9px 0 0; width:auto;}
     input.long, select.long{width:~"calc(100% - 11px)";}
     input.short, select.short{width:100px;}
     input.tiny, select.tiny{width:50px;}
+    input.digit{width:25px;}
     select{padding:5px 4px; box-sizing:border-box;}
     label{padding-right:5px; position:relative;}
     textarea{height:100px;}
@@ -306,7 +304,6 @@ body {font-size:14px;}
     table.spreadsheet thead td{padding:12px 15px; font-weight:600;}
     table.spreadsheet .hover-only{opacity:0}
     table.spreadsheet tr:hover .hover-only{opacity:1}
-    table.spreadsheet tr:hover .hover-only.hide{opacity:1; display:block !important;}
 
     /* menu system */
      ul.menu{list-style:none;}
@@ -424,14 +421,11 @@ body {font-size:14px;}
             svg{width:25px; height:25px;}
         }
 
-        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:12px; padding:2px 4px; height:27px;}
-        textarea{font-size:12px; padding:2px 4px;}
+        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), textarea, select{font-size:12px; padding:2px 4px;}
         input[type="checkbox"]{margin:2px 5px 0 0}
         input.short, select.short{width:100px;}
         input.tiny, select.tiny{width:50px;}
-        input.digit{max-width:25px;}
-        input.two-digits{max-width:35px;}
-        input.four-digits{max-width:60px;}
+        input.digit{width:25px;}
         select{padding:5px 4px;}
         label{top:-2px;}
         textarea{height:100px;}
@@ -493,15 +487,12 @@ body {font-size:14px;}
             svg{width:36px; height:36px;}
         }
 
-        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:15px; padding:2px 6px; height:31px;}
-        textarea{font-size:15px; padding:2px 6px;}
+        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), textarea, select{font-size:15px; padding:2px 6px;}
         select{padding:5px 6px;}
         input[type="checkbox"]{margin:2px 6px 0 0}
         input.short, select.short{width:120px;}
         input.tiny, select.tiny{width:65px;}
-        input.digit{max-width:30px;}
-        input.two-digits{max-width:50px;}
-        input.four-digits{max-width:80px;}
+        input.digit{width:30px;}
         label{top:-2px;}
         textarea{height:130px;}
         textarea.small{height:50px;}
@@ -541,13 +532,13 @@ body {font-size:14px;}
         .icon.large{height:48px;}
         .icon.xlarge{height:64px;}
         .icon.small{min-width:25px; height:25px; margin-top:5px; svg{width:25px; height:25px;}}
-        .icon.tiny{min-width:12px; height:12px; margin-top:9px; svg{width:12px; height:12px;}}
+        .icon.tiny{min-width:16px; height:16px; margin-top:12px; svg{width:16px; height:16px;}}
         .icon.pad-right{padding-right:9px;}
         .title{line-height:1.75; font-size:21px;}
         .label{margin:10px 0;}
         .field-label{
-            width:110px; padding:8px 7px 10px 4px; margin-top:7px;
-            &.long{width:140px;}
+            width:130px; padding:8px 7px 10px 4px; margin-top:7px;
+            &.long{width:120px;}
             &.two-lines{padding-top:2px; padding-bottom:7px;}
         }
         .field-input{padding:6px 7px 3px 0px; 
@@ -566,15 +557,12 @@ body {font-size:14px;}
             svg{width:48px; height:48px;}
         }
 
-        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:17px; padding:7px 12px; height:49px;}
-        textarea{font-size:17px; padding:7px 12px;}
+        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), textarea, select{font-size:17px; padding:7px 12px;}
         input[type="checkbox"]{margin:0 7px 0 0; top:-2px;}
         select{padding:11px 12px 10px 12px;} 
         input.short, select.short{width:150px;}
         input.tiny, select.tiny{width:75px;}
-        input.digit{max-width:40px;}
-        input.two-digits{max-width:65px;}
-        input.four-digits{max-width:100px;}
+        input.digit{width:45px;}
         label{top:-4px;}
         textarea{height:175px;}
         textarea.small{height:75px;}
@@ -681,10 +669,6 @@ body {font-size:14px;}
     }
     
     
-}
-
-@media (max-width:1320px){
-    .container{width:100%; max-width:100%; padding:0 20px; }
 }
 
 .screen-sizes(@size){
