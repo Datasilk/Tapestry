@@ -3,6 +3,11 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, img, stro
 table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, footer, header, menu, nav, section, summary, audio, video {
     margin:0; padding:0; border:none; outline:0;
 }
+input[type=submit], input[type=button], button{border:0;}
+
+/* Hide HTML5 Up and Down arrows. */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}
+input[type="number"] { -moz-appearance: textfield;}
 
 /* body */
 body {font-size:14px;}
@@ -14,9 +19,10 @@ body {font-size:14px;}
 .absolute.bottom-right{bottom:0px; right:0px;}
 .absolute.botttom-left, .absolute.bottom{bottom:0px; left:0px;}
 .relative{position:relative;}
+.fixed{position:fixed;}
 .clear:after{visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
 .hide{display:none !important;}
-.text-left{text-align:right;}
+.text-left{text-align:left;}
 .text-right{text-align:right;}
 .text-center{text-align:center;}
 .overflow{overflow:hidden;}
@@ -27,6 +33,7 @@ body {font-size:14px;}
 .faded-more{opacity:0.3;}
 .faded-mostly{opacity:0.1;}
 .wait, .wait div {cursor: wait !important;}
+.pointer{cursor:pointer;}
 .bold{font-weight:bold !important;}
 .thin{font-weight:300 !important;}
 .italic{font-style:italic !important;}
@@ -34,6 +41,7 @@ body {font-size:14px;}
 .flex{display:flex; flex-wrap:wrap;}
 .flex > .flexed{display:flex;}
 .flex.center{justify-content:center; flex-direction:column; width:100%; height:100%;}
+.container{width:100%; max-width:1280px; margin:0 auto; box-sizing:border-box;}
 
 /* global variables */
 @grid-invert:~'total'; //name of the inverted grid system
@@ -86,13 +94,21 @@ body {font-size:14px;}
 .margin-right{margin-right:15px !important;}
 .margin-top-xs{margin-top:4px !important;}
 .margin-top-sm{margin-top:7px !important;}
-.margin-top-med{margin-top:15px !important;}
+.margin-top-med, .margin-top{margin-top:15px !important;}
 .margin-top-lg{margin-top:30px !important;}
 .margin-bottom-xs{margin-bottom:4px !important;}
 .margin-bottom-sm{margin-bottom:7px !important;}
 .margin-bottom-med, .margin-bottom{margin-bottom:15px !important;}
 .margin-bottom-lg{margin-bottom:30px !important;}
 .margin-bottom-xl{margin-bottom:100px !important;}
+
+.border-top{border-top:1px solid transparent;}
+.border-right{border-right:1px solid transparent;}
+.border-bottom{border-bottom:1px solid transparent;}
+.border-left{border-left:1px solid transparent;}
+.border{border:1px solid transparent;}
+.border-width{border-left:1px solid transparent;border-right:1px solid transparent;}
+.border-height{border-top:1px solid transparent;border-bottom:1px solid transparent;}
 
 .height{height:100%;}
 .height-lg{height:300px !important;}
@@ -126,8 +142,10 @@ body {font-size:14px;}
         .hover-only{opacity:0;}
         .hover-faded{opacity:0.33;}
         &.hover:hover .hover-only{opacity:1;}
+        &.hover:hover .hover-only.hide{display:block !important;}
         &.hover:hover .hover-faded{opacity:1;}
         &.hover-alt:hover .hover-only{opacity:1;}
+        &.hover-alt:hover .hover-only.hide{display:block !important;}
         &.hover-alt:hover .hover-faded{opacity:1;}
         &.empty{height:10px; font-size:0; clear:both;}
         &.header{padding:7px 14px 7px 14px;}
@@ -178,16 +196,17 @@ body {font-size:14px;}
     .row, .col{
         /* column styles */
         vertical-align:top;
-        label, input, a, span, p, h1, h2, h3, h4, h5, h6, blockquote, strong, td{ line-height:1; }
+        label, input, a, span, p, h1, h2, h3, h4, h5, h6, blockquote, strong, td, li, &.field{ line-height:1; }
         ul, table, tr ,thead, tbody, tfoot{line-height:0;}
         &.title{font-size:18px; white-space:nowrap;}
         &.sub-title{padding:5px 0 10px;}
         &.label{white-space:nowrap;  cursor:default;
             a{cursor:pointer;}
         } 
+        label{display:inline-block;}
         &.field-label{text-align:right;}
         
-        &.field{text-align:right; padding:20px 5px 0 7px; white-space:nowrap;} /* label above input field*/
+        &.field{text-align:left; padding:15px 5px 0 7px; white-space:nowrap;} /* label above input field*/
         &.input{padding:5px 5px 5px 7px; min-height:30px;} /* input field */
         &.buttons .button{margin-top:0; margin-left:10px; margin-bottom:10px;}
         &.header .buttons .button{margin-bottom:0;}
@@ -198,16 +217,26 @@ body {font-size:14px;}
             cursor:pointer;
             a{text-decoration:none;}
         }
-        &.icon *{line-height:0 !important; display:inline-block}
+        &.icon *, a.icon{font-size:0; display:inline-block}
         &.nowrap{
             white-space:nowrap; 
             > .col{float:none !important; display:inline-block;}
         }
     }
 
-    .row.text-center > .col{
-        float:none;
+    .row{
+        &.field-label{
+            text-align:left; padding:0 0 7px 0;
+        }
+        &.field-input{
+            padding:0 0 15px 0;
+        }
+
+        &.text-center > .col{
+            float:none; text-align:left;
+        }
     }
+    
 
     //inner box
     .section{
@@ -219,23 +248,24 @@ body {font-size:14px;}
 
     /* fonts */
     h1, h2, h3, h4, h5, h6{font-weight:normal; margin:0px; padding:0px;}
-    h1{font-size:4.2em;}
-    h2{font-size:3.2em;}
-    h3{font-size:2.4em;}
-    h4{font-size:1.8em;}
-    h5{font-size:1.6em;}
-    h6{font-size:1.2em;}
+    h1{font-size:3.2rem;}
+    h2{font-size:2.4rem;}
+    h3{font-size:1.8rem;}
+    h4{font-size:1.6rem;}
+    h5{font-size:1.2rem;}
+    h6{font-size:1.0rem;}
 
     /* inputs fields */
     input[type]:not([type=button]):not([type=submit]):not([type=radio]){border-width:1px; border-style:solid;}
-    input, textarea, select{font-size:12px; padding:5px 4px; box-sizing:border-box; width:100%;}
+    input[type]:not([type=button]):not([type=submit]):focus, textarea:focus, select:focus{outline:2px solid; box-shadow:none;} //remove Chrome's default outline on input focus
+    input[type=checkbox]:focus, input[type=radio]:focus{outline-offset: 3px;}
+    input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), textarea, select{font-size:15px; padding:2px 4px; box-sizing:border-box; width:100%;}
     input[type="checkbox"]{position:relative; top:1px; margin:0 9px 0 0; width:auto;}
     input.long, select.long{width:~"calc(100% - 11px)";}
     input.short, select.short{width:100px;}
     input.tiny, select.tiny{width:50px;}
-    input.digit{width:25px;}
     select{padding:5px 4px; box-sizing:border-box;}
-    label{padding-right:5px;}
+    label{padding-right:5px; position:relative;}
     textarea{height:100px;}
     textarea.small{height:40px;}
     textarea.medium{height:150px;}
@@ -244,8 +274,8 @@ body {font-size:14px;}
 
     /* buttons */
     a.button{text-decoration:none !important;}
-    .button{display:inline-block; padding:8px 14px; border-radius:4px; white-space:nowrap; cursor:default;}
     .button{
+        display:inline-block; padding:8px 14px; border-radius:4px; white-space:nowrap; cursor:default;
         &.outline{padding:4px 10px; font-size:12px; border:2px solid; background-color:transparent !important; border-radius:4px; overflow:hidden;}
         &.circle{
             border-radius:100%; font-size:0px;
@@ -273,7 +303,10 @@ body {font-size:14px;}
     /* data tables */
     table.spreadsheet{border-spacing:0; width:100%;}
     table.spreadsheet td{padding:10px 15px; cursor:default;}
-    table.spreadsheet thead td{padding:12px 15px;}
+    table.spreadsheet thead td{padding:12px 15px; font-weight:600;}
+    table.spreadsheet .hover-only{opacity:0}
+    table.spreadsheet tr:hover .hover-only{opacity:1}
+    table.spreadsheet tr:hover .hover-only.hide{opacity:1; display:block !important;}
 
     /* menu system */
      ul.menu{list-style:none;}
@@ -288,6 +321,7 @@ body {font-size:14px;}
      ul.menu > li > .row.submenu > ul.menu{width:100%; display:none;}
      ul.menu > li > .row.submenu > ul.menu.expanded{display:block;}
      ul.menu > li > .row.submenu .gutter{width:15px; height:1px; float:left;}
+     ul.menu > li > .row > a span.arrow-expand{display:inline-block; width: 0; height: 0; border-style: solid; border-width: 5px 0 5px 5px;}
      ul.menu.row > li{display:inline-block; width:auto; padding-right:20px;}
      
      //slideshow
@@ -326,6 +360,10 @@ body {font-size:14px;}
     ul.columns-list{
         display:flex; flex-direction:column; flex-wrap:wrap; align-content:flex-start; width:100%; overflow-y:hidden; overflow-x:auto;
         li{list-style-type:none; width:33.33%; max-width:250px;}
+        &.rows{
+            display:block;
+            li{float:left;}
+        }
     }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -342,49 +380,65 @@ body {font-size:14px;}
     /* small (16x16) ///////////////////////////////////////////// */
     .size-sm{
         font-size:14px;
+        h1{font-size:2.8rem;}
+        h2{font-size:2rem;}
+        h3{font-size:1.4rem;}
+        h4{font-size:1.2rem;}
+        h5{font-size:0.8rem;}
+        h6{font-size:0.6rem;}
+        input[type=button], input[type=submit]{font-size:14px;}
         svg{width:16px; height:16px;}
+        .small{svg{width:10px; height:10px;}}
         .large{svg{width:25px; height:25px;}}
         .xlarge{svg{width:32px; height:32px;}}
         .row{
             & > .arrow-right:after, & > .arrow-left:after{border-width:18px;}
             & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:11px; margin-top:7px;}
         }
-        .col{
-            &.icon{height:16px;}
-            &.icon.large{height:25px;}
-            &.icon.xlarge{height:32px;}
-            &.title{font-size:17px;}
-            &.label{margin:1px 0;}
-            &.field-label{
-                width:80px; padding:8px 7px 7px 4px; margin-top:1px;
-                &.long{width:120px;}
-            }
-            &.field-input{padding:4px 7px 4px 0px;
-                &.expand{width:~"calc(100% - 80px)";}
-            }
-            &.field-text{padding:8px 7px 7px 4px; margin-top:1px;}
-            &.field-icon{margin-top:8px;}
-            &.buttons{
-                .button{margin-left:10px;}
-                &.right .button{margin-left:0; margin-right:10px;}
-            }
-            .button.circle.large{
-                padding:7px; margin: -12px 0;
-                svg{width:25px; height:25px;}
-            }
-
-            input:not([type=button]):not([type=submit]), textarea, select{font-size:12px; padding:5px 4px;}
-            input[type="checkbox"]{margin:2px 5px 0 0}
-            input.short, select.short{width:100px;}
-            input.tiny, select.tiny{width:50px;}
-            input.digit{width:25px;}
-            select{padding:5px 4px;}
-            label{top:-2px;}
-            textarea{height:100px;}
-            textarea.small{height:40px;}
-            textarea.medium{height:150px;}
-            textarea.tall{height:300px;}
+        
+        .icon{height:16px;}
+        .icon.large{height:25px;}
+        .icon.xlarge{height:32px;}
+        .title{font-size:17px;}
+        .label{margin:1px 0;}
+        .field-label{
+            width:80px; padding:8px 7px 7px 4px; margin-top:1px;
+            &.long{width:120px;}
+            &.thin{padding: 2px 7px 1px 4px;}
+            &.two-lines{padding-top:2px; padding-bottom:7px;}
         }
+        .field-input{padding:4px 7px 4px 0px;
+            &.expand{width:~"calc(100% - 80px)";}
+        }
+        .field-text{
+            padding:9px 7px 7px 4px; margin-top:1px;
+            &.thin{padding: 3px 7px 1px 4px;}
+        }
+        .field-icon{margin-top:8px;}
+        .buttons{
+            .button{margin-left:10px;}
+            &.right .button{margin-left:0; margin-right:10px;}
+        }
+        .button.circle.large{
+            padding:7px; margin: -12px 0;
+            svg{width:25px; height:25px;}
+        }
+
+        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:12px; padding:2px 4px; height:27px;}
+        textarea{font-size:12px; padding:2px 4px;}
+        input[type="checkbox"]{margin:2px 5px 0 0}
+        input.short, select.short{width:100px;}
+        input.tiny, select.tiny{width:50px;}
+        input.digit{max-width:25px;}
+        input.two-digits{max-width:35px;}
+        input.four-digits{max-width:60px;}
+        select{padding:5px 4px;}
+        label{top:-2px;}
+        textarea{height:100px;}
+        textarea.small{height:40px;}
+        textarea.medium{height:150px;}
+        textarea.tall{height:300px;}
+
         .header{
             .buttons{
                 .button{
@@ -398,51 +452,62 @@ body {font-size:14px;}
     /* medium (25x25) ///////////////////////////////////////////// */
     .size-med, &{
         font-size:15px;
+        input[type=button], input[type=submit]{font-size:15px;}
         svg{width:25px; height:25px;}
+        .small{svg{width:16px; height:16px;}}
         .large{svg{width:32px; height:32px;}}
         .xlarge{svg{width:48px; height:48px;}}
         .row{
             & > .arrow-right:after, & > .arrow-left:after{border-width:21px;}
             & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:13px; margin-top:8px;}
         }
-        .col{
-            &.icon{height:25px;}
-            &.icon.large{height:32px;}
-            &.icon.xlarge{height:48px;}
-            &.icon.small{min-width:16px; height:16px; margin-top:5px; svg{width:16px; height:16px;}}
-            &.icon.pad-right{padding-right:7px;}
-            &.title{line-height:1.5; font-size:18px;}
-            &.label{margin:6px 0;}
-            &.field-label{
-                width:100px; padding:8px 7px 7px 4px; margin-top:4px;
-                &.long{width:120px;}
-            }
-            &.field-input{padding:3px 7px 3px 0px; 
-                &.expand{width:~"calc(100% - 100px)";}
-            }
-            &.field-text{padding:8px 7px 7px 4px; margin-top:4px;}
-            &.field-icon{margin-top:3px;}
-            &.buttons{
-                .button{margin-left:10px;}
-                &.right .button{margin-left:0px; margin-right:10px;}
-            }
-            .button.circle.large{
-                padding:7px; margin: -14px 0;
-                svg{width:36px; height:36px;}
-            }
-
-            input:not([type=button]):not([type=submit]), textarea, select{font-size:14px; padding:7px 8px 6px 8px;}
-            input[type="checkbox"]{margin:2px 6px 0 0}
-            input.short, select.short{width:120px;}
-            input.tiny, select.tiny{width:65px;}
-            input.digit{width:30px;}
-            select{padding:8px 6px;}
-            label{top:-2px;}
-            textarea{height:130px;}
-            textarea.small{height:50px;}
-            textarea.medium{height:200px;}
-            textarea.tall{height:400px;}
+        
+        .icon{height:25px;}
+        .icon.large{height:32px;}
+        .icon.xlarge{height:48px;}
+        .icon.small{min-width:16px; height:16px; margin-top:5px; svg{width:16px; height:16px;}}
+        .icon.tiny{min-width:10px; height:10px; margin-top:8px; svg{width:10px; height:10px;}}
+        .icon.pad-right{padding-right:7px;}
+        .title{line-height:1.5; font-size:18px;}
+        .label{margin:6px 0;}
+        .field-label{
+            width:100px; padding:9px 7px 15px 4px; margin-top:4px;
+            &.long{width:120px;}
+            &.thin{padding: 3px 7px 8px 4px;}
+            &.two-lines{padding-top:2px; padding-bottom:7px;}
         }
+        .field-input{padding:6px 7px 3px 0px; 
+            &.expand{width:~"calc(100% - 100px)";}
+        }
+        .field-text{
+            padding:9px 7px 10px 4px; margin-top:4px;
+            &.thin{padding: 3px 7px 6px 4px;}
+        }
+        .field-icon{margin-top:3px;}
+        .buttons{
+            .button{margin-left:10px;}
+            &.right .button{margin-left:0px; margin-right:10px;}
+        }
+        .button.circle.large{
+            padding:7px; margin: -14px 0;
+            svg{width:36px; height:36px;}
+        }
+
+        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:15px; padding:2px 6px; height:31px;}
+        textarea{font-size:15px; padding:2px 6px;}
+        select{padding:5px 6px;}
+        input[type="checkbox"]{margin:2px 6px 0 0}
+        input.short, select.short{width:120px;}
+        input.tiny, select.tiny{width:65px;}
+        input.digit{max-width:30px;}
+        input.two-digits{max-width:50px;}
+        input.four-digits{max-width:80px;}
+        label{top:-2px;}
+        textarea{height:130px;}
+        textarea.small{height:50px;}
+        textarea.medium{height:200px;}
+        textarea.tall{height:400px;}
+        
         .header{
             .buttons{
                 .button{
@@ -456,53 +521,66 @@ body {font-size:14px;}
     /* large (32xx32) ///////////////////////////////////////////// */
     .size-lg{
         font-size:17px;
+        h1{font-size:3.4rem;}
+        h2{font-size:2.6rem;}
+        h3{font-size:2rem;}
+        h4{font-size:1.8rem;}
+        h5{font-size:1.4rem;}
+        h6{font-size:1.2rem;}
+        input[type=button], input[type=submit]{font-size:17px;}
         svg{width:32px; height:32px;}
+        .small{svg{width:25px; height:25px;}}
         .large{svg{width:48px; height:48px;}}
         .xlarge{svg{width:64px; height:64px;}}
         .row{
             & > .arrow-right:after, & > .arrow-left:after{border-width:26px;}
             & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:17px; margin-top:9px;}
         }
-        .col{
-            &.icon{height:32px;}
-            &.icon.large{height:48px;}
-            &.icon.xlarge{height:64px;}
-            &.icon.small{min-width:25px; height:25px; margin-top:5px; svg{width:25px; height:25px;}}
-            &.icon.pad-right{padding-right:9px;}
-            &.title{line-height:1.75; font-size:21px;}
-            &.label{margin:10px 0;}
-            &.field-label{
-                width:130px; padding:8px 7px 7px 4px; margin-top:7px;
-                &.long{width:120px;}
-            }
-            &.field-input{padding:3px 7px 3px 0px; 
-                &.expand{width:~"calc(100% - 130px)";}
-            }
-            &.field-text{padding:8px 7px 7px 4px; margin-top:7px;}
-            &.field-icon{margin-top:8px;}
-            &.buttons{
-                .button{margin-left:10px; padding:12px 16px; font-size:19px;}
-                &.right .button{margin-left:0px; margin-right:10px;}
-            }
-            .button.circle, .button.icon{margin:-3px 0 -9px 0;}
-            
-            .button.circle.large{
-                padding:7px; margin:-14px 0 -11px 0;
-                svg{width:48px; height:48px;}
-            }
-
-            input:not([type=button]):not([type=submit]), textarea, select{font-size:17px; padding:10px 12px;}
-            input[type="checkbox"]{margin:3px 7px 0 0}
-            input.short, select.short{width:150px;}
-            input.tiny, select.tiny{width:75px;}
-            input.digit{width:45px;}
-            select{padding:12px 9px;}
-            label{top:-4px;}
-            textarea{height:175px;}
-            textarea.small{height:75px;}
-            textarea.medium{height:250px;}
-            textarea.tall{height:475px;}
+        
+        .icon{height:32px;}
+        .icon.large{height:48px;}
+        .icon.xlarge{height:64px;}
+        .icon.small{min-width:25px; height:25px; margin-top:5px; svg{width:25px; height:25px;}}
+        .icon.tiny{min-width:12px; height:12px; margin-top:9px; svg{width:12px; height:12px;}}
+        .icon.pad-right{padding-right:9px;}
+        .title{line-height:1.75; font-size:21px;}
+        .label{margin:10px 0;}
+        .field-label{
+            width:110px; padding:8px 7px 10px 4px; margin-top:7px;
+            &.long{width:140px;}
+            &.two-lines{padding-top:2px; padding-bottom:7px;}
         }
+        .field-input{padding:6px 7px 3px 0px; 
+            &.expand{width:~"calc(100% - 130px)";}
+        }
+        .field-text{padding:9px 7px 10px 4px; margin-top:7px;}
+        .field-icon{margin-top:8px;}
+        .buttons{
+            .button{margin-left:10px; padding:12px 16px; font-size:19px;}
+            &.right .button{margin-left:0px; margin-right:10px;}
+        }
+        .button.circle, .button.icon{margin:-3px 0 -9px 0;}
+        
+        .button.circle.large{
+            padding:7px; margin:-14px 0 -11px 0;
+            svg{width:48px; height:48px;}
+        }
+
+        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:17px; padding:7px 12px; height:49px;}
+        textarea{font-size:17px; padding:7px 12px;}
+        input[type="checkbox"]{margin:0 7px 0 0; top:-2px;}
+        select{padding:11px 12px 10px 12px;} 
+        input.short, select.short{width:150px;}
+        input.tiny, select.tiny{width:75px;}
+        input.digit{max-width:40px;}
+        input.two-digits{max-width:65px;}
+        input.four-digits{max-width:100px;}
+        label{top:-4px;}
+        textarea{height:175px;}
+        textarea.small{height:75px;}
+        textarea.medium{height:250px;}
+        textarea.tall{height:475px;}
+        
         .header{
             .buttons{
                 .button{
@@ -605,6 +683,10 @@ body {font-size:14px;}
     
 }
 
+@media (max-width:1320px){
+    .container{width:100%; max-width:100%; padding:0 20px; }
+}
+
 .screen-sizes(@size){
     .col{
         &.@{size}-one{width:8.333339%}
@@ -632,7 +714,5 @@ body {font-size:14px;}
         &.@{size}-ten-@{grid-invert}{width:10%}
         &.@{size}-eleven-@{grid-invert}{width:9.0909090%}
         &.@{size}-twelve-@{grid-invert}{width:8.3333334%}
-        
-        //.flex{display:block;}
     }
 }
