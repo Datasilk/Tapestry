@@ -250,7 +250,7 @@ body {font-size:14px;}
      .message{padding:7px 20px; margin:10px 0; border-radius:7px; overflow:hidden; box-sizing:border-box; line-height:1; width:100%;}
 
     /* small tag */
-    .tag{position:relative; padding:8px 12px; margin:0 10px 10px 0; border-radius:6px; font-size:14px; overflow:hidden;}
+    .tag{position:relative; display:inline; padding:0px 12px; margin:0 10px 10px 0; border-radius:6px; font-size:14px; overflow:hidden;}
     .tag .icon.tiny{margin-top:1px;}
 
     /* create horizontal list of columns (like Windows Explorer file list) */
@@ -426,14 +426,17 @@ body {font-size:14px;}
             .button{margin-left:10px;}
             &.right .button{margin-left:0; margin-right:10px;}
         }
-        .button.circle.large{
-            padding:7px; margin: -12px 0;
-            svg{width:25px; height:25px;}
+        .button.circle{
+            padding:7px 6px 6px 7px; margin:0px;
+            svg{width:16px; height:16px;}
+            &.large{padding:7px; margin: -12px 0;
+                svg{width:25px; height:25px;}
+            }
         }
 
         input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:12px; padding:2px 4px; line-height:1.4;}
-        textarea{padding:2px 4px; line-height:1.0;}
-        input[type="checkbox"]{margin:2px 5px 0 0}
+        textarea{padding:2px 4px; line-height:1.0; font-size:12px;}
+        input[type="checkbox"]{margin:0px 5px 0 0}
         input.short, select.short{width:100px;}
         input.tiny, select.tiny{width:50px;}
         input.digit{width:25px !important;}
@@ -497,15 +500,18 @@ body {font-size:14px;}
             .button{margin-left:10px;}
             &.right .button{margin-left:0px; margin-right:10px;}
         }
-        .button.circle.large{
-            padding:7px; margin: -14px 0;
-            svg{width:36px; height:36px;}
+        .button.circle{
+            padding:9px 8px 8px 9px; margin-top:-1px;
+            svg{width:16px; height:16px;}
+            &.large{padding:7px; margin: -14px 0;
+                svg{width:36px; height:36px;}
+            }
         }
 
         input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:15px; padding:0 5px 0 10px; line-height:1.95;}
-        textarea{font-size:15px; padding:10px; line-height:1.25;}
+        textarea{font-size:15px; padding:10px; line-height:1.15;}
         select{padding:5px 6px;}
-        input[type="checkbox"]{margin:2px 6px 0 0}
+        input[type="checkbox"]{margin:0px 6px 0 0}
         input.short, select.short{width:120px;}
         input.tiny, select.tiny{width:65px;}
         input.digit{width:30px !important;}
@@ -556,36 +562,38 @@ body {font-size:14px;}
         .title{line-height:1.75; font-size:21px;}
         .label{margin:10px 0;}
         .field-label{
-            width:130px; padding:8px 7px 10px 4px; margin-top:7px;
+            width:130px; padding:9px 7px 19px 4px; margin-top:9px;
             &.long{width:120px;}
             &.two-lines{padding-top:2px; padding-bottom:7px;}
             &.short{width:65px;}
         }
-        .field-input{padding:6px 7px 3px 0px; 
+        .field-input{padding:6px 7px 6px 0px; 
             &.expand{width:~"calc(100% - 130px)";}
         }
-        .field-text{padding:9px 7px 10px 4px; margin-top:7px;}
-        .field-icon{margin-top:8px;}
+        .field-text{padding:11px 7px 17px 4px; margin-top:9px;}
+        .field-icon{margin-top:9px;}
         .buttons{
             .button{margin-left:10px; padding:12px 16px; font-size:19px;}
             &.right .button{margin-left:0px; margin-right:10px;}
         }
-        .button.circle, .button.icon{margin:-3px 0 -9px 0;}
+        .button.circle, .button.icon{margin:-4px 0 -9px 0;}
         
-        .button.circle.large{
-            padding:7px; margin:-14px 0 -11px 0;
-            svg{width:48px; height:48px;}
+        .button.circle{
+            padding:8px 7px 7px 8px;
+            svg{width:25px; height:25px;}
+            &.large{padding:7px; margin:-14px 0 -11px 0;
+                svg{width:48px; height:48px;}
+            }
         }
 
-        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), textarea, select{font-size:17px; padding:0 7px; line-height:2.5;}
-        input[type="checkbox"]{margin:0 7px 0 0; top:-2px;}
-        select{padding:11px 12px 10px 12px;} 
+        input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), textarea, select{font-size:17px; padding:7px; line-height:1.5;}
+        input[type="checkbox"]{margin:0 7px 0 0; top:2px; }
+        select{padding:10px 12px 9px 12px;} 
         input.short, select.short{width:150px;}
         input.tiny, select.tiny{width:75px;}
         input.digit{width:40px !important;}
         input.two-digit{width:50px !important;}
         input.four-digit{width:100px !important;}
-        label{top:-4px;}
         textarea{height:175px;}
         textarea.small{height:75px;}
         textarea.medium{height:250px;}
@@ -615,13 +623,17 @@ body {font-size:14px;}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
     /* High Definition (HD) Screen Size */
-    @media (max-width:1920px){
+    @media (max-width:9999px){
         .screen-sizes(hd);
+        ul.columns-list{
+            li{min-width:12.5% !important;}
+        }
+        ul.columns-list.small{
+            li{min-width:25% !important;}
+        }
     }
 
-    /* Desktop Screen Size */
-    @media (max-width:1440px){
-        .screen-sizes(desktop);
+    @media (max-width:1920px){
         ul.columns-list{
             li{min-width:25% !important;}
         }
@@ -629,11 +641,19 @@ body {font-size:14px;}
             li{min-width:33% !important;}
         }
     }
+
+    /* Desktop Screen Size */
+    @media (max-width:1440px){
+        .screen-sizes(desktop);
+    }
     
 
     /* Desktop Screen Size */
     @media (max-width:1280px){
         .screen-sizes(desktop-sm);
+        ul.columns-list{
+            li{min-width:33.33% !important;}
+        }
         ul.columns-list.small{
             li{min-width:50% !important;}
         }
@@ -643,8 +663,9 @@ body {font-size:14px;}
     @media (max-width:1024px){
         .screen-sizes(laptop);
         ul.columns-list{
-            li{min-width:33.33% !important;}
+            li{min-width:50% !important;}
         }
+        
     }
 
     /* Small Laptop Screen Size */
@@ -655,9 +676,6 @@ body {font-size:14px;}
     /* Tablet Screen Size */
     @media (max-width:768px){
         .screen-sizes(tablet);
-        ul.columns-list{
-            li{min-width:50% !important;}
-        }
         ul.columns-list.small{
             li{min-width:100% !important;}
         }
