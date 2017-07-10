@@ -52,19 +52,27 @@ body {font-size:14px;}
         & > .arrow-right.small:after, & > .arrow-left.small:after{border-width:12px; margin-top:10px;}
         .onselect{display:none;}
         &.selected .onselect{display:block;}
+
+        /* form fields */
+        &.field{text-align:left; padding:15px 5px 0 7px; white-space:nowrap;} /* label above input field*/
+        &.input{padding:5px 5px 5px 7px; min-height:30px;} /* input field */
     }
 
     .col{
-        /* columns (12 column grid system) */
+        /* columns */
         float:left;
         width:auto;
         box-sizing:border-box;
         display:inline-block;
         *margin-right: -1px; /* Add the asterisk */
         line-height:1;
+
+        &.field{text-align:right;}
+
+       /* 12 column grid system */
         &.zero{width:0%; font-size:0;}
         &.one{width:8.333339%}
-        &.two{width:16.666669%}
+        &.two{width:16.41%}
         &.three{width:25%}
         &.four{width:33.333339%}
         &.five{width:41.66669%}
@@ -82,7 +90,7 @@ body {font-size:14px;}
         &.three-@{grid-invert}{width:33.3333337%}
         &.four-@{grid-invert}{width:25%}
         &.five-@{grid-invert}{width:20%}
-        &.six-@{grid-invert}{width:16.666669%}
+        &.six-@{grid-invert}{width:16.41%}
         &.seven-@{grid-invert}{width:14.2857142%}
         &.eight-@{grid-invert}{width:12.5%}
         &.nine-@{grid-invert}{width:11.1111111%}
@@ -102,10 +110,9 @@ body {font-size:14px;}
             a{cursor:pointer;}
         } 
         label{display:inline-block;}
-        &.field-label{text-align:right; cursor:default;}
+        &.field{cursor:default;}
         
-        &.field{text-align:left; padding:15px 5px 0 7px; white-space:nowrap;} /* label above input field*/
-        &.input{padding:5px 5px 5px 7px; min-height:30px;} /* input field */
+        
         &.buttons .button{margin-top:0; margin-left:10px; margin-bottom:10px;}
         &.header .buttons .button{margin-bottom:0;}
         &.buttons.text-right .button{margin-top:0; margin-right:10px; margin-left:0;}
@@ -124,14 +131,8 @@ body {font-size:14px;}
     }
 
     .row{
-        &.field-label{
-            text-align:left; padding:0 0 7px 0;
-        }
-        &.field-input{
-            padding:0 0 15px 0;
-        }
-
-        &.text-center > .col{
+        &.text-center > .col,
+        &.text-right > .col{
             float:none;
         }
     }
@@ -286,7 +287,7 @@ body {font-size:14px;}
 .relative{position:relative;}
 .fixed{position:fixed;}
 .clear:after{visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
-.hide, .row .hide{display:none;}
+.hide, .box .row .hide{display:none;}
 .text-left{text-align:left;}
 .text-right{text-align:right;}
 .text-center{text-align:center;}
@@ -303,8 +304,8 @@ body {font-size:14px;}
 .thin{font-weight:300 !important;}
 .italic{font-style:italic !important;}
 .underline{text-decoration:underline !important;}
-a.no-link:link, a.no-link:visited{text-decoration:none}
-a.no-link:hover, a.no-link:active{text-decoration:underline}
+a.no-link{text-decoration:none;}
+a.no-link:hover, a.no-link:active{text-decoration:underline;}
 .flex{display:flex; flex-wrap:wrap;}
 .flex > .flexed{display:flex;}
 .flex.center{justify-content:center; flex-direction:column; width:100%; height:100%;}
@@ -421,21 +422,20 @@ a.no-link:hover, a.no-link:active{text-decoration:underline}
         .icon.xlarge{height:32px;}
         .title{font-size:17px;}
         .label{margin:1px 0;}
-        .field-label{
+        .col.field{
             width:80px; padding:8px 7px 7px 4px; margin-top:1px;
             &.long{width:120px;}
             &.thin{padding: 2px 7px 1px 4px;}
             &.two-lines{padding-top:2px; padding-bottom:7px;}
             &.short{width:40px;}
         }
-        .field-input{padding:4px 7px 4px 0px;
+        .col.input{padding:4px 7px 4px 0px;
             &.expand{width:~"calc(100% - 80px)";}
         }
-        .field-text{
+        .col.text{
             padding:9px 7px 7px 4px; margin-top:1px;
             &.thin{padding: 3px 7px 1px 4px;}
         }
-        .field-icon{margin-top:8px;}
         .buttons{
             .button{margin-left:10px;}
             &.right .button{margin-left:0; margin-right:10px;}
@@ -491,25 +491,24 @@ a.no-link:hover, a.no-link:active{text-decoration:underline}
         .icon.xlarge{height:48px;}
         .icon.small{min-width:16px; height:16px; box-sizing:content-box; svg{width:16px; height:16px;}}
         .icon.tiny{min-width:10px; height:10px; box-sizing:content-box; svg{width:10px; height:10px;}}
-        .icon.small.field-text{margin-bottom:3px;}
+        .col.text.icon.small{margin-bottom:3px;}
         .icon.pad-right{padding-right:7px;}
         .title{font-size:18px;}
         .label{margin:6px 0;}
-        .field-label{
+        .col.field{
             width:100px; padding:9px 7px 15px 4px; margin-top:4px;
             &.long{width:120px;}
             &.thin{padding: 3px 7px 8px 4px;}
             &.two-lines{padding-top:2px; padding-bottom:7px;}
             &.short{width:50px;}
         }
-        .field-input{padding:6px 7px 3px 0px; 
+        .col.input{padding:6px 7px 3px 0px; 
             &.expand{width:~"calc(100% - 100px)";}
         }
-        .field-text{
+        .col.text{
             padding:9px 7px 10px 4px; margin-top:4px;
             &.thin{padding: 3px 7px 6px 4px;}
         }
-        .field-icon{margin-top:3px;}
         .buttons{
             .button{margin-left:10px;}
             &.right .button{margin-left:0px; margin-right:10px;}
@@ -571,21 +570,20 @@ a.no-link:hover, a.no-link:active{text-decoration:underline}
         .icon.xlarge{height:64px;}
         .icon.small{min-width:25px; height:25px; box-sizing:content-box; svg{width:25px; height:25px;}}
         .icon.tiny{min-width:16px; height:16px; box-sizing:content-box; svg{width:16px; height:16px;}}
-        .icon.small.field-text{margin-bottom:3px;}
+        .col.text.icon.small{margin-bottom:3px;}
         .icon.pad-right{padding-right:9px;}
         .title{line-height:1.75; font-size:21px;}
         .label{margin:10px 0;}
-        .field-label{
+        .col.field{
             width:130px; padding:9px 7px 19px 4px; margin-top:9px;
             &.long{width:120px;}
             &.two-lines{padding-top:2px; padding-bottom:7px;}
             &.short{width:65px;}
         }
-        .field-input{padding:6px 7px 6px 0px; 
+        .col.input{padding:6px 7px 6px 0px; 
             &.expand{width:~"calc(100% - 130px)";}
         }
-        .field-text{padding:11px 7px 17px 4px; margin-top:9px;}
-        .field-icon{margin-top:9px;}
+        .col.text{padding:9px 7px 19px 4px; margin-top:9px;}
         .buttons{
             .button{margin-left:10px; padding:12px 16px; font-size:19px;}
             &.right .button{margin-left:0px; margin-right:10px;}
@@ -734,7 +732,7 @@ a.no-link:hover, a.no-link:active{text-decoration:underline}
     .col{
         &.@{size}-zero{width:0%; font-size:0;}
         &.@{size}-one{width:8.333339%}
-        &.@{size}-two{width:16.666669%}
+        &.@{size}-two{width:16.41%}
         &.@{size}-three{width:25%}
         &.@{size}-four{width:33.333339%}
         &.@{size}-five{width:41.66669%}
@@ -752,7 +750,7 @@ a.no-link:hover, a.no-link:active{text-decoration:underline}
         &.@{size}-three-@{grid-invert}{width:33.3333334%}
         &.@{size}-four-@{grid-invert}{width:25%}
         &.@{size}-five-@{grid-invert}{width:20%}
-        &.@{size}-six-@{grid-invert}{width:16.6666667%}
+        &.@{size}-six-@{grid-invert}{width:16.41%}
         &.@{size}-seven-@{grid-invert}{width:14.2857142%}
         &.@{size}-eight-@{grid-invert}{width:12.5%}
         &.@{size}-nine-@{grid-invert}{width:11.1111111%}
