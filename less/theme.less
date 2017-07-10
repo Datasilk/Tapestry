@@ -18,6 +18,7 @@
     background:@box-bg;
     & when not (@box-border = transparent){border-color:@box-border;}
     color:@box-font;
+    a.no-link{color:@box-font !important;}
 }
 
 // links : all types of anchor links, including svg icon links & faded links
@@ -185,19 +186,19 @@
     }
 }
 .table-row-alt(@bg, @bg-hover, @bg-selected, @font, @font-hover, @font-selected, @a-link, @a-hover, @a-active, @a-visited, @icon-link, @icon-hover, @icon-active, @icon-selected){
-    tbody > tr:nth-child(odd){
+    tbody > tr:nth-child(even){
         background:@bg; color:@font;
         .links(@a-link, @a-hover, @a-active, @a-visited);
         .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
         a.text{.link(@font, @font, @font, @font);}
     }
-    tbody > tr:nth-child(odd):hover{
+    tbody > tr:nth-child(even):hover{
         background:@bg-hover; color:@font-hover;
         .links(@a-link, @a-hover, @a-active, @a-visited);
         .icons(@icon-link, @icon-hover, @icon-active, @icon-link);
         a.text{.link(@font-hover, @font-hover, @font-hover, @font-hover);}
     }
-    tbody > tr:nth-child(odd).selected{
+    tbody > tr:nth-child(even).selected{
         background:@bg-selected; color:@font-selected;
         .links(@a-link, @a-hover, @a-active, @a-visited);
         .icons(@icon-selected, @icon-hover, @icon-active, @icon-selected);
