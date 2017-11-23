@@ -207,7 +207,7 @@
 }
 
 // input : styling for form inputs
-.input(@input-bg, @input-color, @input-border, @input-placeholder, @input-bg-hover, @input-color-hover, @input-border-hover, @input-bg-focus, @input-color-focus, @input-border-focus, @input-label){
+.input(@input-bg, @input-color, @input-border, @input-placeholder, @input-bg-hover, @input-color-hover, @input-border-hover, @input-bg-focus, @input-color-focus, @input-border-focus, @input-label, @input-label-hover){
     input[type]:not([type=button]):not([type=submit]):not([type=radio]), textarea, select{background:@input-bg; color:@input-color; border-color:@input-border;}
     .input-placeholder() when not (@input-placeholder = transparent){
         input[type]:not([type=button]):not([type=submit]):not([type=radio])::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -239,6 +239,7 @@
     .input-focus();
 
     .col.field{color:@input-label}
+    .row.hover:hover .col.field{color:@input-label-hover}
 }
 
 
