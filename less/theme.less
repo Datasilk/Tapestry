@@ -219,8 +219,16 @@
         input[type]:not([type=button]):not([type=submit]):not([type=radio]):-ms-input-placeholder { /* IE 10+ */
           color: @input-placeholder;
         }
-        input[type]:not([type=button]):not([type=submit]):not([type=radio]):-moz-placeholder { /* Firefox 18- */
-          color: @input-placeholder;
+
+        textarea::-webkit-input-placeholder {
+            color: @input-placeholder;
+        }
+        textarea::-moz-placeholder {  /* Firefox 19+ */
+            color: @input-placeholder;
+        }
+ 
+        textarea:-ms-input-placeholder {  
+        color: green !important;  
         }
     }
     .input-hover() when not (@input-bg-hover = transparent){
