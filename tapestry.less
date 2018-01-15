@@ -132,6 +132,7 @@ body {font-size:14px;}
     }
 
     .row{
+        &.text > .col,
         &.text-center > .col,
         &.text-right > .col{
             float:none;
@@ -174,6 +175,8 @@ body {font-size:14px;}
     input.tiny, select.tiny{width:50px;}
     input.digit{width:25px;}
     select{padding:5px 4px; box-sizing:border-box;}
+    select[disabled]{background:transparent !important; border:transparent !important; -webkit-appearance: none;-moz-appearance: none;}
+
     label{padding-right:5px; position:relative;}
     textarea{height:100px;}
     textarea.small{height:40px;}

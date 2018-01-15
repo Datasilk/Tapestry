@@ -30,6 +30,15 @@
     }
 }
 
+.svg(@color; @important:false){
+    & when (@important = true){
+        use{color:@color !important; fill:@color !important;}
+    } 
+    & when (@important = false){
+        use{color:@color; fill:@color;}
+    }
+}
+
 .keyframes(@name; @arguments) {
 	@-moz-keyframes @name { @arguments(); }
 	@-webkit-keyframes @name { @arguments(); }
