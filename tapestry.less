@@ -132,6 +132,7 @@ body {font-size:14px;}
     }
 
     .row{
+        &.text > .col,
         &.text-center > .col,
         &.text-right > .col{
             float:none;
@@ -174,6 +175,8 @@ body {font-size:14px;}
     input.tiny, select.tiny{width:50px;}
     input.digit{width:25px;}
     select{padding:5px 4px; box-sizing:border-box;}
+    select[disabled]{background:transparent !important; border:transparent !important; -webkit-appearance: none;-moz-appearance: none;}
+
     label{padding-right:5px; position:relative;}
     textarea{height:100px;}
     textarea.small{height:40px;}
@@ -524,7 +527,7 @@ a.no-link:hover, a.no-link:active{text-decoration:underline;}
             padding:9px 8px 8px 9px; margin-top:-1px;
             svg{width:16px; height:16px;}
             &.large{padding:7px; margin: -14px 0;
-                svg{width:36px; height:36px;}
+                svg{width:36px; height:36px; padding:4px;}
             }
         }
 
@@ -602,7 +605,7 @@ a.no-link:hover, a.no-link:active{text-decoration:underline;}
             padding:8px 8px 7px 9px;
             svg{width:25px; height:25px;}
             &.large{padding:7px; margin:-14px 0 -11px 0;
-                svg{width:48px; height:48px;}
+                svg{width:48px; height:48px; padding:5px;}
             }
         }
 
