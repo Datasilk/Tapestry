@@ -100,7 +100,9 @@ body {font-size:14px;}
         &.field{cursor:default;}
         &.nowrap{
             white-space:nowrap; 
-            > .col{float:none !important; display:inline-block;}
+            > .col{float:none !important; display:inline-block;
+                &.wrap{white-space:normal;}
+            }
         }
     }
 
@@ -184,7 +186,7 @@ body {font-size:14px;}
 .absolute{position:absolute;}
 .relative{position:relative;}
 .fixed{position:fixed;}
-.hide, .box .hide{display:none;}
+.hide, .box .hide{display:none !important;}
 .text-left{text-align:left;}
 .text-right{text-align:right;}
 .text-center{text-align:center;}
