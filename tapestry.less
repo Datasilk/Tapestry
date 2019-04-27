@@ -16,12 +16,12 @@ body {font-size:14px;}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Grid System ////////////////////////////////////////////////////////////////////////////////////////////// */
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-.container{width:100%; background:transparent none !important;}
 
 .box, .row, .col{position:relative;}
 
 //outer box
 .box{
+    .container{width:100%; background:transparent none !important;}
     .row:after{visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
     &.hidden{display:none;}
     .line{float:left; width:100%; border-top-width:1px; border-top-style:solid; border-top-color:transparent;}
