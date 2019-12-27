@@ -201,13 +201,13 @@
 .button(@name, @bg, @bg-hover, @bg-active, @bg-selected, @border, @border-hover, @border-active, @border-selected, @outline, @outline-hover, @outline-active, @outline-selected, @font, @font-hover, @font-active, @font-selected){
     
     .check-button-name() when (@name = default){
-        .button, a.button{
+        button, .button, a.button{
             .get-button();
         }
     }
 
     .check-button-name() when not (@name = default){
-        .button.@{name}, a.button.@{name}{
+        button.@{name}, .button.@{name}, a.button.@{name}{
             .get-button();
         }
     }
