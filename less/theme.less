@@ -264,7 +264,7 @@
 }
 
 // message : colors for all message types
-.message(@name, @bg, @border, @font){
+.message(@name, @bg, @border, @color, @hover){
     .msg() when (@name = default){
         .message{
             .get-msg();
@@ -282,6 +282,7 @@
     .get-msg(){
         background:@bg;
         border-color:@border;
-        color:@font;
+        color:@color;
+        .svglink(@color, @hover, @hover, @color, true);
     }
 }
