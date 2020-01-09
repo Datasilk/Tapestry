@@ -19,7 +19,7 @@
 
 // links : all types of anchor links, including svg icon links & faded links
 .links(@a-link, @a-hover, @a-active, @a-visited, @important:false){
-    a{.link(@a-link, @a-hover, @a-active, @a-link, @important);}
+    a, .link{.link(@a-link, @a-hover, @a-active, @a-link, @important);}
 }
 
 // icons : anchor link icons (that use the .icon or .nolinks classes)
