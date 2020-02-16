@@ -90,7 +90,7 @@ input[type="number"] { -moz-appearance: textfield;}
         /* column styles */
         vertical-align:top;
         label, input, a, td, li{ line-height:1; }
-        span, p, h1, h2, h3, h4, h5, h6, blockquote, strong, &.field, &.label{line-height:1.25;}
+        span, p, h1, h2, h3, h4, h5, h6, blockquote, strong, &.field, &.label, &.text{line-height:1.25;}
         p, h1, h2, h3, h4, h5, h6, label, input, a{display:inline-block;}
         ul, table, tr ,thead, tbody, tfoot{line-height:0;}
         label{display:inline-block;}
@@ -318,13 +318,6 @@ input[type="number"] { -moz-appearance: textfield;}
         .buttons{
             .button{margin-left:10px;}
             &.right .button{margin-left:0; margin-right:10px;}
-        }
-        .button.circle{
-            padding:7px 6px 6px 7px; margin:0px;
-            svg{width:16px; height:16px;}
-            &.large{padding:7px; margin: -12px 0;
-                svg{width:25px; height:25px;}
-            }
         }
 
         input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]), select{font-size:12px; padding:2px 4px; line-height:1.4;}
