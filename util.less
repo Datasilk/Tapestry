@@ -1,3 +1,4 @@
+<<<<<<< HEAD:util.less
 //colors for various anchor link states
 .link(@color-link; @color-hover; @color-active; @color-visited; @important:false){
     & when (@important = true){ 
@@ -51,4 +52,59 @@
 	-webkit-animation: @arguments;
 	-moz-animation: @arguments;
 	animation: @arguments;
+=======
+//colors for various anchor link states
+.link(@color-link; @color-hover; @color-active; @color-visited; @important:false){
+    & when (@important = true){ 
+        &.link, &:link{color:@color-link !important;}
+        &:visited{color:@color-visited !important;}
+        &:hover{color:@color-hover !important;}
+        &:active{color:@color-active !important;} 
+    } 
+    & when (@important = false){
+        &.link, &:link{color:@color-link;}
+        &:visited{color:@color-visited;}
+        &:hover{color:@color-hover;}
+        &:active{color:@color-active;} 
+    }
+}
+
+//colors for various anchor link states that contain an svg
+.svglink(@color-link; @color-hover; @color-active; @color-visited; @important:false){
+    & when (@important = true){
+        use{color:@color-link !important; fill:@color-link !important;}
+        &.link, &:link{use{color:@color-link !important; fill:@color-link !important;}}
+        a:visited use{color:@color-visited !important; fill:@color-visited !important;}
+        a:hover use{color:@color-hover !important; fill:@color-hover !important;} 
+        a:active use{color:@color-active !important; fill:@color-active !important;} 
+    } 
+    & when (@important = false){
+        use{color:@color-link; fill:@color-link;}
+        &.link, &:link{use{color:@color-link; fill:@color-link;}}
+        a:visited use{color:@color-visited; fill:@color-visited;}
+        a:hover use{color:@color-hover; fill:@color-hover;}
+        a:active use{color:@color-active; fill:@color-active;} 
+    }
+}
+
+.svg(@color; @important:false){
+    & when (@important = true){
+        use{color:@color !important; fill:@color !important;}
+    } 
+    & when (@important = false){
+        use{color:@color; fill:@color;}
+    }
+}
+
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+>>>>>>> e7a6e995db4307414697c5c8ceff97549dc96c8e:less/util.less
 }

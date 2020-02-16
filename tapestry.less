@@ -22,6 +22,9 @@ input[type="number"] { -moz-appearance: textfield;}
     .row:after{visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
     &.hidden{display:none;}
     .line{float:left; width:100%; border-top-width:1px; border-top-style:solid; border-top-color:transparent;}
+    li .hover-only{opacity:0;}
+    li .hover-faded{opacity:0.33;}
+    li:hover {.hover-only, .hover-faded{opacity:1;}}
 
     .row{
         /* rows */
@@ -55,6 +58,7 @@ input[type="number"] { -moz-appearance: textfield;}
 
         &.field{text-align:right;}
         &.right{float:right;}
+        &.text{line-height:1.25;}
 
        /* 12 column grid system */
         &.zero{width:0%; font-size:0;}
@@ -155,7 +159,7 @@ input[type="number"] { -moz-appearance: textfield;}
 
     /* buttons */
     a.button{text-decoration:none !important;}
-    .button{
+    button, .button{
         display:inline-block; padding:8px 14px; border-radius:4px; white-space:nowrap; cursor:default;
         &.outline{padding:4px 10px; font-size:12px; border:2px solid; background-color:transparent !important; border-radius:4px; overflow:hidden;}
     }
@@ -172,7 +176,7 @@ input[type="number"] { -moz-appearance: textfield;}
     }
 
      /* messages */
-     .message{padding:7px 20px; margin:10px 0; border-radius:7px; overflow:hidden; box-sizing:border-box; line-height:1; width:100%;}
+     .message{padding:7px 20px; width:~"calc(100% - 20px)"; height:auto; margin:10px; border-radius:7px; overflow:hidden; box-sizing:border-box; line-height:1;}
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -290,7 +294,7 @@ input[type="number"] { -moz-appearance: textfield;}
         h4{font-size:1.2rem;}
         h5{font-size:0.8rem;}
         h6{font-size:0.6rem;}
-        input[type=button], input[type=submit]{font-size:14px;}
+        input[type=button], input[type=submit], button, .button{font-size:14px;}
         svg{width:16px; height:16px;}
         .small{svg{width:10px; height:10px;}}
         .large{svg{width:25px; height:25px;}}
@@ -316,7 +320,7 @@ input[type="number"] { -moz-appearance: textfield;}
             &.thin{padding: 3px 7px 1px 4px;}
         }
         .buttons{
-            .button{margin-left:10px;}
+            .button, button, input[type=button]{margin-left:10px;}
             &.right .button{margin-left:0; margin-right:10px;}
         }
 
@@ -339,7 +343,7 @@ input[type="number"] { -moz-appearance: textfield;}
     /* medium (25x25) ///////////////////////////////////////////// */
     .size-med, &{
         font-size:15px;
-        input[type=button], input[type=submit]{font-size:15px;}
+        input[type=button], input[type=submit], .button, button{font-size:15px;}
         svg{width:25px; height:25px;}
         .small{svg{width:16px; height:16px;}}
         .large{svg{width:32px; height:32px;}}
@@ -394,7 +398,7 @@ input[type="number"] { -moz-appearance: textfield;}
         h4{font-size:1.8rem;}
         h5{font-size:1.4rem;}
         h6{font-size:1.2rem;}
-        input[type=button], input[type=submit]{font-size:17px;}
+        input[type=button], input[type=submit], .button, button{font-size:17px;}
         svg{width:32px; height:32px;}
         .small{svg{width:25px; height:25px;}}
         .large{svg{width:48px; height:48px;}}
