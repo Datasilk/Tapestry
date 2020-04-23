@@ -93,7 +93,7 @@ input[type="number"] { -moz-appearance: textfield;}
     .row, .col{
         /* column styles */
         vertical-align:top;
-        label, input, a, td, li{ line-height:1; }
+        label, input, a, th, td, li{ line-height:1; }
         span, p, h1, h2, h3, h4, h5, h6, blockquote, strong, &.field, &.label{line-height:1.25;}
         p, h1, h2, h3, h4, h5, h6, label, input, a{display:inline-block;}
         ul, table, tr ,thead, tbody, tfoot{line-height:0;}
@@ -169,7 +169,7 @@ input[type="number"] { -moz-appearance: textfield;}
     /* data tables */
     table.spreadsheet{border-spacing:0; width:100%;
         td{padding:10px 15px; cursor:default;}
-        & > thead td{padding:7px 15px; font-weight:600;}
+        & > thead td, & th{padding:7px 15px; font-weight:600;}
         .hover-only{opacity:0}
         tr:hover .hover-only{opacity:1}
         tr:hover .hover-only.hide{display:block !important;}
