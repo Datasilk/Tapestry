@@ -22,9 +22,6 @@ input[type="number"] { -moz-appearance: textfield;}
     .row:after{visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
     &.hidden{display:none;}
     .line{width:100%; border-top-width:1px; border-top-style:solid; border-top-color:transparent;}
-    li .hover-only{opacity:0;}
-    li .hover-faded{opacity:0.33;}
-    li:hover {.hover-only, .hover-faded{opacity:1;}}
 
     .row{
         /* rows */
@@ -287,7 +284,7 @@ input[type="number"] { -moz-appearance: textfield;}
 */
 
     /* small (16x16) ///////////////////////////////////////////// */
-    .size-sm{
+    &.size-sm{
         font-size:14px;
         h1{font-size:2.8rem;}
         h2{font-size:2rem;}
@@ -342,7 +339,7 @@ input[type="number"] { -moz-appearance: textfield;}
     }
 
     /* medium (25x25) ///////////////////////////////////////////// */
-    .size-med, &{
+    &.size-med, &{
         font-size:15px;
         input[type=button], input[type=submit], .button, button{font-size:15px;}
         svg{width:25px; height:25px;}
@@ -391,7 +388,7 @@ input[type="number"] { -moz-appearance: textfield;}
     }
 
     /* large (32xx32) ///////////////////////////////////////////// */
-    .size-lg{
+    &.size-lg{
         font-size:17px;
         h1{font-size:3.4rem;}
         h2{font-size:2.6rem;}
