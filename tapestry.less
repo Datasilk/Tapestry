@@ -92,7 +92,8 @@ input[type="number"] { -moz-appearance: textfield;}
         vertical-align:top;
         label, input, a, th, td, li{ line-height:1; }
         span, p, h1, h2, h3, h4, h5, h6, blockquote, strong, &.field, &.label, &.text{line-height:1.25;}
-        p, h1, h2, h3, h4, h5, h6, label, input, a{display:inline-block;}
+        p, label, input, a{display:inline-block;}
+        h1, h2, h3, h4, h5, h6{display:block;}
         ul, table, tr ,thead, tbody, tfoot{line-height:0;}
         label{display:inline-block;}
         &.field{cursor:default;}
@@ -112,6 +113,8 @@ input[type="number"] { -moz-appearance: textfield;}
         li{float:left;}
         &:after{content:'';display:block;clear:both;height:0}
     }
+
+    li:hover .hover-only{opacity:1;}
 
     //inner box
     .section:after, .row:after{visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0;}
