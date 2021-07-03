@@ -249,23 +249,23 @@
             }
         }
         &:active{
-            background:@bg-active;
-            color:@font-active;
+            background:@bg-active !important;
+            color:@font-active !important;
             & when not (@border-active = transparent){
-                border-color:@border-active;
+                border-color:@border-active !important;
             }
             & when not (@outline-active = transparent){
-                outline-color:@outline-active;
+                outline-color:@outline-active !important;
             }
         }
         &.selected{
-            background:@bg-selected;
-            color:@font-selected;
+            background:@bg-selected !important;
+            color:@font-selected !important;
             & when not (@border-selected = transparent){
-                border-color:@border-selected;
+                border-color:@border-selected !important;
             }
             & when not (@outline-selected = transparent){
-                outline-color:@outline-selected;
+                outline-color:@outline-selected !important;
             }
         }
         .link(@font, @font-hover, @font-active, @font);
