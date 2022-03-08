@@ -4,7 +4,7 @@ Tapestry is a UI framework written in LESS and compiled to CSS and was built to 
 LESS file, then create a theme LESS file defining colors for various sections of your website UI, then build your UI using HTML and the few simple class names provided by Tapestry.
 
 ## Installation
-1. Clone https://github.com/Websilk/Tapestry into your project
+1. Clone https://github.com/Datasilk/Tapestry into your project
 2. Add Tapestry to your website LESS file `@import less/tapestry/tapestry.less` or compile Tapestry to CSS and include it in your website header `<link rel="stylesheet" type="text/css" href="css/tapestry.css"/>`
 3. Create one or more themes for your website, for example: `/less/themes/default.less`
 4. Either add your theme file to your website LESS file `@import /less/themes/default.less` or compile the theme to CSS and include it in your website header `<link rel="stylesheet" type="text/css" href="css/themes/default.css"/>`. If you choose to load your theme separately, you could design a feature on your website allowing your users to change the theme for your website with a drop down list of themes to select from.
