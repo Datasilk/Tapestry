@@ -231,13 +231,16 @@
 
     .get-button(){
         background:@bg;
+        color:@font !important;
         & when not (@border = transparent){
             border-color:@border;
         }
         & when not (@outline = transparent){
             outline-color:@outline;
+            &.outline{
+                color:@outline !important;
+            }
         }
-        color:@font !important;
         &:hover, &:focus{
             background:@bg-hover;
             color:@font-hover !important;
@@ -246,6 +249,9 @@
             }
             & when not (@outline-hover = transparent){
                 outline-color:@outline-hover;
+                &.outline{
+                    color:@outline-hover !important;
+                }
             }
         }
         &:active{
@@ -256,6 +262,9 @@
             }
             & when not (@outline-active = transparent){
                 outline-color:@outline-active !important;
+                &.outline{
+                    color:@outline-active !important;
+                }
             }
         }
         &.selected{
@@ -266,6 +275,9 @@
             }
             & when not (@outline-selected = transparent){
                 outline-color:@outline-selected !important;
+                &.outline{
+                    color:@outline-selected !important;
+                }
             }
         }
         .link(@font, @font-hover, @font-active, @font);
