@@ -291,7 +291,7 @@
 }
 
 // message : colors for all message types
-.message(@name, @bg, @border, @font, @a-link){
+.message(@name, @bg, @border, @font, @a-link, @a-hover){
     .msg() when (@name = default){
         .message{
             .get-msg();
@@ -312,7 +312,7 @@
         color:@font;
         fill:@font;
         a:link, a:visited{color:@a-link;}
-        a:hover, a:active{color:lighten(@a-link, 10%);}
+        a:hover, a:active{color:@a-hover;}
         .svglink(@font, @font, @font, @font);
     }
 }
